@@ -26,12 +26,20 @@ public class GameManager {
 		gm.players[3] = new Player("Player 4", "pw4" , gm);
 		gm.game.nextState();
 		gm.handOutCards();
+		System.out.print("Players in re-party: ");
+		for(int i = 0; i<4 ; i++) {
+			if(gm.players[i].isRe()) System.out.print(gm.players[i].getName() + "   ");
+		}
 		while(!gm.game.nextState().equals(State.EVALUATION)) {
 			System.out.println(" ############### Round " + (gm.game.getCurrentState().getRoundNo()+1) + " ############### ");
 			gm.round();
 		}
-		System.out.println("Siegpunkte Re-Partei: " + gm.calcVictoryPoints());
-//		HashMap<Player, Integer> points = new HashMap<>(4);
+		System.out.println("Victory points re-party: " + gm.calcVictoryPoints());
+		System.out.print("Players in re-party: ");
+		for(int i = 0; i<4 ; i++) {
+			if(gm.players[i].isRe()) System.out.print(gm.players[i].getName() + "   ");
+		}
+		//		HashMap<Player, Integer> points = new HashMap<>(4);
 //		for(int i = 0; i < 10; i++) {
 //			Trick round = gm.game.getRounds()[i];
 //			Player winner = round.evaluate();
@@ -46,7 +54,7 @@ public class GameManager {
 		
 		
 		gm.game.nextState();
-		System.out.println("Game Over.");
+		System.out.println(" \nGame Over.");
 
 
 	}
@@ -151,7 +159,11 @@ public class GameManager {
 			System.out.println(game.currentRoundToString().toString());
 			
 		}
-		System.out.println(game.getCurrentRound().evaluate().getName() + " won this round");
+		Player winner = game.getCurrentRound().evaluate();
+		System.out.println(winner.getName() + " won this round (" + game.getCurrentRound().getPoints() + " pts)");
+		for (int i = 0; i < players.length; i++) {
+			if(players[i].equals(winner)) game.setStartingPlayer(i);
+		}
 	}
 
 	public Game getGame() 

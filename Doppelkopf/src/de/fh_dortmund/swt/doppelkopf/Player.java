@@ -3,6 +3,8 @@ package de.fh_dortmund.swt.doppelkopf;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import de.fh_dortmund.swt.doppelkopf.enumerations.CardColour;
+import de.fh_dortmund.swt.doppelkopf.enumerations.CardValue;
 import de.fh_dortmund.swt.doppelkopf.enumerations.Suit;
 import de.fh_dortmund.swt.doppelkopf.interfaces.Message;
 import messages.PlayedCardMessage;
@@ -13,7 +15,7 @@ public class Player{
 	private String name;
 	private String password;
 	private int victoryPoints;
-	private transient boolean re;
+	private transient boolean re = false;
 	private transient GameManager manager;
 	private transient ArrayList<Card> cards = new ArrayList<>();
 
@@ -73,9 +75,13 @@ public class Player{
 		return cards;
 	}
 	public void setCards(ArrayList<Card> cards) {
+		Card clubsQueen = new Card(CardColour.CLUB, CardValue.QUEEN);
+		if(cards.contains(clubsQueen)) re = true;
 		this.cards = cards;
 	}
 	public void addCard(Card card) {
+		Card clubsQueen = new Card(CardColour.CLUB, CardValue.QUEEN);
+		if(card.equals(clubsQueen)) re = true;
 		cards.add(card);
 	}
 

@@ -32,15 +32,14 @@ public class Trick {
 	}
 
 	public Player evaluate() {
+		//Erste Karte ist zu Beginn automatisch die höchstwertigste
 		Card highestCard = cards[0];
 
 		for (int i = 1; i < 4; i++) {
-			if(cards[i].getSuit().equals(suitToFollow)) {
+			//Wenn Kartenfarbe = Bedienfarbe, oder Trumpf, wird geprüft, ob diese "stärker" als die bisher höchste ist
+			if(cards[i].getSuit().equals(suitToFollow) || cards[i].isTrump()) {
 				if(cards[i].getTrickStrength() > highestCard.getTrickStrength())
 					highestCard = cards[i];
-			}
-			else if(cards[i].isTrump() && !suitToFollow.equals(Suit.TRUMP)) {
-				highestCard = cards[i];
 			}
 		}
 		return highestCard.getOwner();
