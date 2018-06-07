@@ -75,5 +75,13 @@ public class Trick {
 		}
 		return str;
 	}
+	
+	public Card getLatestCard() {
+		Card latestCard = cards[0];
+		for (int i = 0; i < cards.length; i++) {
+			if(cards[i]!=null) latestCard = cards[i];
+		}
+		return latestCard;
+	}
 
 }

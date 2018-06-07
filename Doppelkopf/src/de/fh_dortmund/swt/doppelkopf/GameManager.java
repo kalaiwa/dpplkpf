@@ -7,23 +7,19 @@ import de.fh_dortmund.swt.doppelkopf.enumerations.CardColour;
 import de.fh_dortmund.swt.doppelkopf.enumerations.CardValue;
 import de.fh_dortmund.swt.doppelkopf.enumerations.State;
 import de.fh_dortmund.swt.doppelkopf.interfaces.Message;
-import messages.NextPlayerMsg;
-import messages.PlayedCardMessage;
+import de.fh_dortmund.swt.doppelkopf.messages.ToPlayer_NextPlayerMsg;
+import de.fh_dortmund.swt.doppelkopf.messages.ToServer_PlayedCardMsg;
 
 public class GameManager {
 
 	private Game game;
-	private Player[] players = new Player[4];
+	private Client[] players = new Client[4];
 	private static boolean waiting = false;
+	private static GameManager gm = new GameManager();
 
 
 	public static void main(String[] args) {
-		GameManager gm = new GameManager();
 		gm.game = new Game();
-		gm.players[0] = new Player("Player 1", "pw1" , gm);
-		gm.players[1] = new Player("Player 2", "pw3" , gm);
-		gm.players[2] = new Player("Player 3", "pw2" , gm);
-		gm.players[3] = new Player("Player 4", "pw4" , gm);
 		gm.game.nextState();
 		gm.handOutCards();
 		System.out.print("Players in re-party: ");
@@ -123,7 +119,7 @@ public class GameManager {
 	public void receiveMessage(Message msg) {
 		switch (msg.getMessage()) {
 		case "PlayedCard":
-			game.playerPlaysCard(((PlayedCardMessage) msg).getCard());
+			game.playerPlaysCard(((ToServer_PlayedCardMsg) msg).getCard());
 			game.nextPlayer();
 			waiting = false;
 			break;
@@ -148,7 +144,7 @@ public class GameManager {
 		game.setActivePlayer(game.getStartingPlayer());
 		for(int i = 0; i < 4; i++) {
 			waiting = true;
-			players[game.getActivePlayer()].receiveMessage(new NextPlayerMsg(players[game.getActivePlayer()].getName()));
+			players[game.getActivePlayer()].receiveMessage(new ToPlayer_NextPlayerMsg(players[game.getActivePlayer()].getName()));
 			while(waiting) {
 				try {
 					Thread.sleep(100);
@@ -169,6 +165,13 @@ public class GameManager {
 	public Game getGame() 
 	{
 		return game;
+	}
+
+
+
+	public void login(String username, String password) {
+		//TODO if provided credentials match those on DB
+		players.dd
 	}
 
 }
