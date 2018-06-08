@@ -1,7 +1,9 @@
 
 package de.fh_dortmund.swt.doppelkopf.enumerations;
 
-public enum Suit{
+import java.io.Serializable;
+
+public enum Suit implements Serializable{
 
 	CLUB("C"),
 	SPADE("S"),

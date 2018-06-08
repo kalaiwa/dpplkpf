@@ -11,8 +11,8 @@ import org.eclipse.paho.client.mqttv3.MqttCallback;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
 
 import de.fh_dortmund.swt.doppelkopf.GameManager;
-import de.fh_dortmund.swt.doppelkopf.enumerations.State;
 import de.fh_dortmund.swt.doppelkopf.interfaces.Message;
+import de.fh_dortmund.swt.doppelkopf.interfaces.ToServerMessage;
 
 public class GameManagerMqttCallback implements MqttCallback {
 
@@ -26,6 +26,7 @@ public class GameManagerMqttCallback implements MqttCallback {
 	@Override
 	public void connectionLost(Throwable cause) {
 		logger.error("Connection to MQTT broker lost!");
+		cause.printStackTrace();
 	}
 
 	@Override
@@ -38,33 +39,27 @@ public class GameManagerMqttCallback implements MqttCallback {
 			logger.error("Could not resolve message in topic " + topic);
 		}
 		Message msg;
-		if(!(o instanceof Message)) {
-			logger.error("The delivered object type does not fit into interface Message");
+		if(!(o instanceof ToServerMessage)) {
+			logger.error("The delivered object type does not fit into interface ToServerMessage");
 			return;
 		}
-		msg = (Message) o;
+		msg = (ToServerMessage) o;
 		switch (topic) {
 		case ToServer_LoginMsg.type:
 			if(!(msg instanceof ToServer_LoginMsg)) return;
 			ToServer_LoginMsg loginMsg = (ToServer_LoginMsg)msg;
-			gameManager.login(loginMsg.getUsername(), loginMsg.getPassword());
-			
-			
-		case Server
-			if(!(msg instanceof ToPlayer_StateMsg)) return;
-			logger.info(msg.getMessage());
-			if (((ToPlayer_StateMsg) msg).getState().equals(State.GAME_OVER)) player.showLogoutPrompt();
-		case ToPlayer_NextPlayerMsg.type:
-			if(!(msg instanceof ToPlayer_NextPlayerMsg)) return;
-			ToPlayer_NextPlayerMsg nextPlayerMsg = (ToPlayer_NextPlayerMsg) o;
-			String name = nextPlayerMsg.getPlayerName();
-			if(name.equals(player.getName())) player.chooseCard();
-		case ToPlayer_LeaderBoardMsg.type:
-		case ToPlayer_PlayedCardMsg.type:
-		case ToPlayer_LastTrickMsg.type:
+			gameManager.login(loginMsg.getSender(), loginMsg.getUsername(), loginMsg.getPassword());
 			logger.info(msg.getMessage());
 			break;
-		default:
+		case ToServer_LogoutMsg.type:
+			if(!(msg instanceof ToServer_LogoutMsg)) return;
+			gameManager.logout(((ToServer_LogoutMsg)msg).getSender());
+			logger.info(msg.getMessage());
+			break;
+		case ToServer_PlayedCardMsg.type:
+			if(!(msg instanceof ToServer_PlayedCardMsg)) return;
+			gameManager.addPlayedCard(((ToServer_PlayedCardMsg)msg).getCard());
+			logger.info(msg.getMessage());
 			break;
 		}
 	}

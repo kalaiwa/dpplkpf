@@ -1,35 +1,14 @@
 package de.fh_dortmund.swt.doppelkopf;
 
-import java.util.ArrayList;
-import java.util.Scanner;
-
-import org.apache.log4j.Logger;
-import org.eclipse.paho.client.mqttv3.MqttClient;
-import org.eclipse.paho.client.mqttv3.MqttException;
-
-import de.fh_dortmund.swt.doppelkopf.enumerations.CardColour;
-import de.fh_dortmund.swt.doppelkopf.enumerations.CardValue;
-import de.fh_dortmund.swt.doppelkopf.enumerations.Suit;
-import de.fh_dortmund.swt.doppelkopf.interfaces.Message;
-import de.fh_dortmund.swt.doppelkopf.messages.PlayerMqttCallback;
-import de.fh_dortmund.swt.doppelkopf.messages.ToPlayer_LastTrickMsg;
-import de.fh_dortmund.swt.doppelkopf.messages.ToPlayer_LeaderBoardMsg;
-import de.fh_dortmund.swt.doppelkopf.messages.ToPlayer_LoginReactionMsg;
-import de.fh_dortmund.swt.doppelkopf.messages.ToPlayer_NextPlayerMsg;
-import de.fh_dortmund.swt.doppelkopf.messages.ToPlayer_PlayedCardMsg;
-import de.fh_dortmund.swt.doppelkopf.messages.ToPlayer_StateMsg;
-import de.fh_dortmund.swt.doppelkopf.messages.ToServer_PlayedCardMsg;
+import java.io.Serializable;
 
 //Hibernate Entity
-@SuppressWarnings("resource")
-public class Player{
+public class Player implements Serializable{
 
-	private static Logger logger = Logger.getLogger(Player.class);
-
+	private static final long serialVersionUID = -5634458240601433318L;
 	private String name;
 	private String password;
 	private int victoryPoints;
-
 	    
 
 	public Player(String name, String password) {

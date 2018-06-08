@@ -1,10 +1,12 @@
 package de.fh_dortmund.swt.doppelkopf;
 
+import java.io.Serializable;
+
 import de.fh_dortmund.swt.doppelkopf.enumerations.CardColour;
 import de.fh_dortmund.swt.doppelkopf.enumerations.CardValue;
 import de.fh_dortmund.swt.doppelkopf.enumerations.Suit;
 
-public class Trick {
+public class Trick implements Serializable{
 
 	private Card[] cards = new Card[4];
 	private int lastPlayedCard = -1;
@@ -31,7 +33,7 @@ public class Trick {
 		return cards;
 	}
 
-	public Player evaluate() {
+	public Client evaluate() {
 		//Erste Karte ist zu Beginn automatisch die höchstwertigste
 		Card highestCard = cards[0];
 

@@ -1,6 +1,8 @@
 package de.fh_dortmund.swt.doppelkopf.enumerations;
 
-public enum CardColour {
+import java.io.Serializable;
+
+public enum CardColour implements Serializable{
 
 	CLUB("♣"),
 	SPADE("♠"),

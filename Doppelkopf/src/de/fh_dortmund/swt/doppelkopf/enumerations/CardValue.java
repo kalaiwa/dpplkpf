@@ -1,6 +1,8 @@
 package de.fh_dortmund.swt.doppelkopf.enumerations;
 
-public enum CardValue {
+import java.io.Serializable;
+
+public enum CardValue implements Serializable {
 
 	TEN("10", 10),
 	JACK("J", 2),

@@ -1,5 +1,6 @@
 package de.fh_dortmund.swt.doppelkopf;
 
+import java.io.Serializable;
 import java.util.Arrays;
 import java.util.List;
 
@@ -8,7 +9,10 @@ import de.fh_dortmund.swt.doppelkopf.enumerations.CardValue;
 import de.fh_dortmund.swt.doppelkopf.enumerations.Suit;
 import javafx.util.Pair;
 
-public class Card {
+@SuppressWarnings("restriction")
+public class Card implements Serializable{
+
+	private static final long serialVersionUID = -1319404831682683859L;
 
 	public static final List<Pair<CardColour, CardValue>> trumps = Arrays.asList(
 
@@ -32,7 +36,7 @@ public class Card {
 	private final CardColour colour;
 	private final Suit suit;
 	private final CardValue value;
-	private Player owner;
+	private Client owner;
 
 	public Card(CardColour c, CardValue v) {
 		colour = c;
@@ -58,10 +62,10 @@ public class Card {
 //		this.trickStrength = trickStrength;
 //	}
 
-	public Player getOwner() {
+	public Client getOwner() {
 		return owner;
 	}
-	public void setOwner(Player owner) {
+	public void setOwner(Client owner) {
 		this.owner = owner;
 	}
 

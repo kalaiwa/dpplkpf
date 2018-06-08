@@ -3,16 +3,21 @@ package de.fh_dortmund.swt.doppelkopf.messages;
 import java.util.Arrays;
 
 import de.fh_dortmund.swt.doppelkopf.Player;
-import de.fh_dortmund.swt.doppelkopf.interfaces.Message;
+import de.fh_dortmund.swt.doppelkopf.interfaces.ToClientMessage;
 
-public class ToPlayer_LeaderBoardMsg implements Message {
+public class ToClient_LeaderBoardMsg implements ToClientMessage {
 
-	public static final String type = "ToPlayer_LeaderBoard";
+	private static final long serialVersionUID = -1519541605206710285L;
+
+	public static final String type = "ToClient_LeaderBoard";
+	
+	private String addressee;
 	private Player[] players;
 
-	public ToPlayer_LeaderBoardMsg(Player[] players) {
+	public ToClient_LeaderBoardMsg(String addressee, Player[] players) {
+		this.addressee = addressee;		
 		this.players = players;
-
+		
 		//sort by victory points
 		//TODO richtige Reihenfolge?
 		Arrays.sort(players, (a, b) -> a.getVictoryPoints() - b.getVictoryPoints());
@@ -30,5 +35,15 @@ public class ToPlayer_LeaderBoardMsg implements Message {
 
 	public Player[] getPlayers() {
 		return players;
+	}
+
+	@Override
+	public String getAddressee() {
+		return addressee;
+	}
+
+	@Override
+	public String getType() {
+		return type;
 	}
 }
