@@ -74,31 +74,34 @@ public class Client implements Serializable{
 
 
 	public  Card chooseCard() {
+		logger.info("It's your turn!");
+		if(currentTrick != null) logger.info(currentTrick.toString());
 		int pos = 1;
+		String hand = "Your cards: ";
 		for (Card card : cards) {
-			logger.info(pos + ": " + card.toString() + "    ");
+			hand += pos + ": " + card.toString() + "    ";
 			pos++;
 		}
+		logger.info(hand);
 		boolean validCard = false;
 		int input = 0;
 		Card card = null;
 		while(!validCard) {
-			logger.info("\nEnter card position: ");
+			logger.info("-> Enter card position:");
 			try{
-			input = keyboard.nextInt();
+				input = keyboard.nextInt();
+				if(cards.size()>=input && input>0) {
+					card = cards.get(input-1);
+					validCard = checkSuitToFollow(card);
+					if(!validCard) logger.info("X  Your card sucks!!! ");
+				}
+				else {
+					logger.info("X  Are you even capable of counting?!");
+				}
 			} catch(Exception e) {
-				logger.info("X Maybe you should go back to preschool and learn, what a number is...");
-				continue;
+				logger.info("X  Maybe you should go back to preschool and learn, what a number is...");
+				keyboard.next();
 			}
-			if(cards.size()>=input && input>0) {
-				card = cards.get(input-1);
-				validCard = checkSuitToFollow(card);
-				if(!validCard) System.out.print("X   Your card sucks!!! ");
-			}
-			else {
-				logger.info("X   Are you even capable of counting?!");
-			}
-
 		}
 		cards.remove(input-1);
 		publishMessage(new ToServer_PlayedCardMsg(this, card));
@@ -138,13 +141,13 @@ public class Client implements Serializable{
 	public  void showLoginPrompt() {
 
 		String usernameAttempt = null; 
-		logger.info("Please enter your username: ");
+		logger.info("-> Please enter your username: ");
 		while(usernameAttempt==null)
 			usernameAttempt = keyboard.nextLine(); //TODO NextLine or next?
 
 		String pwAttempt = null;
 		while(pwAttempt ==null) {
-			logger.info("Please enter your password: ");
+			logger.info("-> Please enter your password: ");
 			pwAttempt = keyboard.nextLine(); //TODO NextLine or next?
 		}
 		publishMessage(new ToServer_LoginMsg(this, usernameAttempt, pwAttempt));
@@ -152,7 +155,7 @@ public class Client implements Serializable{
 
 	public  void showLogoutPrompt() {
 		String logout = "";
-		logger.info("Do you want to logout? [y/n]");
+		logger.info("-> Do you want to logout? [y/n]");
 		while(logout.equals("y") && logout.equals("n")) {
 			logout = keyboard.next();
 		}
@@ -252,5 +255,5 @@ public class Client implements Serializable{
 			return false;
 		return true;
 	}
-	
+
 }

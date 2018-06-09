@@ -51,23 +51,9 @@ public class GameManager {
 				instance.handOutCards();
 				while(!instance.game.nextState().equals(State.EVALUATION)) {
 					instance.publishMessage(new ToClient_StateMsg(null, instance.game.getCurrentState()));
-					logger.info(" ############### Round " + (instance.game.getCurrentState().getRoundNo()+1) + " ############### ");
+					logger.info(instance.game.getCurrentState().getStateName());
 					instance.round();
 				}
-				//		HashMap<Player, Integer> points = new HashMap<>(4);
-				//		for(int i = 0; i < 10; i++) {
-				//			Trick round = gm.game.getRounds()[i];
-				//			Player winner = round.evaluate();
-				//			int pts = round.getPoints() + points.get(winner);
-				//			points.put(winner, pts);
-				//		}
-				//		Player winner = null;
-				//		int pts = -1;
-				//		for (Entry<Player, Integer> entry : points.entrySet()) {
-				//			if(entry.getValue()>pts)
-				//		}
-
-
 
 				instance.publishMessage(new ToClient_StateMsg(null, instance.game.nextState()));
 				instance.publishMessage(new ToClient_LeaderBoardMsg(null, Arrays.stream(instance.clients).map(c -> c.getPlayer()).toArray(Player[]::new)));
@@ -78,6 +64,11 @@ public class GameManager {
 				}
 				logger.error(" \nGame Over.");
 				instance.publishMessage(new ToClient_StateMsg(null, instance.game.nextState()));
+				try {
+					Thread.sleep(30000);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
 			}
 			try {
 				Thread.sleep(5000);

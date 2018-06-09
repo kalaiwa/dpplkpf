@@ -19,7 +19,7 @@ public class ToClient_StateMsg implements ToClientMessage {
 	
 	@Override
 	public String getMessage() {
-		return "Game is in state " + state.getStateName();
+		return state.getStateName();
 	}
 
 	public State getState() {

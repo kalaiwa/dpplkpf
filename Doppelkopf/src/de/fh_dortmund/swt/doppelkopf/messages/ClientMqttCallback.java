@@ -49,14 +49,18 @@ public class ClientMqttCallback implements MqttCallback{
 			if(msg.getAddressee().equals(client.getId())) {
 				if(!(msg instanceof ToClient_AddCard)) return;
 				client.addCard(((ToClient_AddCard)msg).getCard());
-				logger.info(msg.getMessage());
+				logger.debug(msg.getMessage());
 			}
 			break;
 		case ToClient_StateMsg.type:
 			if(!(msg instanceof ToClient_StateMsg)) return;
+			State state = ((ToClient_StateMsg) msg).getState();
+			if (state.getRoundNo()>0 && state.getRoundNo()<11) { 
+				logger.info(client.getCurrentTrick().toString() +  "  -  " + client.getCurrentTrick().evaluate().getPlayer().getName() + " won this round (" + client.getCurrentTrick().getPoints() + " pts)");
+				client.setCurrentTrick(null);
+			}
 			logger.info(msg.getMessage());
-			client.setCurrentTrick(null);
-			if (((ToClient_StateMsg) msg).getState().equals(State.GAME_OVER)) client.showLogoutPrompt();
+			if (state.equals(State.GAME_OVER)) client.showLogoutPrompt();
 			break;
 		case ToClient_LoginReactionMsg.type:
 			if(msg.getAddressee().equals(client.getId())) {
@@ -78,8 +82,12 @@ public class ClientMqttCallback implements MqttCallback{
 			if(!(msg instanceof ToClient_NextPlayerMsg)) return;
 			ToClient_NextPlayerMsg nextPlayerMsg = (ToClient_NextPlayerMsg) o;
 			String name = nextPlayerMsg.getPlayerName();
-			if(name.equals(client.getPlayer().getName()))
+			if(name.equals(client.getPlayer().getName())) {
 				client.chooseCard();
+				break;
+			}
+			logger.debug(msg.getMessage());
+			break;
 		case ToClient_LeaderBoardMsg.type:
 		case ToClient_LastTrickMsg.type:
 			logger.info(msg.getMessage());

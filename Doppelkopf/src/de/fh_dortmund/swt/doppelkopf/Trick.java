@@ -8,6 +8,8 @@ import de.fh_dortmund.swt.doppelkopf.enumerations.Suit;
 
 public class Trick implements Serializable{
 
+	private static final long serialVersionUID = -3153340372431595294L;
+
 	private Card[] cards = new Card[4];
 	private int lastPlayedCard = -1;
 	private Suit suitToFollow;
@@ -71,7 +73,7 @@ public class Trick implements Serializable{
 
 	@Override
 	public String toString() {
-		String str = "current trick: ";
+		String str = "Current trick: ";
 		for (Card card : cards) {
 			if(card!=null) str += card.toString() + "   ";
 		}
