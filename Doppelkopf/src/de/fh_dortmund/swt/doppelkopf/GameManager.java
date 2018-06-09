@@ -199,7 +199,6 @@ public class GameManager {
 			}
 		}
 		loggedInClients++;
-		//TODO Für gespeicherten Client auch noch setzen?
 		publishMessage(new ToClient_LoginReactionMsg(client.getId(), player, true));
 	}
 
@@ -214,7 +213,6 @@ public class GameManager {
 			}
 		}
 
-		//aufrücken
 		//TODO prüfen
 		for (int j = i; j < clients.length-1; j++) {
 			clients[i] = clients[i+1];

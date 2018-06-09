@@ -86,6 +86,7 @@ public class Client implements Serializable{
 		boolean validCard = false;
 		int input = 0;
 		Card card = null;
+		try { Thread.sleep(500); } catch (InterruptedException e1) { } //For convenience - focuses on the clients console
 		while(!validCard) {
 			logger.info("-> Enter card position:");
 			try{
@@ -143,12 +144,12 @@ public class Client implements Serializable{
 		String usernameAttempt = null; 
 		logger.info("-> Please enter your username: ");
 		while(usernameAttempt==null)
-			usernameAttempt = keyboard.nextLine(); //TODO NextLine or next?
+			usernameAttempt = keyboard.nextLine();
 
 		String pwAttempt = null;
 		while(pwAttempt ==null) {
 			logger.info("-> Please enter your password: ");
-			pwAttempt = keyboard.nextLine(); //TODO NextLine or next?
+			pwAttempt = keyboard.nextLine();
 		}
 		publishMessage(new ToServer_LoginMsg(this, usernameAttempt, pwAttempt));
 	}

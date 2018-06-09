@@ -19,13 +19,12 @@ public class ToClient_LeaderBoardMsg implements ToClientMessage {
 		this.players = players;
 		
 		//sort by victory points
-		//TODO richtige Reihenfolge?
 		Arrays.sort(players, (a, b) -> a.getVictoryPoints() - b.getVictoryPoints());
 	}
 
 	@Override
 	public String getMessage() {
-		String leaderboard = " ############### Leaderboard ############### \n";
+		String leaderboard = " ############################################################## Leaderboard ################################################################ \n";
 		for (int i = 0; i < players.length; i++) {
 			leaderboard += (i+1) + ". ";
 			leaderboard += players[i].getName() + " (" + players[i].getVictoryPoints() + ")\n";

@@ -66,7 +66,7 @@ public class GameManagerMqttCallback implements MqttCallback {
 
 	@Override
 	public void deliveryComplete(IMqttDeliveryToken token) {
-		//TODO ?
+		// ?
 	}
 
 }
