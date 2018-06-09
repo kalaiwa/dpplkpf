@@ -18,7 +18,7 @@ import de.fh_dortmund.swt.doppelkopf.enumerations.CardValue;
 import de.fh_dortmund.swt.doppelkopf.enumerations.Suit;
 import de.fh_dortmund.swt.doppelkopf.interfaces.Message;
 import de.fh_dortmund.swt.doppelkopf.messages.ClientMqttCallback;
-import de.fh_dortmund.swt.doppelkopf.messages.ToClient_AddCard;
+import de.fh_dortmund.swt.doppelkopf.messages.ToClient_AddCardMsg;
 import de.fh_dortmund.swt.doppelkopf.messages.ToClient_LastTrickMsg;
 import de.fh_dortmund.swt.doppelkopf.messages.ToClient_LeaderBoardMsg;
 import de.fh_dortmund.swt.doppelkopf.messages.ToClient_LoginReactionMsg;
@@ -29,6 +29,9 @@ import de.fh_dortmund.swt.doppelkopf.messages.ToServer_LoginMsg;
 import de.fh_dortmund.swt.doppelkopf.messages.ToServer_LogoutMsg;
 import de.fh_dortmund.swt.doppelkopf.messages.ToServer_PlayedCardMsg;
 
+/**
+ * Manages player input as well as server communication
+ */
 public class Client implements Serializable{
 
 	private static final long serialVersionUID = -3724342480704062462L;
@@ -44,12 +47,19 @@ public class Client implements Serializable{
 	private final String id = System.nanoTime() + System.getProperty("user.name");
 	private transient Trick currentTrick;
 
+	/**
+	 * Lifecycle:
+	 * 1. Connects to MQTT Broker
+	 * 2. Logs in
+	 * 3. Waits for server reaction / successful login
+	 * 4. While logged in: Waits for messages
+	 */
 	public static void main(String[] args) {
 		logger.info("Running");
 		Client instance = new Client();
 		instance.connect();
 		instance.showLoginPrompt();
-		while(instance.getPlayer()==null) {
+		while(instance.getPlayer()==null) { //player will be set on successful login message in Callback Class
 			try { Thread.sleep(100); } catch (InterruptedException e) { }
 		}
 		instance.setLoggedIn(true);
@@ -57,15 +67,17 @@ public class Client implements Serializable{
 			//TODO
 		}
 	}
-
+		
 	public  ArrayList<Card> getCards() {
 		return cards;
 	}
+	/** Sets re flag */
 	public  void setCards(ArrayList<Card> cards) {
 		Card clubsQueen = new Card(CardColour.CLUB, CardValue.QUEEN);
 		if(cards.contains(clubsQueen)) setRe(true);
 		this.cards = cards;
 	}
+	/** Sets re flag */
 	public  void addCard(Card card) {
 		Card clubsQueen = new Card(CardColour.CLUB, CardValue.QUEEN);
 		if(card.equals(clubsQueen)) setRe(true);
@@ -73,6 +85,9 @@ public class Client implements Serializable{
 	}
 
 
+	/** 
+	 * Shows card choice prompts, removes card after valid card input and notifies the server via ToServer_PlayedCardMsg
+	 */
 	public  Card chooseCard() {
 		logger.info("It's your turn!");
 		if(currentTrick != null) logger.info(currentTrick.toString());
@@ -86,7 +101,7 @@ public class Client implements Serializable{
 		boolean validCard = false;
 		int input = 0;
 		Card card = null;
-		try { Thread.sleep(500); } catch (InterruptedException e1) { } //For convenience - focuses on the clients console
+		try { Thread.sleep(500); } catch (InterruptedException e1) { } //For convenience - focuses on this clients console
 		while(!validCard) {
 			logger.info("-> Enter card position:");
 			try{
@@ -101,7 +116,7 @@ public class Client implements Serializable{
 				}
 			} catch(Exception e) {
 				logger.info("X  Maybe you should go back to preschool and learn, what a number is...");
-				keyboard.next();
+				keyboard.next(); //important, else line won't be cleared and thread will be caught in error loop
 			}
 		}
 		cards.remove(input-1);
@@ -109,6 +124,9 @@ public class Client implements Serializable{
 		return card;
 	}
 
+	/**
+	 * Publishes an Message to its topic, serializing it into an byte[] 
+	 */
 	public  void publishMessage(Message msg) {
 		MqttMessage message = new MqttMessage();
 
@@ -116,7 +134,6 @@ public class Client implements Serializable{
 			out.writeObject(msg);
 			out.flush();
 			byte[] bytes = bos.toByteArray();
-
 			message.setPayload(bytes);
 			mqttClient.publish(msg.getType(), message);
 		} catch (IOException e) {
@@ -126,12 +143,15 @@ public class Client implements Serializable{
 		}
 	}
 
-	public  boolean login() {
+	public boolean login() {
 		showLoginPrompt();
 		return true;
 	}
 
-	public  void logout() {
+	/**
+	 * Notifies Server of logout attempt via ToServer_LogoutMsg, disconnects from MQTT Broker afterwards
+	 */
+	public void logout() {
 		publishMessage(new ToServer_LogoutMsg(this));
 		try {
 			mqttClient.disconnect();
@@ -139,7 +159,10 @@ public class Client implements Serializable{
 		keyboard.close();
 	}
 
-	public  void showLoginPrompt() {
+	/**
+	 * Prompts input lines and sends them to server via ToServer_LoginMsg
+	 */
+	public void showLoginPrompt() {
 
 		String usernameAttempt = null; 
 		logger.info("-> Please enter your username: ");
@@ -164,6 +187,10 @@ public class Client implements Serializable{
 	}
 
 
+	/**
+	 * Checks, if client could and does follow a possible suit. If no trick is given, Client will see this as an
+	 * indicator, that he is the first in line, so he's free to pick a suit 
+	 */
 	public  boolean checkSuitToFollow(Card cardToCheck) 
 	{
 		if(currentTrick==null) return true;
@@ -181,13 +208,16 @@ public class Client implements Serializable{
 		}
 	}
 
+	/**
+	 * Connects to MQTT Broker and subscribes to topics
+	 */
 	public void connect() {
 		try {
 			mqttClient = new MqttClient("tcp://localhost:1883", MqttClient.generateClientId());
 			mqttClient.connect();
 			mqttClient.setTimeToWait(100000);
 			mqttClient.setCallback(new ClientMqttCallback(this));
-			mqttClient.subscribe(ToClient_AddCard.type);
+			mqttClient.subscribe(ToClient_AddCardMsg.type);
 			mqttClient.subscribe(ToClient_LastTrickMsg.type);
 			mqttClient.subscribe(ToClient_LeaderBoardMsg.type);
 			mqttClient.subscribe(ToClient_LoginReactionMsg.type);
@@ -233,14 +263,9 @@ public class Client implements Serializable{
 	}
 
 	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		return result;
-	}
-
-	@Override
+	/**
+	 * Only evaluates equality by id
+	 */
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;

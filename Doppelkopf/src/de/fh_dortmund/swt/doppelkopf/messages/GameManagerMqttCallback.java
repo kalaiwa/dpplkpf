@@ -30,7 +30,11 @@ public class GameManagerMqttCallback implements MqttCallback {
 	}
 
 	@Override
+	/**
+	 * Handles incoming messages
+	 */
 	public void messageArrived(String topic, MqttMessage message) throws Exception {
+		//tries to deserialize MQTT message to an ToServerMessage
 		Object o = null;
 		try(ByteArrayInputStream bis = new ByteArrayInputStream(message.getPayload()); ObjectInputStream in = new ObjectInputStream(bis);) {
 			o = in.readObject(); 
@@ -44,19 +48,23 @@ public class GameManagerMqttCallback implements MqttCallback {
 			return;
 		}
 		msg = (ToServerMessage) o;
+		// processes message depending on its type
 		switch (topic) {
 		case ToServer_LoginMsg.type:
+			// redirects login request to GameManager
 			if(!(msg instanceof ToServer_LoginMsg)) return;
 			ToServer_LoginMsg loginMsg = (ToServer_LoginMsg)msg;
 			gameManager.login(loginMsg.getSender(), loginMsg.getUsername(), loginMsg.getPassword());
 			logger.info(msg.getMessage());
 			break;
 		case ToServer_LogoutMsg.type:
+			// redirects logout request to GameManager
 			if(!(msg instanceof ToServer_LogoutMsg)) return;
 			gameManager.logout(((ToServer_LogoutMsg)msg).getSender());
 			logger.info(msg.getMessage());
 			break;
 		case ToServer_PlayedCardMsg.type:
+			// redirects card info to GameManager
 			if(!(msg instanceof ToServer_PlayedCardMsg)) return;
 			gameManager.addPlayedCard(((ToServer_PlayedCardMsg)msg).getCard());
 			logger.info(msg.getMessage());

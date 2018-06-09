@@ -32,12 +32,12 @@ public class Card implements Serializable{
 			new Pair<CardColour, CardValue>(CardColour.DIAMOND, CardValue.TEN),
 			new Pair<CardColour, CardValue>(CardColour.DIAMOND, CardValue.ACE));
 	
-//	private int trickStrength;
 	private final CardColour colour;
 	private final Suit suit;
 	private final CardValue value;
 	private Client owner;
 
+	
 	public Card(CardColour c, CardValue v) {
 		colour = c;
 		value = v;
@@ -46,6 +46,11 @@ public class Card implements Serializable{
 		else suit = colour.toSuit();
 	}
 
+	/**
+	 * Calculates trick strength
+	 * Currently by evaluating its position in trumps, if trump is suit,
+	 * else by its value  
+	 */
 	public int getTrickStrength() {
 		if(suit.equals(Suit.TRUMP)) {
 			return 15-trumps.indexOf(new Pair<CardColour, CardValue>(colour, value));
@@ -58,9 +63,6 @@ public class Card implements Serializable{
 		}
 		
 	}
-//	public void setTrickStrength(int trickStrength) {
-//		this.trickStrength = trickStrength;
-//	}
 
 	public Client getOwner() {
 		return owner;
@@ -93,16 +95,6 @@ public class Card implements Serializable{
 	@Override
 	public String toString() {
 		return colour.toString() + value.toString();
-	}
-
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((colour == null) ? 0 : colour.hashCode());
-		result = prime * result + ((suit == null) ? 0 : suit.hashCode());
-		result = prime * result + ((value == null) ? 0 : value.hashCode());
-		return result;
 	}
 
 	@Override

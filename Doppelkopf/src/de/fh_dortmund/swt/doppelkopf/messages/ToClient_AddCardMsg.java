@@ -3,7 +3,7 @@ package de.fh_dortmund.swt.doppelkopf.messages;
 import de.fh_dortmund.swt.doppelkopf.Card;
 import de.fh_dortmund.swt.doppelkopf.interfaces.ToClientMessage;
 
-public class ToClient_AddCard implements ToClientMessage {
+public class ToClient_AddCardMsg implements ToClientMessage {
 
 	/**
 	 * 
@@ -15,7 +15,7 @@ public class ToClient_AddCard implements ToClientMessage {
 	private String addressee;
 	private Card card;
 	
-	public ToClient_AddCard(String string, Card card) {
+	public ToClient_AddCardMsg(String string, Card card) {
 		this.addressee = string;
 		this.card = card;
 	}

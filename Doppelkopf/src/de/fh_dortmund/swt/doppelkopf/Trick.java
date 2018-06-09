@@ -35,12 +35,15 @@ public class Trick implements Serializable{
 		return cards;
 	}
 
+	/**
+	 * @return owner of highestCard aka the winner
+	 */
 	public Client evaluate() {
-		//Erste Karte ist zu Beginn automatisch die höchstwertigste
+		//First Card is the highest by default
 		Card highestCard = cards[0];
 
 		for (int i = 1; i < 4; i++) {
-			//Wenn Kartenfarbe = Bedienfarbe, oder Trumpf, wird geprüft, ob diese "stärker" als die bisher höchste ist
+			//If card's colour  = suit or trump, checks if card is 'stronger' than previously highest card
 			if(cards[i].getSuit().equals(suitToFollow) || cards[i].isTrump()) {
 				if(cards[i].getTrickStrength() > highestCard.getTrickStrength())
 					highestCard = cards[i];
@@ -49,6 +52,9 @@ public class Trick implements Serializable{
 		return highestCard.getOwner();
 	}
 
+	/**
+	 * Adds card and sets suit to follow if it was the first card in Trick
+	 */
 	public void addCard(Card card) {
 		if(lastPlayedCard==-1) suitToFollow = card.isTrump()? Suit.TRUMP : card.getColour().toSuit();
 		cards[++lastPlayedCard] = card;

@@ -30,7 +30,11 @@ public class ClientMqttCallback implements MqttCallback{
 	}
 
 	@Override
+	/**
+	 * Handles incoming messages
+	 */
 	public void messageArrived(String topic, MqttMessage message) throws Exception {
+		//tries to deserialize MQTT message to an ToClientMessage
 		Object o = null;
 		try(ByteArrayInputStream bis = new ByteArrayInputStream(message.getPayload()); ObjectInputStream in = new ObjectInputStream(bis);) {
 			o = in.readObject(); 
@@ -44,15 +48,20 @@ public class ClientMqttCallback implements MqttCallback{
 		}
 		ToClientMessage msg = (ToClientMessage) o;
 		logger.debug(topic);
+		// processes message depending on its type
 		switch (topic) {
-		case ToClient_AddCard.type:
+		case ToClient_AddCardMsg.type:
+			// if client is the addressee, it adds an card to his hand cards
 			if(msg.getAddressee().equals(client.getId())) {
-				if(!(msg instanceof ToClient_AddCard)) return;
-				client.addCard(((ToClient_AddCard)msg).getCard());
+				if(!(msg instanceof ToClient_AddCardMsg)) return;
+				client.addCard(((ToClient_AddCardMsg)msg).getCard());
 				logger.debug(msg.getMessage());
 			}
 			break;
 		case ToClient_StateMsg.type:
+			// prints state information, 
+			// if last state was a game round adds evaluation info,
+			// if current state is game over, prompts Logout choice
 			if(!(msg instanceof ToClient_StateMsg)) return;
 			State state = ((ToClient_StateMsg) msg).getState();
 			if (state.getRoundNo()>0 && state.getRoundNo()<11) { 
@@ -63,6 +72,7 @@ public class ClientMqttCallback implements MqttCallback{
 			if (state.equals(State.GAME_OVER)) client.showLogoutPrompt();
 			break;
 		case ToClient_LoginReactionMsg.type:
+			//if client is the addressee, it either sets its player info to the received ones on success or reprints the login prompt otherwise
 			if(msg.getAddressee().equals(client.getId())) {
 				if(!(msg instanceof ToClient_LoginReactionMsg)) return;
 				ToClient_LoginReactionMsg loginReaction = (ToClient_LoginReactionMsg) msg;
@@ -70,15 +80,17 @@ public class ClientMqttCallback implements MqttCallback{
 					client.setPlayer(loginReaction.getPlayer());
 					logger.info(msg.getMessage());
 				}
-				else client.showLogoutPrompt();
+				else client.showLoginPrompt();
 			}
 			break;
 		case ToClient_PlayedCardMsg.type:
+			//Updates info about current trick
 			if(!(msg instanceof ToClient_PlayedCardMsg)) return;
 			client.setCurrentTrick(((ToClient_PlayedCardMsg)msg).getTrick());
 			logger.info(msg.getMessage());
 			break;
 		case ToClient_NextPlayerMsg.type:
+			// if client is next player, prompt card choice lines
 			if(!(msg instanceof ToClient_NextPlayerMsg)) return;
 			ToClient_NextPlayerMsg nextPlayerMsg = (ToClient_NextPlayerMsg) o;
 			String name = nextPlayerMsg.getPlayerName();
@@ -88,6 +100,7 @@ public class ClientMqttCallback implements MqttCallback{
 			}
 			logger.debug(msg.getMessage());
 			break;
+		//Only print message text in all other cases
 		case ToClient_LeaderBoardMsg.type:
 		case ToClient_LastTrickMsg.type:
 			logger.info(msg.getMessage());

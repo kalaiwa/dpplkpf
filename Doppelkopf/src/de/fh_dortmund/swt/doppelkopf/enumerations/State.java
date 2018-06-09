@@ -17,11 +17,11 @@ public enum State {
 	EVALUATION(10, " ############################################## Evaluation ############################################### "),
 	GAME_OVER(11, " ############################################## Game Over ################################################ ");
 	
-	private int round;
+	private int roundNo;
 	private String stateName;
 	
 	private State(int round, String stateName) {
-		this.round = round;
+		this.roundNo = round;
 		this.stateName = stateName;
 	}
 	
@@ -31,7 +31,7 @@ public enum State {
     }
     
     public int getRoundNo() {
-    	return round;
+    	return roundNo;
     }
     
     public String getStateName() {
