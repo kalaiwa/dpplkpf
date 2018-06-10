@@ -286,10 +286,14 @@ public class GameManager {
 
 			message.setPayload(bytes);
 			mqttClient.publish(msg.getType(), message);
+			
+			Thread.sleep(100);
 		} catch (IOException e) {
 			logger.error("Could not serialize Message '" + msg.getMessage() + "': " + e.getMessage());
 		} catch (MqttException e) {
 			logger.error("Problems while publishing Message '" + msg.getMessage() + "':" + e.getMessage());
+		} catch (InterruptedException e) {
+			logger.error("Thread won't go to sleep!");
 		}
 	}
 
