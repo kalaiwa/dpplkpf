@@ -1,21 +1,27 @@
 package de.fh_dortmund.swt.doppelkopf;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
+import javax.persistence.*;
 
 //Hibernate Entity
+@Entity
 public class Player implements Serializable{
 
 	private static final long serialVersionUID = -5634458240601433318L;
+	@Id
 	private String name;
 	private String password;
 	private int victoryPoints;
-	    
-
+	private LocalDateTime date;
+	public Player()
+	{
+		
+	}
 	public Player(String name, String password) {
 		this.name = name;
 		this.password = password;
 		this.victoryPoints = 0;
-		
 	}
 
 	public String getName() {
@@ -39,5 +45,13 @@ public class Player implements Serializable{
 	}
 	public void setVictoryPoints(int victoryPoints) {
 		this.victoryPoints = victoryPoints;
+	}
+	public LocalDateTime getDate()
+	{
+		return this.date;
+	}
+	public void setDate(LocalDateTime now) {
+		// TODO Auto-generated method stub
+		this.date=now;
 	}
 }

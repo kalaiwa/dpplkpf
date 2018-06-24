@@ -4,11 +4,12 @@ import java.io.Serializable;
 import java.util.Arrays;
 import java.util.List;
 
+import javax.persistence.*;
+
 import de.fh_dortmund.swt.doppelkopf.enumerations.CardColour;
 import de.fh_dortmund.swt.doppelkopf.enumerations.CardValue;
 import de.fh_dortmund.swt.doppelkopf.enumerations.Suit;
 import javafx.util.Pair;
-
 @SuppressWarnings("restriction")
 public class Card implements Serializable{
 
@@ -35,9 +36,8 @@ public class Card implements Serializable{
 	private final CardColour colour;
 	private final Suit suit;
 	private final CardValue value;
-	private Client owner;
+	private Client owner;	
 
-	
 	public Card(CardColour c, CardValue v) {
 		colour = c;
 		value = v;
@@ -90,8 +90,6 @@ public class Card implements Serializable{
 	public Suit getSuit() {
 		return suit;
 	}
-
-
 	@Override
 	public String toString() {
 		return colour.toString() + value.toString();

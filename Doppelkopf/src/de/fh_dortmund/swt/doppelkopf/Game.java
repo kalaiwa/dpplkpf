@@ -1,16 +1,18 @@
 package de.fh_dortmund.swt.doppelkopf;
 
+import javax.persistence.*;
+
 import de.fh_dortmund.swt.doppelkopf.enumerations.Announcement;
 import de.fh_dortmund.swt.doppelkopf.enumerations.State;
 import javafx.util.Pair;
 
 @SuppressWarnings("restriction")
 public class Game{
-
+	private int game_Id;
 	private Trick[] rounds = new Trick[10];
 	private State currentState = State.LOBBY;
-	private int startingClient = 0; //first Client to log in
-	private int activeClient = 0; 
+	transient private int startingClient = 0; //first Client to log in
+	transient private int activeClient = 0; 
 	private Pair<Announcement, Client> reAnnouncement;
 	private Pair<Announcement, Client> contraAnnouncement;
 	
@@ -90,8 +92,4 @@ public class Game{
 	public Trick getCurrentRound() {
 		return rounds[currentState.getRoundNo()];
 	}
-
-	
-	
-	
 }
