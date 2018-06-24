@@ -8,6 +8,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
+import java.time.LocalDateTime;
+
+import javax.persistence.*;
+
 import org.apache.log4j.Logger;
 import org.eclipse.paho.client.mqttv3.MqttClient;
 import org.eclipse.paho.client.mqttv3.MqttException;
@@ -35,12 +39,11 @@ import de.fh_dortmund.swt.doppelkopf.messages.ToServer_PlayedCardMsg;
 public class GameManager {
 
 	private static final Logger logger = Logger.getLogger(GameManager.class);
-
 	private Game game;
 	private Client[] clients = new Client[4];
 	private static boolean waitingForPlayedCard = false;
 	private static int loggedInClients = 0;
-	private MqttClient mqttClient;
+	transient private MqttClient mqttClient;
 
 
 	/** 
@@ -74,7 +77,18 @@ public class GameManager {
 				logger.info("Victory points re-party: " + instance.calcVictoryPoints());
 				logger.info("Players in re-party: ");
 				for(int i = 0; i<4 ; i++) {
-					if(instance.clients[i].isRe()) logger.info(instance.clients[i].getPlayer().getName() + "   ");
+					if(instance.clients[i].isRe())
+					{
+						instance.clients[i].getPlayer().setVictoryPoints(instance.calcVictoryPoints());
+						logger.info(instance.clients[i].getPlayer().getName() + "   ");
+					}
+					else
+						instance.clients[i].getPlayer().setVictoryPoints(-instance.calcVictoryPoints());
+				}
+				for(int i=0;i<instance.clients.length;i++)
+				{	
+					instance.clients[i].getPlayer().setDate(LocalDateTime.now());
+					Manager.start(instance.clients[i].getPlayer());
 				}
 				logger.error(" \nGame Over.");
 				instance.publishMessage(new ToClient_StateMsg(null, instance.game.nextState()));
@@ -142,13 +156,15 @@ public class GameManager {
 	public void handOutCards() {
 		ArrayList<Card> deck = createDeck();
 		Random rand = new Random();
+		Card clubsQueen=new Card(CardColour.CLUB,CardValue.QUEEN);
 		for(int client = 0; client < 4; client ++) {
 			for(int i = 10; i > 0; i--) {
 				int idx = rand.nextInt(deck.size());
 				Card card = deck.get(idx);
 				deck.remove(idx);
 				card.setOwner(clients[client]);
-
+				if(card.equals(clubsQueen))
+					clients[client].setRe(true);
 				publishMessage(new ToClient_AddCardMsg(clients[client].getId(), card));
 			}
 		}

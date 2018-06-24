@@ -8,6 +8,8 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import javax.persistence.*;
+
 import org.apache.log4j.Logger;
 import org.eclipse.paho.client.mqttv3.MqttClient;
 import org.eclipse.paho.client.mqttv3.MqttException;
@@ -38,10 +40,11 @@ public class Client implements Serializable{
 
 	private static final Logger logger = Logger.getLogger(Client.class);
 
-	private boolean loggedIn = false;
+	private transient boolean loggedIn = false;
 	private boolean re = false;
-	private ArrayList<Card> cards = new ArrayList<>();
+	private transient ArrayList<Card> cards = new ArrayList<>();
 	private transient MqttClient mqttClient;
+
 	private Player me;
 	private transient Scanner keyboard = new Scanner(System.in);
 	private final String id = System.nanoTime() + System.getProperty("user.name");
@@ -67,7 +70,10 @@ public class Client implements Serializable{
 			//TODO
 		}
 	}
+	public Client()
+	{
 		
+	}
 	public  ArrayList<Card> getCards() {
 		return cards;
 	}
