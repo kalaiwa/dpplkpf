@@ -12,6 +12,7 @@ import java.time.LocalDateTime;
 
 import javax.persistence.*;
 
+import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 import org.eclipse.paho.client.mqttv3.MqttClient;
 import org.eclipse.paho.client.mqttv3.MqttException;
@@ -26,6 +27,7 @@ import de.fh_dortmund.swt.doppelkopf.messages.ToClient_AddCardMsg;
 import de.fh_dortmund.swt.doppelkopf.messages.ToClient_LeaderBoardMsg;
 import de.fh_dortmund.swt.doppelkopf.messages.ToClient_LoginReactionMsg;
 import de.fh_dortmund.swt.doppelkopf.messages.ToClient_NextPlayerMsg;
+import de.fh_dortmund.swt.doppelkopf.messages.ToClient_OverallScoreMsg;
 import de.fh_dortmund.swt.doppelkopf.messages.ToClient_PlayedCardMsg;
 import de.fh_dortmund.swt.doppelkopf.messages.ToClient_StateMsg;
 import de.fh_dortmund.swt.doppelkopf.messages.ToServer_LoginMsg;
@@ -37,7 +39,6 @@ import de.fh_dortmund.swt.doppelkopf.messages.ToServer_PlayedCardMsg;
  *
  */
 public class GameManager {
-
 	private static final Logger logger = Logger.getLogger(GameManager.class);
 	private Game game;
 	private Client[] clients = new Client[4];
@@ -72,8 +73,6 @@ public class GameManager {
 				}
 
 				instance.publishMessage(new ToClient_StateMsg(null, instance.game.nextState()));
-				//generates Player[] from Client[] to create a ToClient_LeaderBoardMsg
-				instance.publishMessage(new ToClient_LeaderBoardMsg(null, Arrays.stream(instance.clients).map(c -> c.getPlayer()).toArray(Player[]::new)));
 				logger.info("Victory points re-party: " + instance.calcVictoryPoints());
 				logger.info("Players in re-party: ");
 				for(int i = 0; i<4 ; i++) {
@@ -85,13 +84,16 @@ public class GameManager {
 					else
 						instance.clients[i].getPlayer().setVictoryPoints(-instance.calcVictoryPoints());
 				}
+				
+				//generates Player[] from Client[] to create a ToClient_LeaderBoardMsg
+				instance.publishMessage(new ToClient_LeaderBoardMsg(null, Arrays.stream(instance.clients).map(c -> c.getPlayer()).toArray(Player[]::new)));
+				
 				for(int i=0;i<instance.clients.length;i++)
 				{	
 					instance.clients[i].getPlayer().setDate(LocalDateTime.now());
 					Manager.start(instance.clients[i].getPlayer());
 				}
 				logger.error(" \nGame Over.");
-				instance.publishMessage(new ToClient_StateMsg(null, instance.game.nextState()));
 				try {
 					Thread.sleep(30000);
 				} catch (InterruptedException e) {
@@ -210,7 +212,7 @@ public class GameManager {
 			publishMessage(new ToClient_NextPlayerMsg(null, clients[game.getActiveClient()].getPlayer().getName()));
 			while(waitingForPlayedCard) {
 				try {
-					Thread.sleep(100);
+					Thread.sleep(300);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
@@ -278,7 +280,7 @@ public class GameManager {
 		try {
 			mqttClient = new MqttClient("tcp://localhost:1883", MqttClient.generateClientId());
 			mqttClient.connect();
-			mqttClient.setTimeToWait(1000000);
+			mqttClient.setTimeToWait(10000000);
 			mqttClient.setCallback(new GameManagerMqttCallback(this));
 			mqttClient.subscribe(ToServer_LoginMsg.type);
 			mqttClient.subscribe(ToServer_LogoutMsg.type);
@@ -311,6 +313,12 @@ public class GameManager {
 		} catch (InterruptedException e) {
 			logger.error("Thread won't go to sleep!");
 		}
+	}
+
+
+
+	public void sendLeaderboard(Client sender) {
+		publishMessage(new ToClient_OverallScoreMsg(sender.getId(), Manager.askLeaderboard()));
 	}
 
 }

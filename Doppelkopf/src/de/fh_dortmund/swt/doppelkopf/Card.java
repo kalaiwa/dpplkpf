@@ -4,8 +4,6 @@ import java.io.Serializable;
 import java.util.Arrays;
 import java.util.List;
 
-import javax.persistence.*;
-
 import de.fh_dortmund.swt.doppelkopf.enumerations.CardColour;
 import de.fh_dortmund.swt.doppelkopf.enumerations.CardValue;
 import de.fh_dortmund.swt.doppelkopf.enumerations.Suit;

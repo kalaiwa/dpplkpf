@@ -69,6 +69,12 @@ public class GameManagerMqttCallback implements MqttCallback {
 			gameManager.addPlayedCard(((ToServer_PlayedCardMsg)msg).getCard());
 			logger.info(msg.getMessage());
 			break;
+		case ToServer_LeaderBoardMsg.type:
+			// redirects card info to GameManager
+			ToServer_LeaderBoardMsg leaderboardMsg = (ToServer_LeaderBoardMsg) msg;
+			gameManager.sendLeaderboard(leaderboardMsg.getSender());
+			logger.info(msg.getMessage());
+			break;
 		}
 	}
 

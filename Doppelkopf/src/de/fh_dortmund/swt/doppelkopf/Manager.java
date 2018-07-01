@@ -1,4 +1,13 @@
 package de.fh_dortmund.swt.doppelkopf;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+
 import javax.persistence.*;
 
 import org.hibernate.HibernateException;
@@ -14,6 +23,12 @@ import org.hibernate.tool.hbm2ddl.SchemaExport;
 public class Manager {
 	private static SessionFactory factory;
 	private static ServiceRegistry registry;
+	
+	public static void main(String[] args) {
+		//Manager.start(null);
+		System.out.println(Manager.askLeaderboard());
+	}
+	
 	public static void start(Object obj)
 	{
 		try
@@ -51,6 +66,29 @@ public class Manager {
 			System.out.println("##############################################");
 			he.printStackTrace();
 		}
+	}
+	
+	public static String askLeaderboard() {
+		String url = "jdbc:postgresql://localhost:5432/Doppelkopf_Table";
+        String user = "postgres";
+        String password = "fadr2541994*";
+        String leaderboardString = "";
+
+        try (Connection con = DriverManager.getConnection(url, user, password);
+                Statement st = con.createStatement();
+                ResultSet rs = st.executeQuery("SELECT * FROM public.player")) {
+
+            while (rs.next()) {
+                String name = rs.getString("name");
+                int points = rs.getInt("victorypoints");
+                leaderboardString += "Name: " + name + "|| Punkte: " + points + "\n"; 
+            }
+            
+            return leaderboardString;
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+		return leaderboardString;
 	}
 
 }

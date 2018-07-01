@@ -24,7 +24,7 @@ public class ToClient_LeaderBoardMsg implements ToClientMessage {
 
 	@Override
 	public String getMessage() {
-		String leaderboard = " ############################################################## Leaderboard ################################################################ \n";
+		String leaderboard = "";
 		for (int i = 0; i < players.length; i++) {
 			leaderboard += (i+1) + ". ";
 			leaderboard += players[i].getName() + " (" + players[i].getVictoryPoints() + ")\n";

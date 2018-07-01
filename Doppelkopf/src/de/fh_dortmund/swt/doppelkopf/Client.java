@@ -1,5 +1,7 @@
 package de.fh_dortmund.swt.doppelkopf;
 
+import java.beans.PropertyChangeListener;
+import java.beans.PropertyChangeSupport;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutput;
@@ -8,12 +10,11 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import javax.persistence.*;
-
 import org.apache.log4j.Logger;
 import org.eclipse.paho.client.mqttv3.MqttClient;
 import org.eclipse.paho.client.mqttv3.MqttException;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
+import org.eclipse.paho.client.mqttv3.MqttSecurityException;
 
 import de.fh_dortmund.swt.doppelkopf.enumerations.CardColour;
 import de.fh_dortmund.swt.doppelkopf.enumerations.CardValue;
@@ -27,6 +28,7 @@ import de.fh_dortmund.swt.doppelkopf.messages.ToClient_LoginReactionMsg;
 import de.fh_dortmund.swt.doppelkopf.messages.ToClient_NextPlayerMsg;
 import de.fh_dortmund.swt.doppelkopf.messages.ToClient_PlayedCardMsg;
 import de.fh_dortmund.swt.doppelkopf.messages.ToClient_StateMsg;
+import de.fh_dortmund.swt.doppelkopf.messages.ToServer_LeaderBoardMsg;
 import de.fh_dortmund.swt.doppelkopf.messages.ToServer_LoginMsg;
 import de.fh_dortmund.swt.doppelkopf.messages.ToServer_LogoutMsg;
 import de.fh_dortmund.swt.doppelkopf.messages.ToServer_PlayedCardMsg;
@@ -44,11 +46,11 @@ public class Client implements Serializable{
 	private boolean re = false;
 	private transient ArrayList<Card> cards = new ArrayList<>();
 	private transient MqttClient mqttClient;
-
 	private Player me;
 	private transient Scanner keyboard = new Scanner(System.in);
 	private final String id = System.nanoTime() + System.getProperty("user.name");
 	private transient Trick currentTrick;
+	private PropertyChangeSupport propertyChangeSupport;
 
 	/**
 	 * Lifecycle:
@@ -57,23 +59,18 @@ public class Client implements Serializable{
 	 * 3. Waits for server reaction / successful login
 	 * 4. While logged in: Waits for messages
 	 */
-	public static void main(String[] args) {
-		logger.info("Running");
-		Client instance = new Client();
-		instance.connect();
-		instance.showLoginPrompt();
-		while(instance.getPlayer()==null) { //player will be set on successful login message in Callback Class
-			try { Thread.sleep(100); } catch (InterruptedException e) { }
-		}
-		instance.setLoggedIn(true);
-		while(instance.isLoggedIn()) {
-			//TODO
-		}
-	}
-	public Client()
+	
+	public Client(PropertyChangeListener listener)
 	{
+		logger.info("Running");
 		
+		propertyChangeSupport = new PropertyChangeSupport(this);
+		
+		propertyChangeSupport.addPropertyChangeListener(listener);
+		
+		connect();
 	}
+
 	public  ArrayList<Card> getCards() {
 		return cards;
 	}
@@ -94,7 +91,7 @@ public class Client implements Serializable{
 	/** 
 	 * Shows card choice prompts, removes card after valid card input and notifies the server via ToServer_PlayedCardMsg
 	 */
-	public  Card chooseCard() {
+	public Card chooseCard() {
 		logger.info("It's your turn!");
 		if(currentTrick != null) logger.info(currentTrick.toString());
 		int pos = 1;
@@ -143,7 +140,7 @@ public class Client implements Serializable{
 			message.setPayload(bytes);
 			mqttClient.publish(msg.getType(), message);
 			
-			Thread.sleep(100);
+			Thread.sleep(300);
 		} catch (IOException e) {
 			logger.error("Could not serialize Message '" + msg.getMessage() + "': " + e.getMessage());
 		} catch (MqttException e) {
@@ -153,9 +150,8 @@ public class Client implements Serializable{
 		}
 	}
 
-	public boolean login() {
-		showLoginPrompt();
-		return true;
+	public void login(String username, String password) {
+		publishMessage(new ToServer_LoginMsg(this, username, password));
 	}
 
 	/**
@@ -168,34 +164,6 @@ public class Client implements Serializable{
 		} catch (MqttException e) { }
 		keyboard.close();
 	}
-
-	/**
-	 * Prompts input lines and sends them to server via ToServer_LoginMsg
-	 */
-	public void showLoginPrompt() {
-
-		String usernameAttempt = null; 
-		logger.info("-> Please enter your username: ");
-		while(usernameAttempt==null)
-			usernameAttempt = keyboard.nextLine();
-
-		String pwAttempt = null;
-		while(pwAttempt ==null) {
-			logger.info("-> Please enter your password: ");
-			pwAttempt = keyboard.nextLine();
-		}
-		publishMessage(new ToServer_LoginMsg(this, usernameAttempt, pwAttempt));
-	}
-
-	public  void showLogoutPrompt() {
-		String logout = "";
-		logger.info("-> Do you want to logout? [y/n]");
-		while(logout.equals("y") && logout.equals("n")) {
-			logout = keyboard.next();
-		}
-		if(logout.equals("y")) logout();
-	}
-
 
 	/**
 	 * Checks, if client could and does follow a possible suit. If no trick is given, Client will see this as an
@@ -225,7 +193,7 @@ public class Client implements Serializable{
 		try {
 			mqttClient = new MqttClient("tcp://localhost:1883", MqttClient.generateClientId());
 			mqttClient.connect();
-			mqttClient.setTimeToWait(100000);
+			mqttClient.setTimeToWait(1000000);
 			mqttClient.setCallback(new ClientMqttCallback(this));
 			mqttClient.subscribe(ToClient_AddCardMsg.type);
 			mqttClient.subscribe(ToClient_LastTrickMsg.type);
@@ -270,8 +238,18 @@ public class Client implements Serializable{
 
 	public void setCurrentTrick(Trick currentTrick) {
 		this.currentTrick = currentTrick;
+		propertyChangeSupport.firePropertyChange("CurrentTrickProperty", null, currentTrick);
+	}
+	
+	public void signalLoginSuccessfull(boolean success) {
+		isLoggedIn();
+		propertyChangeSupport.firePropertyChange("LoginSuccessfullProperty", false, success);
 	}
 
+	public void signalGameStart() {
+		propertyChangeSupport.firePropertyChange("GameStartProperty", false, true);
+	}
+	
 	@Override
 	/**
 	 * Only evaluates equality by id
@@ -292,4 +270,43 @@ public class Client implements Serializable{
 		return true;
 	}
 
+	public void signalNewMessage(String msg) {
+		propertyChangeSupport.firePropertyChange("NewMessageProperty", null, msg);
+	}
+
+	public void signalYourTurn(boolean turn) {
+		propertyChangeSupport.firePropertyChange("IsClientsTurnProperty", false, turn);
+	}
+	
+	public void signalValidCard(boolean b) {
+		propertyChangeSupport.firePropertyChange("IsValidCardProperty", false, b);
+	}
+
+	public void playCard(int position) {
+		boolean validCard = checkSuitToFollow(cards.get(position));
+		if(!validCard) {
+			signalValidCard(validCard);
+			signalNewMessage("X  Your card sucks!!! ");
+		}
+		else {
+			signalValidCard(validCard);
+			publishMessage(new ToServer_PlayedCardMsg(this, cards.remove(position)));
+		}
+	}
+
+	public void signalNextRound() {
+		propertyChangeSupport.firePropertyChange("NextRoundProperty", false, true);
+	}
+
+	public void signalGameScore(String gameScore) {
+		propertyChangeSupport.firePropertyChange("GameScoreProperty", null, gameScore);
+	}
+	
+	public void signalLeaderBoard(String leaderboardString) {
+		propertyChangeSupport.firePropertyChange("LeaderboardProperty", null, leaderboardString);
+	}
+
+	public void askLeaderboard() {
+		publishMessage(new ToServer_LeaderBoardMsg(this));
+	}
 }
