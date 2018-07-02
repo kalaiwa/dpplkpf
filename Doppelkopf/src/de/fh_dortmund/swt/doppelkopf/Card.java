@@ -8,7 +8,6 @@ import de.fh_dortmund.swt.doppelkopf.enumerations.CardColour;
 import de.fh_dortmund.swt.doppelkopf.enumerations.CardValue;
 import de.fh_dortmund.swt.doppelkopf.enumerations.Suit;
 import javafx.util.Pair;
-@SuppressWarnings("restriction")
 public class Card implements Serializable{
 
 	private static final long serialVersionUID = -1319404831682683859L;

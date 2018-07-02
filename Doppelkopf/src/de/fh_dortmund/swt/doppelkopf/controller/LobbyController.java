@@ -1,7 +1,6 @@
 package de.fh_dortmund.swt.doppelkopf.controller;
 
 import de.fh_dortmund.swt.doppelkopf.dataexcange.LobbyDataModel;
-import de.fh_dortmund.swt.doppelkopf.dataexcange.MenuDataModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

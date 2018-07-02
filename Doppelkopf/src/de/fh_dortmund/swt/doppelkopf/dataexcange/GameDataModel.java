@@ -3,7 +3,6 @@ package de.fh_dortmund.swt.doppelkopf.dataexcange;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 import java.util.ArrayList;
-import java.util.Map;
 
 import de.fh_dortmund.swt.doppelkopf.Card;
 import de.fh_dortmund.swt.doppelkopf.Trick;
@@ -17,7 +16,6 @@ public class GameDataModel {
 	private int lastPlayedCard;
 	private Button lastPressedButton;
 	private ArrayList<Button> disabledButtons;
-	private Trick currentTrick;
 	
 	public GameDataModel() {
 		appSupport = new PropertyChangeSupport(this);

@@ -14,7 +14,6 @@ import org.apache.log4j.Logger;
 import org.eclipse.paho.client.mqttv3.MqttClient;
 import org.eclipse.paho.client.mqttv3.MqttException;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
-import org.eclipse.paho.client.mqttv3.MqttSecurityException;
 
 import de.fh_dortmund.swt.doppelkopf.enumerations.CardColour;
 import de.fh_dortmund.swt.doppelkopf.enumerations.CardValue;

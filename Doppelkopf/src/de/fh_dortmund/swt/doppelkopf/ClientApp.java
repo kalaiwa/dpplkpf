@@ -1,7 +1,5 @@
 package de.fh_dortmund.swt.doppelkopf;
 
-import java.beans.PropertyChangeEvent;
-
 import de.fh_dortmund.swt.doppelkopf.controller.GameController;
 import de.fh_dortmund.swt.doppelkopf.controller.GameOverController;
 import de.fh_dortmund.swt.doppelkopf.controller.LeaderboardController;

@@ -1,14 +1,10 @@
 package de.fh_dortmund.swt.doppelkopf;
 
-import javax.persistence.*;
-
 import de.fh_dortmund.swt.doppelkopf.enumerations.Announcement;
 import de.fh_dortmund.swt.doppelkopf.enumerations.State;
 import javafx.util.Pair;
 
-@SuppressWarnings("restriction")
 public class Game{
-	private int game_Id;
 	private Trick[] rounds = new Trick[10];
 	private State currentState = State.LOBBY;
 	transient private int startingClient = 0; //first Client to log in
