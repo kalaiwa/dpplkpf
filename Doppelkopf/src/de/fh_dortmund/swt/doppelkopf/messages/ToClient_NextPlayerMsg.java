@@ -2,6 +2,9 @@ package de.fh_dortmund.swt.doppelkopf.messages;
 
 import de.fh_dortmund.swt.doppelkopf.interfaces.ToClientMessage;
 
+/**
+ * Notifies Clients that it's the next players turn
+ */
 public class ToClient_NextPlayerMsg implements ToClientMessage {
 
 	private static final long serialVersionUID = -8720777268181163831L;

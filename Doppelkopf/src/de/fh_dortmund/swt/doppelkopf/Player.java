@@ -4,7 +4,6 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 import javax.persistence.*;
 
-//Hibernate Entity
 @Entity
 public class Player implements Serializable{
 

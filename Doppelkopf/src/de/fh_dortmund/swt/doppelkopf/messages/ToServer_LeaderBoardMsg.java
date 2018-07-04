@@ -3,6 +3,9 @@ package de.fh_dortmund.swt.doppelkopf.messages;
 import de.fh_dortmund.swt.doppelkopf.Client;
 import de.fh_dortmund.swt.doppelkopf.interfaces.ToServerMessage;
 
+/**
+ * Requests leaderboard info from server
+ */
 public class ToServer_LeaderBoardMsg implements ToServerMessage {
 
 	private static final long serialVersionUID = -2101571612241831965L;

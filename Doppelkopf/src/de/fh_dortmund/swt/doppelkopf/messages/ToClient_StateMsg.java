@@ -3,6 +3,9 @@ package de.fh_dortmund.swt.doppelkopf.messages;
 import de.fh_dortmund.swt.doppelkopf.enumerations.State;
 import de.fh_dortmund.swt.doppelkopf.interfaces.ToClientMessage;
 
+/**
+ * Informs the Client of a state change
+ */
 public class ToClient_StateMsg implements ToClientMessage {
 
 	private static final long serialVersionUID = -1621405473434913986L;

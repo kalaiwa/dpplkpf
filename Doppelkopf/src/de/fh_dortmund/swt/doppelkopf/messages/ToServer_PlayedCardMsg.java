@@ -4,6 +4,9 @@ import de.fh_dortmund.swt.doppelkopf.Card;
 import de.fh_dortmund.swt.doppelkopf.Client;
 import de.fh_dortmund.swt.doppelkopf.interfaces.ToServerMessage;
 
+/**
+ * Informs the server of a played Card
+ */
 public class ToServer_PlayedCardMsg implements ToServerMessage {
 
 	private static final long serialVersionUID = -850857137961301271L;

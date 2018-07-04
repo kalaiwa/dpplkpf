@@ -2,6 +2,9 @@ package de.fh_dortmund.swt.doppelkopf.messages;
 
 import de.fh_dortmund.swt.doppelkopf.interfaces.ToClientMessage;
 
+/**
+ * Sends a leaderboard String to the Client
+ */
 public class ToClient_OverallScoreMsg implements ToClientMessage{
 
 	private static final long serialVersionUID = -1519541605206710285L;

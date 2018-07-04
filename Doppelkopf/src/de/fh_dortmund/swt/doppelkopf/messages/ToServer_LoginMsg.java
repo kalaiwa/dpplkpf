@@ -3,6 +3,9 @@ package de.fh_dortmund.swt.doppelkopf.messages;
 import de.fh_dortmund.swt.doppelkopf.Client;
 import de.fh_dortmund.swt.doppelkopf.interfaces.ToServerMessage;
 
+/**
+ * Sends a login request to server
+ */
 public class ToServer_LoginMsg implements ToServerMessage {
 
 	private static final long serialVersionUID = -2101571612241831965L;

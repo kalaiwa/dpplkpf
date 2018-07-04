@@ -3,6 +3,9 @@ package de.fh_dortmund.swt.doppelkopf.messages;
 import de.fh_dortmund.swt.doppelkopf.Client;
 import de.fh_dortmund.swt.doppelkopf.interfaces.ToServerMessage;
 
+/**
+ * Informs the server of logout 
+ */
 public class ToServer_LogoutMsg implements ToServerMessage {
 
 	private static final long serialVersionUID = 1816110379883391660L;

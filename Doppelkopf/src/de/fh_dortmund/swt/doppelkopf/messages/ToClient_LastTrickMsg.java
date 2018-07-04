@@ -4,6 +4,9 @@ import de.fh_dortmund.swt.doppelkopf.Card;
 import de.fh_dortmund.swt.doppelkopf.Trick;
 import de.fh_dortmund.swt.doppelkopf.interfaces.ToClientMessage;
 
+/**
+ * Contains the last played trick
+ */
 public class ToClient_LastTrickMsg implements ToClientMessage {
 
 	private static final long serialVersionUID = 1923535204408433590L;

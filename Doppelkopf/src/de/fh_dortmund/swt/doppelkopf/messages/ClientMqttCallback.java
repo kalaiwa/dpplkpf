@@ -13,6 +13,9 @@ import de.fh_dortmund.swt.doppelkopf.Client;
 import de.fh_dortmund.swt.doppelkopf.enumerations.State;
 import de.fh_dortmund.swt.doppelkopf.interfaces.ToClientMessage;
 
+/**
+ * Handles all messages to Client via the MQTT Broker
+ */
 public class ClientMqttCallback implements MqttCallback{
 
 	private static final Logger logger = Logger.getLogger(Client.class);

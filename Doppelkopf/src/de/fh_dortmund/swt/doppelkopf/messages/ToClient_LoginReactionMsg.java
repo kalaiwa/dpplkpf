@@ -3,6 +3,9 @@ package de.fh_dortmund.swt.doppelkopf.messages;
 import de.fh_dortmund.swt.doppelkopf.Player;
 import de.fh_dortmund.swt.doppelkopf.interfaces.ToClientMessage;
 
+/**
+ * Informs the Client how successful his login attempt was
+ */
 public class ToClient_LoginReactionMsg implements ToClientMessage {
 
 	private static final long serialVersionUID = -4304791908032282967L;

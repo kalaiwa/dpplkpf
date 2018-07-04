@@ -23,6 +23,9 @@ public class Manager {
 		System.out.println(Manager.askLeaderboard());
 	}
 	
+	/**
+	 *  Configures and builds a Sessionfactory, uses it to open a session to persist the given object
+	 */
 	public static void start(Object obj)
 	{
 		try

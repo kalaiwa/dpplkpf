@@ -6,7 +6,7 @@ import de.fh_dortmund.swt.doppelkopf.interfaces.ToClientMessage;
 public class ToClient_AddCardMsg implements ToClientMessage {
 
 	/**
-	 * 
+	 * Informs the Client that a card has been added to his deck
 	 */
 	private static final long serialVersionUID = -6688409705852279728L;
 

@@ -14,6 +14,9 @@ import de.fh_dortmund.swt.doppelkopf.GameManager;
 import de.fh_dortmund.swt.doppelkopf.interfaces.Message;
 import de.fh_dortmund.swt.doppelkopf.interfaces.ToServerMessage;
 
+/**
+ * Handles all messages to Srver via the MQTT Broker
+ */
 public class GameManagerMqttCallback implements MqttCallback {
 
 	private static Logger logger = Logger.getLogger(GameManager.class);

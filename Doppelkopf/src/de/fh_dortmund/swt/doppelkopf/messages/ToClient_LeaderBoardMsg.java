@@ -5,6 +5,9 @@ import java.util.Arrays;
 import de.fh_dortmund.swt.doppelkopf.Player;
 import de.fh_dortmund.swt.doppelkopf.interfaces.ToClientMessage;
 
+/**
+ * Sends player info to Client so he can build the leaderboard
+ */
 public class ToClient_LeaderBoardMsg implements ToClientMessage {
 
 	private static final long serialVersionUID = -1519541605206710285L;

@@ -4,6 +4,9 @@ import de.fh_dortmund.swt.doppelkopf.Card;
 import de.fh_dortmund.swt.doppelkopf.Trick;
 import de.fh_dortmund.swt.doppelkopf.interfaces.ToClientMessage;
 
+/**
+ * Informs the clients, that a new card has been played
+ */
 public class ToClient_PlayedCardMsg implements ToClientMessage {
 
 	private static final long serialVersionUID = 1628009996338977185L;
