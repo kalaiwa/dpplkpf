@@ -39200,3 +39200,2213 @@ Game Over.
 12:41:54 INFO  -  Card  Handout 
 12:41:54 INFO  -  Card  Handout 
 12:45:07 INFO  - Running
+15:09:19 INFO  - Running
+15:09:21 ERROR - Could not connect to MQTT Broker (Verbindung zu Server kann nicht hergestellt werden)
+15:09:47 INFO  - Running
+15:10:32 INFO  - Running
+15:10:43 INFO  - Login was successful
+15:10:43 INFO  - Dennis tries to login
+15:10:48 INFO  - Running
+15:10:56 INFO  - Login was successful
+15:10:56 INFO  - Mia tries to login
+15:11:01 INFO  - Running
+15:11:13 INFO  - Login was successful
+15:11:13 INFO  - Patrick tries to login
+15:11:18 INFO  - Running
+15:11:27 INFO  - Login was successful
+15:11:27 INFO  - Fabian tries to login
+15:11:28 INFO  - All 4 Clients logged in. Starting Game...
+15:11:28 INFO  -  Card  Handout 
+15:11:28 INFO  -  Card  Handout 
+15:11:28 INFO  -  Card  Handout 
+15:11:28 INFO  -  Card  Handout 
+15:11:32 INFO  -  Round  1  
+15:11:32 INFO  -  Round  1  
+15:11:32 INFO  -  Round  1  
+15:11:33 INFO  -  Round  1  
+15:11:33 INFO  -  Round  1  
+15:11:56 INFO  - Dennis played ♠K
+15:11:56 INFO  - Dennis played ♠K
+15:11:56 INFO  - Dennis played ♠K
+15:11:56 INFO  - Dennis played ♠K
+15:11:56 INFO  - Dennis played ♠K
+15:11:56 INFO  - Current trick: ♠K   
+15:12:05 INFO  - Mia played ♦J
+15:12:05 INFO  - Mia played ♦J
+15:12:05 INFO  - Mia played ♦J
+15:12:05 INFO  - Mia played ♦J
+15:12:05 INFO  - Mia played ♦J
+15:12:06 INFO  - Current trick: ♠K   ♦J   
+15:12:38 INFO  - Patrick played ♠K
+15:12:38 INFO  - Patrick played ♠K
+15:12:38 INFO  - Patrick played ♠K
+15:12:38 INFO  - Patrick played ♠K
+15:12:38 INFO  - Patrick played ♠K
+15:12:38 INFO  - Current trick: ♠K   ♦J   ♠K   
+15:12:44 INFO  - Fabian played ♠10
+15:12:44 INFO  - Fabian played ♠10
+15:12:44 INFO  - Fabian played ♠10
+15:12:44 INFO  - Fabian played ♠10
+15:12:44 INFO  - Fabian played ♠10
+15:12:44 INFO  - Current trick: ♠K   ♦J   ♠K   ♠10   
+15:12:44 INFO  - Mia won this round (20 pts)
+15:12:44 INFO  - Current trick: ♠K   ♦J   ♠K   ♠10     -  Mia won this round (20 pts)
+15:12:44 INFO  - Current trick: ♠K   ♦J   ♠K   ♠10     -  Mia won this round (20 pts)
+15:12:44 INFO  - Current trick: ♠K   ♦J   ♠K   ♠10     -  Mia won this round (20 pts)
+15:12:44 INFO  - Current trick: ♠K   ♦J   ♠K   ♠10     -  Mia won this round (20 pts)
+15:12:44 INFO  -   Round  2  
+15:12:44 INFO  -   Round  2  
+15:12:44 INFO  -   Round  2  
+15:12:44 INFO  -   Round  2  
+15:12:44 INFO  -   Round  2  
+15:12:57 INFO  - Mia played ♣K
+15:12:57 INFO  - Mia played ♣K
+15:12:57 INFO  - Mia played ♣K
+15:12:57 INFO  - Mia played ♣K
+15:12:57 INFO  - Mia played ♣K
+15:12:57 INFO  - Current trick: ♣K   
+15:13:02 INFO  - Patrick played ♣10
+15:13:02 INFO  - Patrick played ♣10
+15:13:02 INFO  - Patrick played ♣10
+15:13:02 INFO  - Patrick played ♣10
+15:13:03 INFO  - Patrick played ♣10
+15:13:03 INFO  - Current trick: ♣K   ♣10   
+15:13:12 INFO  - Fabian played ♣K
+15:13:12 INFO  - Fabian played ♣K
+15:13:12 INFO  - Fabian played ♣K
+15:13:12 INFO  - Fabian played ♣K
+15:13:13 INFO  - Fabian played ♣K
+15:13:13 INFO  - Current trick: ♣K   ♣10   ♣K   
+15:13:18 INFO  - Dennis played ♣10
+15:13:18 INFO  - Dennis played ♣10
+15:13:18 INFO  - Dennis played ♣10
+15:13:18 INFO  - Dennis played ♣10
+15:13:18 INFO  - Dennis played ♣10
+15:13:18 INFO  - Current trick: ♣K   ♣10   ♣K   ♣10   
+15:13:18 INFO  - Patrick won this round (28 pts)
+15:13:18 INFO  - Current trick: ♣K   ♣10   ♣K   ♣10     -  Patrick won this round (28 pts)
+15:13:18 INFO  - Current trick: ♣K   ♣10   ♣K   ♣10     -  Patrick won this round (28 pts)
+15:13:18 INFO  - Current trick: ♣K   ♣10   ♣K   ♣10     -  Patrick won this round (28 pts)
+15:13:18 INFO  -   Round  3  
+15:13:18 INFO  - Current trick: ♣K   ♣10   ♣K   ♣10     -  Patrick won this round (28 pts)
+15:13:18 INFO  -   Round  3  
+15:13:18 INFO  -   Round  3  
+15:13:18 INFO  -   Round  3  
+15:13:18 INFO  -   Round  3  
+15:13:38 INFO  - Patrick played ♥10
+15:13:38 INFO  - Patrick played ♥10
+15:13:38 INFO  - Patrick played ♥10
+15:13:38 INFO  - Patrick played ♥10
+15:13:38 INFO  - Patrick played ♥10
+15:13:38 INFO  - Current trick: ♥10   
+15:13:47 INFO  - Fabian played ♠Q
+15:13:47 INFO  - Fabian played ♠Q
+15:13:47 INFO  - Fabian played ♠Q
+15:13:47 INFO  - Fabian played ♠Q
+15:13:47 INFO  - Fabian played ♠Q
+15:13:47 INFO  - Current trick: ♥10   ♠Q   
+15:13:50 INFO  - Dennis played ♦Q
+15:13:50 INFO  - Dennis played ♦Q
+15:13:50 INFO  - Dennis played ♦Q
+15:13:50 INFO  - Dennis played ♦Q
+15:13:50 INFO  - Dennis played ♦Q
+15:13:50 INFO  - Current trick: ♥10   ♠Q   ♦Q   
+15:13:52 INFO  - Mia played ♥J
+15:13:52 INFO  - Mia played ♥J
+15:13:52 INFO  - Mia played ♥J
+15:13:52 INFO  - Mia played ♥J
+15:13:52 INFO  - Mia played ♥J
+15:13:52 INFO  - Current trick: ♥10   ♠Q   ♦Q   ♥J   
+15:13:52 INFO  - Patrick won this round (18 pts)
+15:13:52 INFO  - Current trick: ♥10   ♠Q   ♦Q   ♥J     -  Patrick won this round (18 pts)
+15:13:52 INFO  -   Round  4  
+15:13:52 INFO  - Current trick: ♥10   ♠Q   ♦Q   ♥J     -  Patrick won this round (18 pts)
+15:13:52 INFO  -   Round  4  
+15:13:52 INFO  - Current trick: ♥10   ♠Q   ♦Q   ♥J     -  Patrick won this round (18 pts)
+15:13:52 INFO  -   Round  4  
+15:13:52 INFO  - Current trick: ♥10   ♠Q   ♦Q   ♥J     -  Patrick won this round (18 pts)
+15:13:52 INFO  -   Round  4  
+15:13:52 INFO  -   Round  4  
+15:14:07 INFO  - Patrick played ♦J
+15:14:07 INFO  - Patrick played ♦J
+15:14:07 INFO  - Patrick played ♦J
+15:14:07 INFO  - Patrick played ♦J
+15:14:07 INFO  - Patrick played ♦J
+15:14:07 INFO  - Current trick: ♦J   
+15:14:12 INFO  - Fabian played ♠Q
+15:14:12 INFO  - Fabian played ♠Q
+15:14:12 INFO  - Fabian played ♠Q
+15:14:12 INFO  - Fabian played ♠Q
+15:14:12 INFO  - Fabian played ♠Q
+15:14:12 INFO  - Current trick: ♦J   ♠Q   
+15:14:27 INFO  - Dennis played ♦A
+15:14:27 INFO  - Dennis played ♦A
+15:14:27 INFO  - Dennis played ♦A
+15:14:27 INFO  - Dennis played ♦A
+15:14:27 INFO  - Dennis played ♦A
+15:14:27 INFO  - Current trick: ♦J   ♠Q   ♦A   
+15:14:31 INFO  - Mia played ♣J
+15:14:31 INFO  - Mia played ♣J
+15:14:31 INFO  - Mia played ♣J
+15:14:31 INFO  - Mia played ♣J
+15:14:31 INFO  - Mia played ♣J
+15:14:31 INFO  - Current trick: ♦J   ♠Q   ♦A   ♣J   
+15:14:31 INFO  - Fabian won this round (18 pts)
+15:14:31 INFO  - Current trick: ♦J   ♠Q   ♦A   ♣J     -  Fabian won this round (18 pts)
+15:14:31 INFO  - Current trick: ♦J   ♠Q   ♦A   ♣J     -  Fabian won this round (18 pts)
+15:14:31 INFO  - Current trick: ♦J   ♠Q   ♦A   ♣J     -  Fabian won this round (18 pts)
+15:14:31 INFO  - Current trick: ♦J   ♠Q   ♦A   ♣J     -  Fabian won this round (18 pts)
+15:14:31 INFO  -   Round  5  
+15:14:31 INFO  -   Round  5  
+15:14:31 INFO  -   Round  5  
+15:14:31 INFO  -   Round  5  
+15:14:31 INFO  -   Round  5  
+15:14:41 INFO  - Fabian played ♣J
+15:14:41 INFO  - Fabian played ♣J
+15:14:41 INFO  - Fabian played ♣J
+15:14:41 INFO  - Fabian played ♣J
+15:14:41 INFO  - Fabian played ♣J
+15:14:41 INFO  - Current trick: ♣J   
+15:14:51 INFO  - Dennis played ♦K
+15:14:51 INFO  - Dennis played ♦K
+15:14:51 INFO  - Dennis played ♦K
+15:14:51 INFO  - Dennis played ♦K
+15:14:51 INFO  - Dennis played ♦K
+15:14:51 INFO  - Current trick: ♣J   ♦K   
+15:15:09 INFO  - Mia played ♦A
+15:15:09 INFO  - Mia played ♦A
+15:15:09 INFO  - Mia played ♦A
+15:15:09 INFO  - Mia played ♦A
+15:15:09 INFO  - Mia played ♦A
+15:15:09 INFO  - Current trick: ♣J   ♦K   ♦A   
+15:15:15 INFO  - Patrick played ♠J
+15:15:15 INFO  - Patrick played ♠J
+15:15:15 INFO  - Patrick played ♠J
+15:15:15 INFO  - Patrick played ♠J
+15:15:15 INFO  - Patrick played ♠J
+15:15:15 INFO  - Current trick: ♣J   ♦K   ♦A   ♠J   
+15:15:15 INFO  - Fabian won this round (19 pts)
+15:15:15 INFO  - Current trick: ♣J   ♦K   ♦A   ♠J     -  Fabian won this round (19 pts)
+15:15:15 INFO  - Current trick: ♣J   ♦K   ♦A   ♠J     -  Fabian won this round (19 pts)
+15:15:15 INFO  - Current trick: ♣J   ♦K   ♦A   ♠J     -  Fabian won this round (19 pts)
+15:15:15 INFO  -   Round  6  
+15:15:15 INFO  -   Round  6  
+15:15:15 INFO  - Current trick: ♣J   ♦K   ♦A   ♠J     -  Fabian won this round (19 pts)
+15:15:15 INFO  -   Round  6  
+15:15:15 INFO  -   Round  6  
+15:15:15 INFO  -   Round  6  
+15:15:21 INFO  - Fabian played ♥J
+15:15:21 INFO  - Fabian played ♥J
+15:15:21 INFO  - Fabian played ♥J
+15:15:21 INFO  - Fabian played ♥J
+15:15:21 INFO  - Fabian played ♥J
+15:15:21 INFO  - Current trick: ♥J   
+15:15:28 INFO  - Dennis played ♠10
+15:15:28 INFO  - Dennis played ♠10
+15:15:29 INFO  - Dennis played ♠10
+15:15:29 INFO  - Dennis played ♠10
+15:15:29 INFO  - Dennis played ♠10
+15:15:29 INFO  - Current trick: ♥J   ♠10   
+15:15:34 INFO  - Mia played ♦K
+15:15:34 INFO  - Mia played ♦K
+15:15:34 INFO  - Mia played ♦K
+15:15:34 INFO  - Mia played ♦K
+15:15:34 INFO  - Mia played ♦K
+15:15:35 INFO  - Current trick: ♥J   ♠10   ♦K   
+15:15:37 INFO  - Patrick played ♦10
+15:15:37 INFO  - Patrick played ♦10
+15:15:37 INFO  - Patrick played ♦10
+15:15:37 INFO  - Patrick played ♦10
+15:15:37 INFO  - Patrick played ♦10
+15:15:37 INFO  - Current trick: ♥J   ♠10   ♦K   ♦10   
+15:15:37 INFO  - Fabian won this round (26 pts)
+15:15:37 INFO  - Current trick: ♥J   ♠10   ♦K   ♦10     -  Fabian won this round (26 pts)
+15:15:37 INFO  - Current trick: ♥J   ♠10   ♦K   ♦10     -  Fabian won this round (26 pts)
+15:15:37 INFO  - Current trick: ♥J   ♠10   ♦K   ♦10     -  Fabian won this round (26 pts)
+15:15:37 INFO  -   Round  7  
+15:15:37 INFO  -   Round  7  
+15:15:37 INFO  -   Round  7  
+15:15:37 INFO  - Current trick: ♥J   ♠10   ♦K   ♦10     -  Fabian won this round (26 pts)
+15:15:37 INFO  -   Round  7  
+15:15:37 INFO  -   Round  7  
+15:15:40 INFO  - Fabian played ♥K
+15:15:40 INFO  - Fabian played ♥K
+15:15:40 INFO  - Fabian played ♥K
+15:15:40 INFO  - Fabian played ♥K
+15:15:40 INFO  - Fabian played ♥K
+15:15:40 INFO  - Current trick: ♥K   
+15:15:44 INFO  - Dennis played ♥K
+15:15:44 INFO  - Dennis played ♥K
+15:15:44 INFO  - Dennis played ♥K
+15:15:44 INFO  - Dennis played ♥K
+15:15:44 INFO  - Dennis played ♥K
+15:15:44 INFO  - Current trick: ♥K   ♥K   
+15:15:50 INFO  - Mia played ♥A
+15:15:50 INFO  - Mia played ♥A
+15:15:50 INFO  - Mia played ♥A
+15:15:50 INFO  - Mia played ♥A
+15:15:51 INFO  - Mia played ♥A
+15:15:51 INFO  - Current trick: ♥K   ♥K   ♥A   
+15:15:53 INFO  - Patrick played ♦10
+15:15:53 INFO  - Patrick played ♦10
+15:15:53 INFO  - Patrick played ♦10
+15:15:53 INFO  - Patrick played ♦10
+15:15:53 INFO  - Patrick played ♦10
+15:15:53 INFO  - Current trick: ♥K   ♥K   ♥A   ♦10   
+15:15:53 INFO  - Patrick won this round (29 pts)
+15:15:53 INFO  - Current trick: ♥K   ♥K   ♥A   ♦10     -  Patrick won this round (29 pts)
+15:15:53 INFO  - Current trick: ♥K   ♥K   ♥A   ♦10     -  Patrick won this round (29 pts)
+15:15:53 INFO  - Current trick: ♥K   ♥K   ♥A   ♦10     -  Patrick won this round (29 pts)
+15:15:53 INFO  -   Round  8  
+15:15:53 INFO  -   Round  8  
+15:15:53 INFO  -   Round  8  
+15:15:53 INFO  - Current trick: ♥K   ♥K   ♥A   ♦10     -  Patrick won this round (29 pts)
+15:15:53 INFO  -   Round  8  
+15:15:53 INFO  -   Round  8  
+15:15:55 INFO  - Patrick played ♥Q
+15:15:55 INFO  - Patrick played ♥Q
+15:15:55 INFO  - Patrick played ♥Q
+15:15:55 INFO  - Patrick played ♥Q
+15:15:55 INFO  - Patrick played ♥Q
+15:15:55 INFO  - Current trick: ♥Q   
+15:15:56 INFO  - Fabian played ♥10
+15:15:56 INFO  - Fabian played ♥10
+15:15:56 INFO  - Fabian played ♥10
+15:15:56 INFO  - Fabian played ♥10
+15:15:56 INFO  - Fabian played ♥10
+15:15:56 INFO  - Current trick: ♥Q   ♥10   
+15:15:58 INFO  - Dennis played ♠A
+15:15:58 INFO  - Dennis played ♠A
+15:15:58 INFO  - Dennis played ♠A
+15:15:58 INFO  - Dennis played ♠A
+15:15:58 INFO  - Dennis played ♠A
+15:15:59 INFO  - Current trick: ♥Q   ♥10   ♠A   
+15:16:02 INFO  - Mia played ♣Q
+15:16:02 INFO  - Mia played ♣Q
+15:16:02 INFO  - Mia played ♣Q
+15:16:02 INFO  - Mia played ♣Q
+15:16:02 INFO  - Mia played ♣Q
+15:16:02 INFO  - Current trick: ♥Q   ♥10   ♠A   ♣Q   
+15:16:02 INFO  - Fabian won this round (27 pts)
+15:16:02 INFO  - Current trick: ♥Q   ♥10   ♠A   ♣Q     -  Fabian won this round (27 pts)
+15:16:02 INFO  - Current trick: ♥Q   ♥10   ♠A   ♣Q     -  Fabian won this round (27 pts)
+15:16:02 INFO  -   Round  9  
+15:16:02 INFO  - Current trick: ♥Q   ♥10   ♠A   ♣Q     -  Fabian won this round (27 pts)
+15:16:02 INFO  -   Round  9  
+15:16:02 INFO  -   Round  9  
+15:16:02 INFO  - Current trick: ♥Q   ♥10   ♠A   ♣Q     -  Fabian won this round (27 pts)
+15:16:02 INFO  -   Round  9  
+15:16:02 INFO  -   Round  9  
+15:16:06 INFO  - Fabian played ♠J
+15:16:06 INFO  - Fabian played ♠J
+15:16:06 INFO  - Fabian played ♠J
+15:16:06 INFO  - Fabian played ♠J
+15:16:06 INFO  - Fabian played ♠J
+15:16:06 INFO  - Current trick: ♠J   
+15:16:08 INFO  - Dennis played ♠A
+15:16:08 INFO  - Dennis played ♠A
+15:16:08 INFO  - Dennis played ♠A
+15:16:08 INFO  - Dennis played ♠A
+15:16:08 INFO  - Dennis played ♠A
+15:16:08 INFO  - Current trick: ♠J   ♠A   
+15:16:10 INFO  - Mia played ♥A
+15:16:10 INFO  - Mia played ♥A
+15:16:10 INFO  - Mia played ♥A
+15:16:10 INFO  - Mia played ♥A
+15:16:10 INFO  - Mia played ♥A
+15:16:10 INFO  - Current trick: ♠J   ♠A   ♥A   
+15:16:11 INFO  - Patrick played ♦Q
+15:16:11 INFO  - Patrick played ♦Q
+15:16:11 INFO  - Patrick played ♦Q
+15:16:11 INFO  - Patrick played ♦Q
+15:16:11 INFO  - Patrick played ♦Q
+15:16:12 INFO  - Current trick: ♠J   ♠A   ♥A   ♦Q   
+15:16:12 INFO  - Patrick won this round (27 pts)
+15:16:12 INFO  - Current trick: ♠J   ♠A   ♥A   ♦Q     -  Patrick won this round (27 pts)
+15:16:12 INFO  - Current trick: ♠J   ♠A   ♥A   ♦Q     -  Patrick won this round (27 pts)
+15:16:12 INFO  - Current trick: ♠J   ♠A   ♥A   ♦Q     -  Patrick won this round (27 pts)
+15:16:12 INFO  -   Round 10  
+15:16:12 INFO  -   Round 10  
+15:16:12 INFO  - Current trick: ♠J   ♠A   ♥A   ♦Q     -  Patrick won this round (27 pts)
+15:16:12 INFO  -   Round 10  
+15:16:12 INFO  -   Round 10  
+15:16:12 INFO  -   Round 10  
+15:16:13 INFO  - Patrick played ♣Q
+15:16:13 INFO  - Patrick played ♣Q
+15:16:13 INFO  - Patrick played ♣Q
+15:16:13 INFO  - Patrick played ♣Q
+15:16:13 INFO  - Patrick played ♣Q
+15:16:13 INFO  - Current trick: ♣Q   
+15:16:15 INFO  - Fabian played ♥Q
+15:16:15 INFO  - Fabian played ♥Q
+15:16:15 INFO  - Fabian played ♥Q
+15:16:15 INFO  - Fabian played ♥Q
+15:16:15 INFO  - Fabian played ♥Q
+15:16:15 INFO  - Current trick: ♣Q   ♥Q   
+15:16:17 INFO  - Dennis played ♣A
+15:16:17 INFO  - Dennis played ♣A
+15:16:17 INFO  - Dennis played ♣A
+15:16:17 INFO  - Dennis played ♣A
+15:16:17 INFO  - Dennis played ♣A
+15:16:17 INFO  - Current trick: ♣Q   ♥Q   ♣A   
+15:16:19 INFO  - Mia played ♣A
+15:16:19 INFO  - Mia played ♣A
+15:16:19 INFO  - Mia played ♣A
+15:16:19 INFO  - Mia played ♣A
+15:16:19 INFO  - Mia played ♣A
+15:16:19 INFO  - Current trick: ♣Q   ♥Q   ♣A   ♣A   
+15:16:19 INFO  - Patrick won this round (28 pts)
+15:16:19 INFO  -   Game Over  
+15:16:19 INFO  -   Game Over  
+15:16:19 INFO  -   Game Over  
+15:16:19 INFO  -   Game Over  
+15:16:19 INFO  - Victory points re-party: -4
+15:16:19 INFO  - Players in re-party: 
+15:16:19 INFO  - Mia   
+15:16:19 INFO  - Patrick   
+15:16:19 INFO  - 1. Mia (-4)
+2. Patrick (-4)
+3. Dennis (4)
+4. Fabian (4)
+
+15:16:19 INFO  - 1. Mia (-4)
+2. Patrick (-4)
+3. Dennis (4)
+4. Fabian (4)
+
+15:16:19 INFO  - 1. Mia (-4)
+2. Patrick (-4)
+3. Dennis (4)
+4. Fabian (4)
+
+15:16:19 INFO  - 1. Mia (-4)
+2. Patrick (-4)
+3. Dennis (4)
+4. Fabian (4)
+
+15:16:20 INFO  - HHH000412: Hibernate Core {5.2.16.Final}
+15:16:20 INFO  - HHH000206: hibernate.properties not found
+15:16:20 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+15:16:20 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+15:16:20 INFO  - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://127.0.0.1:5432/Doppelkopf_Table?createDatabaseIfNotExist=true]
+15:16:20 INFO  - HHH10001001: Connection properties: {user=postgres, password=****, pool_size=20}
+15:16:20 INFO  - HHH10001003: Autocommit mode: false
+15:16:20 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+15:16:21 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+15:16:21 INFO  - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://127.0.0.1:5432/Doppelkopf_Table?createDatabaseIfNotExist=true]
+15:16:21 INFO  - HHH10001001: Connection properties: {user=postgres, password=****, pool_size=20}
+15:16:21 INFO  - HHH10001003: Autocommit mode: false
+15:16:21 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+15:16:21 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+15:16:21 INFO  - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://127.0.0.1:5432/Doppelkopf_Table?createDatabaseIfNotExist=true]
+15:16:21 INFO  - HHH10001001: Connection properties: {user=postgres, password=****, pool_size=20}
+15:16:21 INFO  - HHH10001003: Autocommit mode: false
+15:16:21 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+15:16:21 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+15:16:21 INFO  - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://127.0.0.1:5432/Doppelkopf_Table?createDatabaseIfNotExist=true]
+15:16:21 INFO  - HHH10001001: Connection properties: {user=postgres, password=****, pool_size=20}
+15:16:21 INFO  - HHH10001003: Autocommit mode: false
+15:16:21 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+15:16:21 ERROR -  
+Game Over.
+15:16:42 INFO  - test tries to login
+15:16:44 INFO  - Mia went offline
+15:16:56 INFO  - All 4 Clients logged in. Starting Game...
+15:16:56 INFO  -  Lobby 
+15:16:56 INFO  -  Lobby 
+15:16:56 INFO  -  Lobby 
+15:17:01 INFO  -  Card  Handout 
+15:17:01 INFO  -  Card  Handout 
+15:17:01 INFO  -  Card  Handout 
+15:17:01 INFO  -  Card  Handout 
+15:19:09 INFO  - Running
+15:19:15 INFO  - Running
+15:19:17 INFO  - Running
+15:19:18 INFO  - Running
+15:19:19 INFO  - Running
+15:19:27 INFO  - Login was successful
+15:19:27 INFO  - Dennis tries to login
+15:19:36 INFO  - Login was successful
+15:19:36 INFO  - Mia tries to login
+15:19:46 INFO  - Login was successful
+15:19:46 INFO  - Patrick tries to login
+15:19:57 INFO  - Login was successful
+15:19:57 INFO  - Fabian tries to login
+15:19:59 INFO  - All 4 Clients logged in. Starting Game...
+15:19:59 INFO  -  Card  Handout 
+15:19:59 INFO  -  Card  Handout 
+15:19:59 INFO  -  Card  Handout 
+15:19:59 INFO  -  Card  Handout 
+15:19:59 INFO  -  Card  Handout 
+15:20:04 INFO  -  Round  1  
+15:20:04 INFO  -  Round  1  
+15:20:04 INFO  -  Round  1  
+15:20:04 INFO  -  Round  1  
+15:20:04 INFO  -  Round  1  
+15:20:04 INFO  -  Round  1  
+15:20:06 INFO  - Dennis played ♣J
+15:20:06 INFO  - Dennis played ♣J
+15:20:06 INFO  - Dennis played ♣J
+15:20:06 INFO  - Dennis played ♣J
+15:20:06 INFO  - Dennis played ♣J
+15:20:06 INFO  - Dennis played ♣J
+15:20:06 INFO  - Current trick: ♣J   
+15:20:11 INFO  - Mia played ♠J
+15:20:11 INFO  - Mia played ♠J
+15:20:11 INFO  - Mia played ♠J
+15:20:11 INFO  - Mia played ♠J
+15:20:11 INFO  - Mia played ♠J
+15:20:11 INFO  - Mia played ♠J
+15:20:11 INFO  - Current trick: ♣J   ♠J   
+15:20:13 INFO  - Patrick played ♦A
+15:20:13 INFO  - Patrick played ♦A
+15:20:13 INFO  - Patrick played ♦A
+15:20:13 INFO  - Patrick played ♦A
+15:20:13 INFO  - Patrick played ♦A
+15:20:13 INFO  - Patrick played ♦A
+15:20:14 INFO  - Current trick: ♣J   ♠J   ♦A   
+15:20:15 INFO  - Fabian played ♥Q
+15:20:15 INFO  - Fabian played ♥Q
+15:20:15 INFO  - Fabian played ♥Q
+15:20:15 INFO  - Fabian played ♥Q
+15:20:15 INFO  - Fabian played ♥Q
+15:20:15 INFO  - Fabian played ♥Q
+15:20:15 INFO  - Current trick: ♣J   ♠J   ♦A   ♥Q   
+15:20:15 INFO  - Fabian won this round (18 pts)
+15:20:15 INFO  - Current trick: ♣J   ♠J   ♦A   ♥Q     -  Fabian won this round (18 pts)
+15:20:15 INFO  -   Round  2  
+15:20:15 INFO  - Current trick: ♣J   ♠J   ♦A   ♥Q     -  Fabian won this round (18 pts)
+15:20:15 INFO  - Current trick: ♣J   ♠J   ♦A   ♥Q     -  Fabian won this round (18 pts)
+15:20:15 INFO  - Current trick: ♣J   ♠J   ♦A   ♥Q     -  Fabian won this round (18 pts)
+15:20:15 INFO  - Current trick: ♣J   ♠J   ♦A   ♥Q     -  Fabian won this round (18 pts)
+15:20:15 INFO  -   Round  2  
+15:20:15 INFO  -   Round  2  
+15:20:15 INFO  -   Round  2  
+15:20:15 INFO  -   Round  2  
+15:20:16 INFO  -   Round  2  
+15:20:18 INFO  - Fabian played ♦K
+15:20:18 INFO  - Fabian played ♦K
+15:20:18 INFO  - Fabian played ♦K
+15:20:18 INFO  - Fabian played ♦K
+15:20:18 INFO  - Fabian played ♦K
+15:20:18 INFO  - Fabian played ♦K
+15:20:18 INFO  - Current trick: ♦K   
+15:20:20 INFO  - Dennis played ♦K
+15:20:20 INFO  - Dennis played ♦K
+15:20:20 INFO  - Dennis played ♦K
+15:20:20 INFO  - Dennis played ♦K
+15:20:20 INFO  - Dennis played ♦K
+15:20:20 INFO  - Dennis played ♦K
+15:20:20 INFO  - Current trick: ♦K   ♦K   
+15:20:23 INFO  - Mia played ♥J
+15:20:23 INFO  - Mia played ♥J
+15:20:23 INFO  - Mia played ♥J
+15:20:23 INFO  - Mia played ♥J
+15:20:23 INFO  - Mia played ♥J
+15:20:23 INFO  - Mia played ♥J
+15:20:23 INFO  - Current trick: ♦K   ♦K   ♥J   
+15:20:25 INFO  - Patrick played ♦Q
+15:20:25 INFO  - Patrick played ♦Q
+15:20:25 INFO  - Patrick played ♦Q
+15:20:25 INFO  - Patrick played ♦Q
+15:20:25 INFO  - Patrick played ♦Q
+15:20:25 INFO  - Patrick played ♦Q
+15:20:25 INFO  - Current trick: ♦K   ♦K   ♥J   ♦Q   
+15:20:25 INFO  - Patrick won this round (13 pts)
+15:20:25 INFO  - Current trick: ♦K   ♦K   ♥J   ♦Q     -  Patrick won this round (13 pts)
+15:20:25 INFO  -   Round  3  
+15:20:25 INFO  - Current trick: ♦K   ♦K   ♥J   ♦Q     -  Patrick won this round (13 pts)
+15:20:25 INFO  - Current trick: ♦K   ♦K   ♥J   ♦Q     -  Patrick won this round (13 pts)
+15:20:25 INFO  -   Round  3  
+15:20:25 INFO  - Current trick: ♦K   ♦K   ♥J   ♦Q     -  Patrick won this round (13 pts)
+15:20:25 INFO  -   Round  3  
+15:20:25 INFO  -   Round  3  
+15:20:25 INFO  - Current trick: ♦K   ♦K   ♥J   ♦Q     -  Patrick won this round (13 pts)
+15:20:25 INFO  -   Round  3  
+15:20:25 INFO  -   Round  3  
+15:20:27 INFO  - Patrick played ♣K
+15:20:27 INFO  - Patrick played ♣K
+15:20:27 INFO  - Patrick played ♣K
+15:20:27 INFO  - Patrick played ♣K
+15:20:27 INFO  - Patrick played ♣K
+15:20:27 INFO  - Patrick played ♣K
+15:20:28 INFO  - Current trick: ♣K   
+15:20:34 INFO  - Fabian played ♠Q
+15:20:34 INFO  - Fabian played ♠Q
+15:20:34 INFO  - Fabian played ♠Q
+15:20:34 INFO  - Fabian played ♠Q
+15:20:34 INFO  - Fabian played ♠Q
+15:20:34 INFO  - Fabian played ♠Q
+15:20:34 INFO  - Current trick: ♣K   ♠Q   
+15:21:04 INFO  - Dennis played ♣A
+15:21:04 INFO  - Dennis played ♣A
+15:21:04 INFO  - Dennis played ♣A
+15:21:04 INFO  - Dennis played ♣A
+15:21:04 INFO  - Dennis played ♣A
+15:21:04 INFO  - Dennis played ♣A
+15:21:04 INFO  - Current trick: ♣K   ♠Q   ♣A   
+15:21:16 INFO  - Mia played ♣10
+15:21:16 INFO  - Mia played ♣10
+15:21:16 INFO  - Mia played ♣10
+15:21:16 INFO  - Mia played ♣10
+15:21:16 INFO  - Mia played ♣10
+15:21:16 INFO  - Mia played ♣10
+15:21:16 INFO  - Current trick: ♣K   ♠Q   ♣A   ♣10   
+15:21:16 INFO  - Fabian won this round (28 pts)
+15:21:16 INFO  - Current trick: ♣K   ♠Q   ♣A   ♣10     -  Fabian won this round (28 pts)
+15:21:16 INFO  -   Round  4  
+15:21:16 INFO  - Current trick: ♣K   ♠Q   ♣A   ♣10     -  Fabian won this round (28 pts)
+15:21:16 INFO  -   Round  4  
+15:21:16 INFO  - Current trick: ♣K   ♠Q   ♣A   ♣10     -  Fabian won this round (28 pts)
+15:21:16 INFO  - Current trick: ♣K   ♠Q   ♣A   ♣10     -  Fabian won this round (28 pts)
+15:21:16 INFO  -   Round  4  
+15:21:16 INFO  -   Round  4  
+15:21:16 INFO  - Current trick: ♣K   ♠Q   ♣A   ♣10     -  Fabian won this round (28 pts)
+15:21:16 INFO  -   Round  4  
+15:21:16 INFO  -   Round  4  
+15:21:18 INFO  - Fabian played ♥J
+15:21:18 INFO  - Fabian played ♥J
+15:21:18 INFO  - Fabian played ♥J
+15:21:18 INFO  - Fabian played ♥J
+15:21:18 INFO  - Fabian played ♥J
+15:21:18 INFO  - Fabian played ♥J
+15:21:18 INFO  - Current trick: ♥J   
+15:21:21 INFO  - Dennis played ♣J
+15:21:21 INFO  - Dennis played ♣J
+15:21:21 INFO  - Dennis played ♣J
+15:21:21 INFO  - Dennis played ♣J
+15:21:21 INFO  - Dennis played ♣J
+15:21:21 INFO  - Dennis played ♣J
+15:21:22 INFO  - Current trick: ♥J   ♣J   
+15:21:24 INFO  - Mia played ♦A
+15:21:24 INFO  - Mia played ♦A
+15:21:24 INFO  - Mia played ♦A
+15:21:24 INFO  - Mia played ♦A
+15:21:24 INFO  - Mia played ♦A
+15:21:24 INFO  - Mia played ♦A
+15:21:24 INFO  - Current trick: ♥J   ♣J   ♦A   
+15:21:29 INFO  - Patrick played ♦10
+15:21:29 INFO  - Patrick played ♦10
+15:21:29 INFO  - Patrick played ♦10
+15:21:29 INFO  - Patrick played ♦10
+15:21:29 INFO  - Patrick played ♦10
+15:21:29 INFO  - Patrick played ♦10
+15:21:30 INFO  - Current trick: ♥J   ♣J   ♦A   ♦10   
+15:21:30 INFO  - Dennis won this round (25 pts)
+15:21:30 INFO  - Current trick: ♥J   ♣J   ♦A   ♦10     -  Dennis won this round (25 pts)
+15:21:30 INFO  - Current trick: ♥J   ♣J   ♦A   ♦10     -  Dennis won this round (25 pts)
+15:21:30 INFO  -   Round  5  
+15:21:30 INFO  -   Round  5  
+15:21:30 INFO  - Current trick: ♥J   ♣J   ♦A   ♦10     -  Dennis won this round (25 pts)
+15:21:30 INFO  -   Round  5  
+15:21:30 INFO  - Current trick: ♥J   ♣J   ♦A   ♦10     -  Dennis won this round (25 pts)
+15:21:30 INFO  - Current trick: ♥J   ♣J   ♦A   ♦10     -  Dennis won this round (25 pts)
+15:21:30 INFO  -   Round  5  
+15:21:30 INFO  -   Round  5  
+15:21:30 INFO  -   Round  5  
+15:21:34 INFO  - Dennis played ♠K
+15:21:34 INFO  - Dennis played ♠K
+15:21:34 INFO  - Dennis played ♠K
+15:21:34 INFO  - Dennis played ♠K
+15:21:34 INFO  - Dennis played ♠K
+15:21:34 INFO  - Dennis played ♠K
+15:21:34 INFO  - Current trick: ♠K   
+15:21:37 INFO  - Mia played ♠A
+15:21:37 INFO  - Mia played ♠A
+15:21:37 INFO  - Mia played ♠A
+15:21:37 INFO  - Mia played ♠A
+15:21:37 INFO  - Mia played ♠A
+15:21:37 INFO  - Mia played ♠A
+15:21:37 INFO  - Current trick: ♠K   ♠A   
+15:21:40 INFO  - Patrick played ♥Q
+15:21:40 INFO  - Patrick played ♥Q
+15:21:40 INFO  - Patrick played ♥Q
+15:21:40 INFO  - Patrick played ♥Q
+15:21:40 INFO  - Patrick played ♥Q
+15:21:40 INFO  - Patrick played ♥Q
+15:21:40 INFO  - Current trick: ♠K   ♠A   ♥Q   
+15:21:43 INFO  - Fabian played ♠10
+15:21:43 INFO  - Fabian played ♠10
+15:21:43 INFO  - Fabian played ♠10
+15:21:43 INFO  - Fabian played ♠10
+15:21:43 INFO  - Fabian played ♠10
+15:21:44 INFO  - Fabian played ♠10
+15:21:44 INFO  - Current trick: ♠K   ♠A   ♥Q   ♠10   
+15:21:44 INFO  - Patrick won this round (28 pts)
+15:21:44 INFO  - Current trick: ♠K   ♠A   ♥Q   ♠10     -  Patrick won this round (28 pts)
+15:21:44 INFO  - Current trick: ♠K   ♠A   ♥Q   ♠10     -  Patrick won this round (28 pts)
+15:21:44 INFO  -   Round  6  
+15:21:44 INFO  -   Round  6  
+15:21:44 INFO  - Current trick: ♠K   ♠A   ♥Q   ♠10     -  Patrick won this round (28 pts)
+15:21:44 INFO  -   Round  6  
+15:21:44 INFO  - Current trick: ♠K   ♠A   ♥Q   ♠10     -  Patrick won this round (28 pts)
+15:21:44 INFO  -   Round  6  
+15:21:44 INFO  - Current trick: ♠K   ♠A   ♥Q   ♠10     -  Patrick won this round (28 pts)
+15:21:44 INFO  -   Round  6  
+15:21:44 INFO  -   Round  6  
+15:21:46 INFO  - Patrick played ♣10
+15:21:46 INFO  - Patrick played ♣10
+15:21:46 INFO  - Patrick played ♣10
+15:21:46 INFO  - Patrick played ♣10
+15:21:46 INFO  - Patrick played ♣10
+15:21:46 INFO  - Patrick played ♣10
+15:21:46 INFO  - Current trick: ♣10   
+15:21:47 INFO  - Fabian played ♦10
+15:21:47 INFO  - Fabian played ♦10
+15:21:47 INFO  - Fabian played ♦10
+15:21:47 INFO  - Fabian played ♦10
+15:21:47 INFO  - Fabian played ♦10
+15:21:47 INFO  - Fabian played ♦10
+15:21:47 INFO  - Current trick: ♣10   ♦10   
+15:21:49 INFO  - Dennis played ♠J
+15:21:49 INFO  - Dennis played ♠J
+15:21:49 INFO  - Dennis played ♠J
+15:21:49 INFO  - Dennis played ♠J
+15:21:49 INFO  - Dennis played ♠J
+15:21:49 INFO  - Dennis played ♠J
+15:21:49 INFO  - Current trick: ♣10   ♦10   ♠J   
+15:21:53 INFO  - Mia played ♣K
+15:21:53 INFO  - Mia played ♣K
+15:21:53 INFO  - Mia played ♣K
+15:21:53 INFO  - Mia played ♣K
+15:21:53 INFO  - Mia played ♣K
+15:21:53 INFO  - Mia played ♣K
+15:21:53 INFO  - Current trick: ♣10   ♦10   ♠J   ♣K   
+15:21:53 INFO  - Dennis won this round (26 pts)
+15:21:53 INFO  - Current trick: ♣10   ♦10   ♠J   ♣K     -  Dennis won this round (26 pts)
+15:21:53 INFO  - Current trick: ♣10   ♦10   ♠J   ♣K     -  Dennis won this round (26 pts)
+15:21:53 INFO  -   Round  7  
+15:21:53 INFO  -   Round  7  
+15:21:53 INFO  - Current trick: ♣10   ♦10   ♠J   ♣K     -  Dennis won this round (26 pts)
+15:21:53 INFO  -   Round  7  
+15:21:53 INFO  - Current trick: ♣10   ♦10   ♠J   ♣K     -  Dennis won this round (26 pts)
+15:21:53 INFO  - Current trick: ♣10   ♦10   ♠J   ♣K     -  Dennis won this round (26 pts)
+15:21:53 INFO  -   Round  7  
+15:21:53 INFO  -   Round  7  
+15:21:53 INFO  -   Round  7  
+15:21:56 INFO  - Dennis played ♠Q
+15:21:56 INFO  - Dennis played ♠Q
+15:21:56 INFO  - Dennis played ♠Q
+15:21:56 INFO  - Dennis played ♠Q
+15:21:56 INFO  - Dennis played ♠Q
+15:21:56 INFO  - Dennis played ♠Q
+15:21:56 INFO  - Current trick: ♠Q   
+15:21:58 INFO  - Mia played ♥K
+15:21:58 INFO  - Mia played ♥K
+15:21:58 INFO  - Mia played ♥K
+15:21:58 INFO  - Mia played ♥K
+15:21:58 INFO  - Mia played ♥K
+15:21:58 INFO  - Mia played ♥K
+15:21:58 INFO  - Current trick: ♠Q   ♥K   
+15:22:06 INFO  - Patrick played ♥10
+15:22:06 INFO  - Patrick played ♥10
+15:22:06 INFO  - Patrick played ♥10
+15:22:06 INFO  - Patrick played ♥10
+15:22:06 INFO  - Patrick played ♥10
+15:22:06 INFO  - Patrick played ♥10
+15:22:07 INFO  - Current trick: ♠Q   ♥K   ♥10   
+15:22:10 INFO  - Fabian played ♦Q
+15:22:10 INFO  - Fabian played ♦Q
+15:22:10 INFO  - Fabian played ♦Q
+15:22:10 INFO  - Fabian played ♦Q
+15:22:10 INFO  - Fabian played ♦Q
+15:22:10 INFO  - Fabian played ♦Q
+15:22:10 INFO  - Current trick: ♠Q   ♥K   ♥10   ♦Q   
+15:22:10 INFO  - Patrick won this round (20 pts)
+15:22:10 INFO  - Current trick: ♠Q   ♥K   ♥10   ♦Q     -  Patrick won this round (20 pts)
+15:22:10 INFO  - Current trick: ♠Q   ♥K   ♥10   ♦Q     -  Patrick won this round (20 pts)
+15:22:10 INFO  - Current trick: ♠Q   ♥K   ♥10   ♦Q     -  Patrick won this round (20 pts)
+15:22:10 INFO  - Current trick: ♠Q   ♥K   ♥10   ♦Q     -  Patrick won this round (20 pts)
+15:22:10 INFO  -   Round  8  
+15:22:10 INFO  -   Round  8  
+15:22:10 INFO  -   Round  8  
+15:22:10 INFO  -   Round  8  
+15:22:10 INFO  - Current trick: ♠Q   ♥K   ♥10   ♦Q     -  Patrick won this round (20 pts)
+15:22:10 INFO  -   Round  8  
+15:22:10 INFO  -   Round  8  
+15:22:12 INFO  - Patrick played ♥A
+15:22:12 INFO  - Patrick played ♥A
+15:22:12 INFO  - Patrick played ♥A
+15:22:12 INFO  - Patrick played ♥A
+15:22:12 INFO  - Patrick played ♥A
+15:22:12 INFO  - Patrick played ♥A
+15:22:12 INFO  - Current trick: ♥A   
+15:22:13 INFO  - Fabian played ♦J
+15:22:13 INFO  - Fabian played ♦J
+15:22:13 INFO  - Fabian played ♦J
+15:22:13 INFO  - Fabian played ♦J
+15:22:13 INFO  - Fabian played ♦J
+15:22:13 INFO  - Fabian played ♦J
+15:22:14 INFO  - Current trick: ♥A   ♦J   
+15:22:16 INFO  - Dennis played ♣Q
+15:22:16 INFO  - Dennis played ♣Q
+15:22:16 INFO  - Dennis played ♣Q
+15:22:16 INFO  - Dennis played ♣Q
+15:22:16 INFO  - Dennis played ♣Q
+15:22:16 INFO  - Dennis played ♣Q
+15:22:16 INFO  - Current trick: ♥A   ♦J   ♣Q   
+15:22:19 INFO  - Mia played ♥A
+15:22:19 INFO  - Mia played ♥A
+15:22:19 INFO  - Mia played ♥A
+15:22:19 INFO  - Mia played ♥A
+15:22:19 INFO  - Mia played ♥A
+15:22:19 INFO  - Mia played ♥A
+15:22:20 INFO  - Current trick: ♥A   ♦J   ♣Q   ♥A   
+15:22:20 INFO  - Dennis won this round (27 pts)
+15:22:20 INFO  - Current trick: ♥A   ♦J   ♣Q   ♥A     -  Dennis won this round (27 pts)
+15:22:20 INFO  - Current trick: ♥A   ♦J   ♣Q   ♥A     -  Dennis won this round (27 pts)
+15:22:20 INFO  - Current trick: ♥A   ♦J   ♣Q   ♥A     -  Dennis won this round (27 pts)
+15:22:20 INFO  - Current trick: ♥A   ♦J   ♣Q   ♥A     -  Dennis won this round (27 pts)
+15:22:20 INFO  - Current trick: ♥A   ♦J   ♣Q   ♥A     -  Dennis won this round (27 pts)
+15:22:20 INFO  -   Round  9  
+15:22:20 INFO  -   Round  9  
+15:22:20 INFO  -   Round  9  
+15:22:20 INFO  -   Round  9  
+15:22:20 INFO  -   Round  9  
+15:22:20 INFO  -   Round  9  
+15:22:25 INFO  - Dennis played ♦J
+15:22:25 INFO  - Dennis played ♦J
+15:22:25 INFO  - Dennis played ♦J
+15:22:25 INFO  - Dennis played ♦J
+15:22:25 INFO  - Dennis played ♦J
+15:22:25 INFO  - Dennis played ♦J
+15:22:25 INFO  - Current trick: ♦J   
+15:22:27 INFO  - Mia played ♥K
+15:22:27 INFO  - Mia played ♥K
+15:22:27 INFO  - Mia played ♥K
+15:22:27 INFO  - Mia played ♥K
+15:22:27 INFO  - Mia played ♥K
+15:22:27 INFO  - Mia played ♥K
+15:22:27 INFO  - Current trick: ♦J   ♥K   
+15:22:29 INFO  - Patrick played ♥10
+15:22:29 INFO  - Patrick played ♥10
+15:22:29 INFO  - Patrick played ♥10
+15:22:29 INFO  - Patrick played ♥10
+15:22:29 INFO  - Patrick played ♥10
+15:22:29 INFO  - Patrick played ♥10
+15:22:29 INFO  - Current trick: ♦J   ♥K   ♥10   
+15:22:31 INFO  - Fabian played ♠K
+15:22:31 INFO  - Fabian played ♠K
+15:22:31 INFO  - Fabian played ♠K
+15:22:31 INFO  - Fabian played ♠K
+15:22:31 INFO  - Fabian played ♠K
+15:22:31 INFO  - Fabian played ♠K
+15:22:31 INFO  - Current trick: ♦J   ♥K   ♥10   ♠K   
+15:22:31 INFO  - Patrick won this round (20 pts)
+15:22:31 INFO  - Current trick: ♦J   ♥K   ♥10   ♠K     -  Patrick won this round (20 pts)
+15:22:31 INFO  -   Round 10  
+15:22:31 INFO  - Current trick: ♦J   ♥K   ♥10   ♠K     -  Patrick won this round (20 pts)
+15:22:31 INFO  -   Round 10  
+15:22:31 INFO  - Current trick: ♦J   ♥K   ♥10   ♠K     -  Patrick won this round (20 pts)
+15:22:31 INFO  - Current trick: ♦J   ♥K   ♥10   ♠K     -  Patrick won this round (20 pts)
+15:22:31 INFO  -   Round 10  
+15:22:31 INFO  -   Round 10  
+15:22:31 INFO  - Current trick: ♦J   ♥K   ♥10   ♠K     -  Patrick won this round (20 pts)
+15:22:31 INFO  -   Round 10  
+15:22:31 INFO  -   Round 10  
+15:22:34 INFO  - Patrick played ♣A
+15:22:34 INFO  - Patrick played ♣A
+15:22:34 INFO  - Patrick played ♣A
+15:22:34 INFO  - Patrick played ♣A
+15:22:34 INFO  - Patrick played ♣A
+15:22:34 INFO  - Patrick played ♣A
+15:22:34 INFO  - Current trick: ♣A   
+15:22:36 INFO  - Fabian played ♠10
+15:22:36 INFO  - Fabian played ♠10
+15:22:36 INFO  - Fabian played ♠10
+15:22:36 INFO  - Fabian played ♠10
+15:22:36 INFO  - Fabian played ♠10
+15:22:36 INFO  - Fabian played ♠10
+15:22:36 INFO  - Current trick: ♣A   ♠10   
+15:22:37 INFO  - Dennis played ♣Q
+15:22:37 INFO  - Dennis played ♣Q
+15:22:37 INFO  - Dennis played ♣Q
+15:22:37 INFO  - Dennis played ♣Q
+15:22:37 INFO  - Dennis played ♣Q
+15:22:37 INFO  - Dennis played ♣Q
+15:22:37 INFO  - Current trick: ♣A   ♠10   ♣Q   
+15:22:40 INFO  - Mia played ♠A
+15:22:40 INFO  - Mia played ♠A
+15:22:40 INFO  - Mia played ♠A
+15:22:40 INFO  - Mia played ♠A
+15:22:40 INFO  - Mia played ♠A
+15:22:40 INFO  - Mia played ♠A
+15:22:40 INFO  - Current trick: ♣A   ♠10   ♣Q   ♠A   
+15:22:40 INFO  - Dennis won this round (35 pts)
+15:22:40 INFO  -   Game Over  
+15:22:40 INFO  -   Game Over  
+15:22:40 INFO  -   Game Over  
+15:22:40 INFO  -   Game Over  
+15:22:40 INFO  -   Game Over  
+15:22:40 INFO  - Victory points re-party: -2
+15:22:40 INFO  - Players in re-party: 
+15:22:40 INFO  - Dennis   
+15:22:40 INFO  - 1. Dennis (-2)
+2. Mia (2)
+3. Patrick (2)
+4. Fabian (2)
+
+15:22:40 INFO  - 1. Dennis (-2)
+2. Mia (2)
+3. Patrick (2)
+4. Fabian (2)
+
+15:22:40 INFO  - 1. Dennis (-2)
+2. Mia (2)
+3. Patrick (2)
+4. Fabian (2)
+
+15:22:40 INFO  - 1. Dennis (-2)
+2. Mia (2)
+3. Patrick (2)
+4. Fabian (2)
+
+15:22:40 INFO  - 1. Dennis (-2)
+2. Mia (2)
+3. Patrick (2)
+4. Fabian (2)
+
+15:22:40 INFO  - HHH000412: Hibernate Core {5.2.16.Final}
+15:22:40 INFO  - HHH000206: hibernate.properties not found
+15:22:41 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+15:22:41 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+15:22:41 INFO  - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://127.0.0.1:5432/Doppelkopf_Table?createDatabaseIfNotExist=true]
+15:22:41 INFO  - HHH10001001: Connection properties: {user=postgres, password=****, pool_size=20}
+15:22:41 INFO  - HHH10001003: Autocommit mode: false
+15:22:41 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+15:22:41 INFO  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+15:22:42 INFO  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+15:22:42 INFO  - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@712625fd
+15:22:42 INFO  - HV000001: Hibernate Validator 6.0.10.Final
+15:22:43 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5af5def9] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+15:22:43 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+15:22:43 INFO  - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://127.0.0.1:5432/Doppelkopf_Table?createDatabaseIfNotExist=true]
+15:22:43 INFO  - HHH10001001: Connection properties: {user=postgres, password=****, pool_size=20}
+15:22:43 INFO  - HHH10001003: Autocommit mode: false
+15:22:43 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+15:22:43 INFO  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+15:22:43 INFO  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+15:22:43 INFO  - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@712625fd
+15:22:43 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@f14e5bf] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+15:22:43 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+15:22:43 INFO  - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://127.0.0.1:5432/Doppelkopf_Table?createDatabaseIfNotExist=true]
+15:22:43 INFO  - HHH10001001: Connection properties: {user=postgres, password=****, pool_size=20}
+15:22:43 INFO  - HHH10001003: Autocommit mode: false
+15:22:43 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+15:22:43 INFO  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+15:22:43 INFO  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+15:22:43 INFO  - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@712625fd
+15:22:43 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@21422231] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+15:22:43 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+15:22:43 INFO  - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://127.0.0.1:5432/Doppelkopf_Table?createDatabaseIfNotExist=true]
+15:22:43 INFO  - HHH10001001: Connection properties: {user=postgres, password=****, pool_size=20}
+15:22:43 INFO  - HHH10001003: Autocommit mode: false
+15:22:43 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+15:22:43 INFO  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+15:22:43 INFO  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+15:22:43 INFO  - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@712625fd
+15:22:43 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@52d6cd34] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+15:22:43 ERROR -  
+Game Over.
+15:23:18 INFO  - All 4 Clients logged in. Starting Game...
+15:23:18 INFO  -  Lobby 
+15:23:18 INFO  -  Lobby 
+15:23:18 INFO  -  Lobby 
+15:23:18 INFO  -  Lobby 
+15:23:18 INFO  -  Lobby 
+15:23:23 INFO  -  Card  Handout 
+15:23:23 INFO  -  Card  Handout 
+15:23:23 INFO  -  Card  Handout 
+15:23:23 INFO  -  Card  Handout 
+15:23:23 INFO  -  Card  Handout 
+15:23:23 INFO  -  Card  Handout 
+15:23:30 INFO  - test tries to login
+15:23:32 INFO  - Fabian went offline
+15:23:35 INFO  - test tries to login
+15:23:38 INFO  - Patrick went offline
+15:23:40 ERROR - Problems while publishing Message 'test tries to login':Keine Verbindung zu Client
+15:23:40 ERROR - Problems while publishing Message 'de.fh_dortmund.swt.doppelkopf.Client@58060753 requests leaderboard':Keine Verbindung zu Client
+15:24:02 INFO  - Running
+15:24:11 INFO  - Dennis tries to login
+15:24:15 INFO  - Dennis tries to login
+15:24:33 INFO  - Running
+15:24:36 INFO  - Running
+15:24:38 INFO  - Running
+15:24:40 INFO  - Running
+15:24:42 INFO  - Running
+15:24:51 INFO  - Login was successful
+15:24:51 INFO  - Dennis tries to login
+15:25:01 INFO  - Login was successful
+15:25:01 INFO  - Mia tries to login
+15:25:09 INFO  - Login was successful
+15:25:10 INFO  - Patrick tries to login
+15:25:17 INFO  - Login was successful
+15:25:17 INFO  - Fabian tries to login
+15:25:18 INFO  - All 4 Clients logged in. Starting Game...
+15:25:18 INFO  -  Card  Handout 
+15:25:18 INFO  -  Card  Handout 
+15:25:18 INFO  -  Card  Handout 
+15:25:18 INFO  -  Card  Handout 
+15:25:23 INFO  -  Round  1  
+15:25:23 INFO  -  Round  1  
+15:25:23 INFO  -  Round  1  
+15:25:23 INFO  -  Round  1  
+15:25:23 INFO  -  Round  1  
+15:25:24 INFO  - Dennis played ♠10
+15:25:24 INFO  - Dennis played ♠10
+15:25:24 INFO  - Dennis played ♠10
+15:25:24 INFO  - Dennis played ♠10
+15:25:24 INFO  - Dennis played ♠10
+15:25:24 INFO  - Current trick: ♠10   
+15:25:25 INFO  - Mia played ♥Q
+15:25:25 INFO  - Mia played ♥Q
+15:25:25 INFO  - Mia played ♥Q
+15:25:25 INFO  - Mia played ♥Q
+15:25:26 INFO  - Mia played ♥Q
+15:25:26 INFO  - Current trick: ♠10   ♥Q   
+15:25:27 INFO  - Patrick played ♠A
+15:25:27 INFO  - Patrick played ♠A
+15:25:27 INFO  - Patrick played ♠A
+15:25:27 INFO  - Patrick played ♠A
+15:25:28 INFO  - Patrick played ♠A
+15:25:28 INFO  - Current trick: ♠10   ♥Q   ♠A   
+15:25:30 INFO  - Fabian played ♠K
+15:25:30 INFO  - Fabian played ♠K
+15:25:30 INFO  - Fabian played ♠K
+15:25:30 INFO  - Fabian played ♠K
+15:25:30 INFO  - Fabian played ♠K
+15:25:30 INFO  - Current trick: ♠10   ♥Q   ♠A   ♠K   
+15:25:30 INFO  - Mia won this round (28 pts)
+15:25:30 INFO  - Current trick: ♠10   ♥Q   ♠A   ♠K     -  Mia won this round (28 pts)
+15:25:30 INFO  - Current trick: ♠10   ♥Q   ♠A   ♠K     -  Mia won this round (28 pts)
+15:25:30 INFO  - Current trick: ♠10   ♥Q   ♠A   ♠K     -  Mia won this round (28 pts)
+15:25:30 INFO  - Current trick: ♠10   ♥Q   ♠A   ♠K     -  Mia won this round (28 pts)
+15:25:30 INFO  -   Round  2  
+15:25:30 INFO  -   Round  2  
+15:25:30 INFO  -   Round  2  
+15:25:30 INFO  -   Round  2  
+15:25:30 INFO  -   Round  2  
+15:25:33 INFO  - Mia played ♥Q
+15:25:33 INFO  - Mia played ♥Q
+15:25:33 INFO  - Mia played ♥Q
+15:25:33 INFO  - Mia played ♥Q
+15:25:33 INFO  - Mia played ♥Q
+15:25:33 INFO  - Current trick: ♥Q   
+15:25:34 INFO  - Patrick played ♣Q
+15:25:34 INFO  - Patrick played ♣Q
+15:25:34 INFO  - Patrick played ♣Q
+15:25:34 INFO  - Patrick played ♣Q
+15:25:35 INFO  - Patrick played ♣Q
+15:25:35 INFO  - Current trick: ♥Q   ♣Q   
+15:25:37 INFO  - Fabian played ♥J
+15:25:37 INFO  - Fabian played ♥J
+15:25:37 INFO  - Fabian played ♥J
+15:25:37 INFO  - Fabian played ♥J
+15:25:37 INFO  - Fabian played ♥J
+15:25:37 INFO  - Current trick: ♥Q   ♣Q   ♥J   
+15:25:39 INFO  - Dennis played ♥10
+15:25:39 INFO  - Dennis played ♥10
+15:25:39 INFO  - Dennis played ♥10
+15:25:39 INFO  - Dennis played ♥10
+15:25:40 INFO  - Dennis played ♥10
+15:25:40 INFO  - Current trick: ♥Q   ♣Q   ♥J   ♥10   
+15:25:40 INFO  - Dennis won this round (18 pts)
+15:25:40 INFO  - Current trick: ♥Q   ♣Q   ♥J   ♥10     -  Dennis won this round (18 pts)
+15:25:40 INFO  - Current trick: ♥Q   ♣Q   ♥J   ♥10     -  Dennis won this round (18 pts)
+15:25:40 INFO  -   Round  3  
+15:25:40 INFO  - Current trick: ♥Q   ♣Q   ♥J   ♥10     -  Dennis won this round (18 pts)
+15:25:40 INFO  -   Round  3  
+15:25:40 INFO  -   Round  3  
+15:25:40 INFO  - Current trick: ♥Q   ♣Q   ♥J   ♥10     -  Dennis won this round (18 pts)
+15:25:40 INFO  -   Round  3  
+15:25:40 INFO  -   Round  3  
+15:25:41 INFO  - Dennis played ♥A
+15:25:41 INFO  - Dennis played ♥A
+15:25:41 INFO  - Dennis played ♥A
+15:25:41 INFO  - Dennis played ♥A
+15:25:41 INFO  - Dennis played ♥A
+15:25:41 INFO  - Current trick: ♥A   
+15:25:45 INFO  - Mia played ♥A
+15:25:45 INFO  - Mia played ♥A
+15:25:45 INFO  - Mia played ♥A
+15:25:45 INFO  - Mia played ♥A
+15:25:45 INFO  - Mia played ♥A
+15:25:45 INFO  - Current trick: ♥A   ♥A   
+15:25:47 INFO  - Patrick played ♦A
+15:25:47 INFO  - Patrick played ♦A
+15:25:47 INFO  - Patrick played ♦A
+15:25:47 INFO  - Patrick played ♦A
+15:25:47 INFO  - Patrick played ♦A
+15:25:47 INFO  - Current trick: ♥A   ♥A   ♦A   
+15:25:53 INFO  - Fabian played ♥K
+15:25:53 INFO  - Fabian played ♥K
+15:25:53 INFO  - Fabian played ♥K
+15:25:53 INFO  - Fabian played ♥K
+15:25:53 INFO  - Fabian played ♥K
+15:25:53 INFO  - Current trick: ♥A   ♥A   ♦A   ♥K   
+15:25:53 INFO  - Patrick won this round (37 pts)
+15:25:53 INFO  - Current trick: ♥A   ♥A   ♦A   ♥K     -  Patrick won this round (37 pts)
+15:25:53 INFO  - Current trick: ♥A   ♥A   ♦A   ♥K     -  Patrick won this round (37 pts)
+15:25:53 INFO  -   Round  4  
+15:25:53 INFO  - Current trick: ♥A   ♥A   ♦A   ♥K     -  Patrick won this round (37 pts)
+15:25:53 INFO  -   Round  4  
+15:25:53 INFO  - Current trick: ♥A   ♥A   ♦A   ♥K     -  Patrick won this round (37 pts)
+15:25:53 INFO  -   Round  4  
+15:25:53 INFO  -   Round  4  
+15:25:53 INFO  -   Round  4  
+15:25:58 INFO  - Patrick played ♠Q
+15:25:58 INFO  - Patrick played ♠Q
+15:25:58 INFO  - Patrick played ♠Q
+15:25:58 INFO  - Patrick played ♠Q
+15:25:58 INFO  - Patrick played ♠Q
+15:25:58 INFO  - Current trick: ♠Q   
+15:26:02 INFO  - Fabian played ♠J
+15:26:02 INFO  - Fabian played ♠J
+15:26:02 INFO  - Fabian played ♠J
+15:26:02 INFO  - Fabian played ♠J
+15:26:02 INFO  - Fabian played ♠J
+15:26:02 INFO  - Current trick: ♠Q   ♠J   
+15:26:06 INFO  - Dennis played ♣Q
+15:26:06 INFO  - Dennis played ♣Q
+15:26:06 INFO  - Dennis played ♣Q
+15:26:06 INFO  - Dennis played ♣Q
+15:26:06 INFO  - Dennis played ♣Q
+15:26:06 INFO  - Current trick: ♠Q   ♠J   ♣Q   
+15:26:09 INFO  - Mia played ♠Q
+15:26:09 INFO  - Mia played ♠Q
+15:26:09 INFO  - Mia played ♠Q
+15:26:09 INFO  - Mia played ♠Q
+15:26:09 INFO  - Mia played ♠Q
+15:26:09 INFO  - Current trick: ♠Q   ♠J   ♣Q   ♠Q   
+15:26:09 INFO  - Dennis won this round (11 pts)
+15:26:09 INFO  - Current trick: ♠Q   ♠J   ♣Q   ♠Q     -  Dennis won this round (11 pts)
+15:26:09 INFO  - Current trick: ♠Q   ♠J   ♣Q   ♠Q     -  Dennis won this round (11 pts)
+15:26:09 INFO  -   Round  5  
+15:26:09 INFO  - Current trick: ♠Q   ♠J   ♣Q   ♠Q     -  Dennis won this round (11 pts)
+15:26:09 INFO  -   Round  5  
+15:26:09 INFO  -   Round  5  
+15:26:09 INFO  - Current trick: ♠Q   ♠J   ♣Q   ♠Q     -  Dennis won this round (11 pts)
+15:26:09 INFO  -   Round  5  
+15:26:09 INFO  -   Round  5  
+15:26:11 INFO  - Dennis played ♠K
+15:26:11 INFO  - Dennis played ♠K
+15:26:11 INFO  - Dennis played ♠K
+15:26:11 INFO  - Dennis played ♠K
+15:26:12 INFO  - Dennis played ♠K
+15:26:12 INFO  - Current trick: ♠K   
+15:26:13 INFO  - Mia played ♣K
+15:26:13 INFO  - Mia played ♣K
+15:26:13 INFO  - Mia played ♣K
+15:26:13 INFO  - Mia played ♣K
+15:26:13 INFO  - Mia played ♣K
+15:26:13 INFO  - Current trick: ♠K   ♣K   
+15:26:14 INFO  - Patrick played ♣J
+15:26:14 INFO  - Patrick played ♣J
+15:26:14 INFO  - Patrick played ♣J
+15:26:14 INFO  - Patrick played ♣J
+15:26:14 INFO  - Patrick played ♣J
+15:26:15 INFO  - Current trick: ♠K   ♣K   ♣J   
+15:26:17 INFO  - Fabian played ♠10
+15:26:17 INFO  - Fabian played ♠10
+15:26:17 INFO  - Fabian played ♠10
+15:26:17 INFO  - Fabian played ♠10
+15:26:17 INFO  - Fabian played ♠10
+15:26:18 INFO  - Current trick: ♠K   ♣K   ♣J   ♠10   
+15:26:18 INFO  - Patrick won this round (20 pts)
+15:26:18 INFO  - Current trick: ♠K   ♣K   ♣J   ♠10     -  Patrick won this round (20 pts)
+15:26:18 INFO  - Current trick: ♠K   ♣K   ♣J   ♠10     -  Patrick won this round (20 pts)
+15:26:18 INFO  -   Round  6  
+15:26:18 INFO  -   Round  6  
+15:26:18 INFO  - Current trick: ♠K   ♣K   ♣J   ♠10     -  Patrick won this round (20 pts)
+15:26:18 INFO  -   Round  6  
+15:26:18 INFO  - Current trick: ♠K   ♣K   ♣J   ♠10     -  Patrick won this round (20 pts)
+15:26:18 INFO  -   Round  6  
+15:26:18 INFO  -   Round  6  
+15:26:21 INFO  - Patrick played ♦10
+15:26:21 INFO  - Patrick played ♦10
+15:26:21 INFO  - Patrick played ♦10
+15:26:21 INFO  - Patrick played ♦10
+15:26:21 INFO  - Patrick played ♦10
+15:26:21 INFO  - Current trick: ♦10   
+15:26:23 INFO  - Fabian played ♥10
+15:26:23 INFO  - Fabian played ♥10
+15:26:23 INFO  - Fabian played ♥10
+15:26:23 INFO  - Fabian played ♥10
+15:26:23 INFO  - Fabian played ♥10
+15:26:23 INFO  - Current trick: ♦10   ♥10   
+15:26:25 INFO  - Dennis played ♦Q
+15:26:25 INFO  - Dennis played ♦Q
+15:26:25 INFO  - Dennis played ♦Q
+15:26:25 INFO  - Dennis played ♦Q
+15:26:25 INFO  - Dennis played ♦Q
+15:26:25 INFO  - Current trick: ♦10   ♥10   ♦Q   
+15:26:27 INFO  - Mia played ♥J
+15:26:27 INFO  - Mia played ♥J
+15:26:27 INFO  - Mia played ♥J
+15:26:27 INFO  - Mia played ♥J
+15:26:27 INFO  - Mia played ♥J
+15:26:27 INFO  - Current trick: ♦10   ♥10   ♦Q   ♥J   
+15:26:27 INFO  - Fabian won this round (25 pts)
+15:26:27 INFO  - Current trick: ♦10   ♥10   ♦Q   ♥J     -  Fabian won this round (25 pts)
+15:26:27 INFO  - Current trick: ♦10   ♥10   ♦Q   ♥J     -  Fabian won this round (25 pts)
+15:26:27 INFO  - Current trick: ♦10   ♥10   ♦Q   ♥J     -  Fabian won this round (25 pts)
+15:26:27 INFO  -   Round  7  
+15:26:27 INFO  - Current trick: ♦10   ♥10   ♦Q   ♥J     -  Fabian won this round (25 pts)
+15:26:27 INFO  -   Round  7  
+15:26:27 INFO  -   Round  7  
+15:26:27 INFO  -   Round  7  
+15:26:28 INFO  -   Round  7  
+15:26:30 INFO  - Fabian played ♣A
+15:26:30 INFO  - Fabian played ♣A
+15:26:30 INFO  - Fabian played ♣A
+15:26:30 INFO  - Fabian played ♣A
+15:26:30 INFO  - Fabian played ♣A
+15:26:31 INFO  - Current trick: ♣A   
+15:26:33 INFO  - Dennis played ♠J
+15:26:33 INFO  - Dennis played ♠J
+15:26:33 INFO  - Dennis played ♠J
+15:26:33 INFO  - Dennis played ♠J
+15:26:33 INFO  - Dennis played ♠J
+15:26:33 INFO  - Current trick: ♣A   ♠J   
+15:26:35 INFO  - Mia played ♦Q
+15:26:35 INFO  - Mia played ♦Q
+15:26:35 INFO  - Mia played ♦Q
+15:26:35 INFO  - Mia played ♦Q
+15:26:35 INFO  - Mia played ♦Q
+15:26:35 INFO  - Current trick: ♣A   ♠J   ♦Q   
+15:26:37 INFO  - Patrick played ♣K
+15:26:37 INFO  - Patrick played ♣K
+15:26:37 INFO  - Patrick played ♣K
+15:26:37 INFO  - Patrick played ♣K
+15:26:37 INFO  - Patrick played ♣K
+15:26:37 INFO  - Current trick: ♣A   ♠J   ♦Q   ♣K   
+15:26:37 INFO  - Mia won this round (20 pts)
+15:26:37 INFO  - Current trick: ♣A   ♠J   ♦Q   ♣K     -  Mia won this round (20 pts)
+15:26:37 INFO  - Current trick: ♣A   ♠J   ♦Q   ♣K     -  Mia won this round (20 pts)
+15:26:37 INFO  -   Round  8  
+15:26:37 INFO  - Current trick: ♣A   ♠J   ♦Q   ♣K     -  Mia won this round (20 pts)
+15:26:37 INFO  -   Round  8  
+15:26:37 INFO  -   Round  8  
+15:26:37 INFO  - Current trick: ♣A   ♠J   ♦Q   ♣K     -  Mia won this round (20 pts)
+15:26:37 INFO  -   Round  8  
+15:26:37 INFO  -   Round  8  
+15:26:41 INFO  - Mia played ♦A
+15:26:41 INFO  - Mia played ♦A
+15:26:41 INFO  - Mia played ♦A
+15:26:41 INFO  - Mia played ♦A
+15:26:41 INFO  - Mia played ♦A
+15:26:42 INFO  - Current trick: ♦A   
+15:26:44 INFO  - Patrick played ♦K
+15:26:44 INFO  - Patrick played ♦K
+15:26:44 INFO  - Patrick played ♦K
+15:26:44 INFO  - Patrick played ♦K
+15:26:45 INFO  - Patrick played ♦K
+15:26:45 INFO  - Current trick: ♦A   ♦K   
+15:26:46 INFO  - Fabian played ♥K
+15:26:46 INFO  - Fabian played ♥K
+15:26:46 INFO  - Fabian played ♥K
+15:26:46 INFO  - Fabian played ♥K
+15:26:47 INFO  - Fabian played ♥K
+15:26:47 INFO  - Current trick: ♦A   ♦K   ♥K   
+15:26:48 INFO  - Dennis played ♣J
+15:26:48 INFO  - Dennis played ♣J
+15:26:48 INFO  - Dennis played ♣J
+15:26:48 INFO  - Dennis played ♣J
+15:26:49 INFO  - Dennis played ♣J
+15:26:49 INFO  - Current trick: ♦A   ♦K   ♥K   ♣J   
+15:26:49 INFO  - Dennis won this round (21 pts)
+15:26:49 INFO  - Current trick: ♦A   ♦K   ♥K   ♣J     -  Dennis won this round (21 pts)
+15:26:49 INFO  -   Round  9  
+15:26:49 INFO  - Current trick: ♦A   ♦K   ♥K   ♣J     -  Dennis won this round (21 pts)
+15:26:49 INFO  -   Round  9  
+15:26:49 INFO  - Current trick: ♦A   ♦K   ♥K   ♣J     -  Dennis won this round (21 pts)
+15:26:49 INFO  -   Round  9  
+15:26:49 INFO  - Current trick: ♦A   ♦K   ♥K   ♣J     -  Dennis won this round (21 pts)
+15:26:49 INFO  -   Round  9  
+15:26:49 INFO  -   Round  9  
+15:26:51 INFO  - Dennis played ♦J
+15:26:51 INFO  - Dennis played ♦J
+15:26:51 INFO  - Dennis played ♦J
+15:26:51 INFO  - Dennis played ♦J
+15:26:51 INFO  - Dennis played ♦J
+15:26:51 INFO  - Current trick: ♦J   
+15:26:53 INFO  - Mia played ♦J
+15:26:53 INFO  - Mia played ♦J
+15:26:53 INFO  - Mia played ♦J
+15:26:53 INFO  - Mia played ♦J
+15:26:53 INFO  - Mia played ♦J
+15:26:53 INFO  - Current trick: ♦J   ♦J   
+15:26:55 INFO  - Patrick played ♣10
+15:26:55 INFO  - Patrick played ♣10
+15:26:55 INFO  - Patrick played ♣10
+15:26:55 INFO  - Patrick played ♣10
+15:26:55 INFO  - Patrick played ♣10
+15:26:56 INFO  - Current trick: ♦J   ♦J   ♣10   
+15:26:57 INFO  - Fabian played ♣10
+15:26:57 INFO  - Fabian played ♣10
+15:26:57 INFO  - Fabian played ♣10
+15:26:57 INFO  - Fabian played ♣10
+15:26:57 INFO  - Fabian played ♣10
+15:26:57 INFO  - Current trick: ♦J   ♦J   ♣10   ♣10   
+15:26:57 INFO  - Dennis won this round (24 pts)
+15:26:57 INFO  - Current trick: ♦J   ♦J   ♣10   ♣10     -  Dennis won this round (24 pts)
+15:26:57 INFO  - Current trick: ♦J   ♦J   ♣10   ♣10     -  Dennis won this round (24 pts)
+15:26:57 INFO  -   Round 10  
+15:26:57 INFO  -   Round 10  
+15:26:57 INFO  - Current trick: ♦J   ♦J   ♣10   ♣10     -  Dennis won this round (24 pts)
+15:26:57 INFO  -   Round 10  
+15:26:57 INFO  - Current trick: ♦J   ♦J   ♣10   ♣10     -  Dennis won this round (24 pts)
+15:26:57 INFO  -   Round 10  
+15:26:57 INFO  -   Round 10  
+15:26:59 INFO  - Dennis played ♦K
+15:26:59 INFO  - Dennis played ♦K
+15:26:59 INFO  - Dennis played ♦K
+15:26:59 INFO  - Dennis played ♦K
+15:26:59 INFO  - Dennis played ♦K
+15:26:59 INFO  - Current trick: ♦K   
+15:27:01 INFO  - Mia played ♦10
+15:27:01 INFO  - Mia played ♦10
+15:27:01 INFO  - Mia played ♦10
+15:27:01 INFO  - Mia played ♦10
+15:27:01 INFO  - Mia played ♦10
+15:27:01 INFO  - Current trick: ♦K   ♦10   
+15:27:02 INFO  - Patrick played ♣A
+15:27:02 INFO  - Patrick played ♣A
+15:27:02 INFO  - Patrick played ♣A
+15:27:02 INFO  - Patrick played ♣A
+15:27:02 INFO  - Patrick played ♣A
+15:27:02 INFO  - Current trick: ♦K   ♦10   ♣A   
+15:27:04 INFO  - Fabian played ♠A
+15:27:04 INFO  - Fabian played ♠A
+15:27:04 INFO  - Fabian played ♠A
+15:27:04 INFO  - Fabian played ♠A
+15:27:04 INFO  - Fabian played ♠A
+15:27:04 INFO  - Current trick: ♦K   ♦10   ♣A   ♠A   
+15:27:04 INFO  - Dennis won this round (36 pts)
+15:27:04 INFO  -   Game Over  
+15:27:04 INFO  -   Game Over  
+15:27:04 INFO  -   Game Over  
+15:27:04 INFO  -   Game Over  
+15:27:05 INFO  - Victory points re-party: 2
+15:27:05 INFO  - Players in re-party: 
+15:27:05 INFO  - Dennis   
+15:27:05 INFO  - Patrick   
+15:27:05 INFO  - 1. Mia (-2)
+2. Fabian (-2)
+3. Dennis (2)
+4. Patrick (2)
+
+15:27:05 INFO  - 1. Mia (-2)
+2. Fabian (-2)
+3. Dennis (2)
+4. Patrick (2)
+
+15:27:05 INFO  - 1. Mia (-2)
+2. Fabian (-2)
+3. Dennis (2)
+4. Patrick (2)
+
+15:27:05 INFO  - 1. Mia (-2)
+2. Fabian (-2)
+3. Dennis (2)
+4. Patrick (2)
+
+15:27:05 INFO  - HHH000412: Hibernate Core {5.2.16.Final}
+15:27:05 INFO  - HHH000206: hibernate.properties not found
+15:27:05 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+15:27:05 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+15:27:05 INFO  - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://127.0.0.1:5432/Doppelkopf_Table?createDatabaseIfNotExist=true]
+15:27:05 INFO  - HHH10001001: Connection properties: {user=postgres, password=****, pool_size=20}
+15:27:05 INFO  - HHH10001003: Autocommit mode: false
+15:27:05 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+15:27:05 INFO  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+15:27:05 INFO  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+15:27:05 INFO  - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@712625fd
+15:27:06 INFO  - HV000001: Hibernate Validator 6.0.10.Final
+15:27:06 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5af5def9] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+15:27:06 WARN  - SQL Error: 0, SQLState: 23505
+15:27:06 ERROR - FEHLER: doppelter Schl�sselwert verletzt Unique-Constraint �player_pkey�
+  Detail: Schl�ssel �(name)=(Dennis)� existiert bereits.
+15:27:06 ERROR - HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
+15:30:55 INFO  - Running
+15:30:58 INFO  - Running
+15:30:59 INFO  - Running
+15:31:00 INFO  - Running
+15:31:01 INFO  - Running
+15:31:19 INFO  - Login was successful
+15:31:19 INFO  - Dennis tries to login
+15:31:27 INFO  - Login was successful
+15:31:27 INFO  - Dennis tries to login
+15:32:35 INFO  - Running
+15:32:38 INFO  - Running
+15:32:39 INFO  - Running
+15:32:39 INFO  - Running
+15:32:39 INFO  - Running
+15:32:40 INFO  - Running
+15:32:52 INFO  - Login was successful
+15:32:52 INFO  - Dennis tries to login
+15:32:58 INFO  - Login was successful
+15:32:58 INFO  - Mia tries to login
+15:33:06 INFO  - Login was successful
+15:33:06 INFO  - Patrick tries to login
+15:33:16 INFO  - Login was successful
+15:33:16 INFO  - Fabian tries to login
+15:33:20 INFO  - All 4 Clients logged in. Starting Game...
+15:33:20 INFO  -  Card  Handout 
+15:33:20 INFO  -  Card  Handout 
+15:33:20 INFO  -  Card  Handout 
+15:33:20 INFO  -  Card  Handout 
+15:33:20 INFO  -  Card  Handout 
+15:33:25 ERROR - Connection to MQTT broker lost!
+15:33:25 INFO  -  Round  1  
+15:33:25 INFO  -  Round  1  
+15:33:25 INFO  -  Round  1  
+15:33:25 INFO  -  Round  1  
+15:33:25 INFO  -  Round  1  
+15:33:26 INFO  - Dennis played ♦K
+15:33:26 INFO  - Dennis played ♦K
+15:33:26 INFO  - Dennis played ♦K
+15:33:26 INFO  - Dennis played ♦K
+15:33:26 INFO  - Dennis played ♦K
+15:33:26 INFO  - Current trick: ♦K   
+15:33:27 INFO  - Mia played ♥J
+15:33:27 INFO  - Mia played ♥J
+15:33:27 INFO  - Mia played ♥J
+15:33:27 INFO  - Mia played ♥J
+15:33:28 INFO  - Mia played ♥J
+15:33:28 INFO  - Current trick: ♦K   ♥J   
+15:33:29 INFO  - Patrick played ♠J
+15:33:29 INFO  - Patrick played ♠J
+15:33:29 INFO  - Patrick played ♠J
+15:33:29 INFO  - Patrick played ♠J
+15:33:29 INFO  - Patrick played ♠J
+15:33:29 INFO  - Current trick: ♦K   ♥J   ♠J   
+15:33:30 INFO  - Fabian played ♥10
+15:33:30 INFO  - Fabian played ♥10
+15:33:30 INFO  - Fabian played ♥10
+15:33:30 INFO  - Fabian played ♥10
+15:33:30 INFO  - Fabian played ♥10
+15:33:30 INFO  - Current trick: ♦K   ♥J   ♠J   ♥10   
+15:33:30 INFO  - Fabian won this round (18 pts)
+15:33:30 INFO  - Current trick: ♦K   ♥J   ♠J   ♥10     -  Fabian won this round (18 pts)
+15:33:30 INFO  - Current trick: ♦K   ♥J   ♠J   ♥10     -  Fabian won this round (18 pts)
+15:33:30 INFO  - Current trick: ♦K   ♥J   ♠J   ♥10     -  Fabian won this round (18 pts)
+15:33:30 INFO  - Current trick: ♦K   ♥J   ♠J   ♥10     -  Fabian won this round (18 pts)
+15:33:30 INFO  -   Round  2  
+15:33:30 INFO  -   Round  2  
+15:33:30 INFO  -   Round  2  
+15:33:30 INFO  -   Round  2  
+15:33:30 INFO  -   Round  2  
+15:33:31 INFO  - Fabian played ♠J
+15:33:31 INFO  - Fabian played ♠J
+15:33:31 INFO  - Fabian played ♠J
+15:33:31 INFO  - Fabian played ♠J
+15:33:31 INFO  - Fabian played ♠J
+15:33:31 INFO  - Current trick: ♠J   
+15:33:34 INFO  - Dennis played ♦10
+15:33:34 INFO  - Dennis played ♦10
+15:33:34 INFO  - Dennis played ♦10
+15:33:34 INFO  - Dennis played ♦10
+15:33:34 INFO  - Dennis played ♦10
+15:33:34 INFO  - Current trick: ♠J   ♦10   
+15:33:36 INFO  - Mia played ♥J
+15:33:36 INFO  - Mia played ♥J
+15:33:36 INFO  - Mia played ♥J
+15:33:36 INFO  - Mia played ♥J
+15:33:37 INFO  - Mia played ♥J
+15:33:37 INFO  - Current trick: ♠J   ♦10   ♥J   
+15:33:38 INFO  - Patrick played ♣Q
+15:33:38 INFO  - Patrick played ♣Q
+15:33:38 INFO  - Patrick played ♣Q
+15:33:38 INFO  - Patrick played ♣Q
+15:33:38 INFO  - Patrick played ♣Q
+15:33:38 INFO  - Current trick: ♠J   ♦10   ♥J   ♣Q   
+15:33:38 INFO  - Patrick won this round (17 pts)
+15:33:38 INFO  - Current trick: ♠J   ♦10   ♥J   ♣Q     -  Patrick won this round (17 pts)
+15:33:38 INFO  -   Round  3  
+15:33:38 INFO  - Current trick: ♠J   ♦10   ♥J   ♣Q     -  Patrick won this round (17 pts)
+15:33:38 INFO  - Current trick: ♠J   ♦10   ♥J   ♣Q     -  Patrick won this round (17 pts)
+15:33:38 INFO  - Current trick: ♠J   ♦10   ♥J   ♣Q     -  Patrick won this round (17 pts)
+15:33:38 INFO  -   Round  3  
+15:33:38 INFO  -   Round  3  
+15:33:38 INFO  -   Round  3  
+15:33:39 INFO  -   Round  3  
+15:33:42 INFO  - Patrick played ♣Q
+15:33:42 INFO  - Patrick played ♣Q
+15:33:42 INFO  - Patrick played ♣Q
+15:33:42 INFO  - Patrick played ♣Q
+15:33:42 INFO  - Patrick played ♣Q
+15:33:42 INFO  - Current trick: ♣Q   
+15:33:45 INFO  - Fabian played ♠Q
+15:33:45 INFO  - Fabian played ♠Q
+15:33:45 INFO  - Fabian played ♠Q
+15:33:45 INFO  - Fabian played ♠Q
+15:33:45 INFO  - Fabian played ♠Q
+15:33:45 INFO  - Current trick: ♣Q   ♠Q   
+15:33:48 INFO  - Dennis played ♦J
+15:33:48 INFO  - Dennis played ♦J
+15:33:48 INFO  - Dennis played ♦J
+15:33:48 INFO  - Dennis played ♦J
+15:33:48 INFO  - Dennis played ♦J
+15:33:48 INFO  - Current trick: ♣Q   ♠Q   ♦J   
+15:33:51 INFO  - Mia played ♦10
+15:33:51 INFO  - Mia played ♦10
+15:33:51 INFO  - Mia played ♦10
+15:33:51 INFO  - Mia played ♦10
+15:33:51 INFO  - Mia played ♦10
+15:33:51 INFO  - Current trick: ♣Q   ♠Q   ♦J   ♦10   
+15:33:51 INFO  - Patrick won this round (18 pts)
+15:33:51 INFO  - Current trick: ♣Q   ♠Q   ♦J   ♦10     -  Patrick won this round (18 pts)
+15:33:51 INFO  - Current trick: ♣Q   ♠Q   ♦J   ♦10     -  Patrick won this round (18 pts)
+15:33:51 INFO  - Current trick: ♣Q   ♠Q   ♦J   ♦10     -  Patrick won this round (18 pts)
+15:33:51 INFO  -   Round  4  
+15:33:51 INFO  - Current trick: ♣Q   ♠Q   ♦J   ♦10     -  Patrick won this round (18 pts)
+15:33:51 INFO  -   Round  4  
+15:33:51 INFO  -   Round  4  
+15:33:51 INFO  -   Round  4  
+15:33:51 INFO  -   Round  4  
+15:33:53 INFO  - Patrick played ♠A
+15:33:53 INFO  - Patrick played ♠A
+15:33:53 INFO  - Patrick played ♠A
+15:33:53 INFO  - Patrick played ♠A
+15:33:53 INFO  - Patrick played ♠A
+15:33:54 INFO  - Current trick: ♠A   
+15:33:55 INFO  - Fabian played ♠A
+15:33:55 INFO  - Fabian played ♠A
+15:33:55 INFO  - Fabian played ♠A
+15:33:55 INFO  - Fabian played ♠A
+15:33:55 INFO  - Fabian played ♠A
+15:33:55 INFO  - Current trick: ♠A   ♠A   
+15:33:58 INFO  - Dennis played ♠K
+15:33:58 INFO  - Dennis played ♠K
+15:33:58 INFO  - Dennis played ♠K
+15:33:58 INFO  - Dennis played ♠K
+15:33:59 INFO  - Dennis played ♠K
+15:33:59 INFO  - Current trick: ♠A   ♠A   ♠K   
+15:34:03 INFO  - Mia played ♠10
+15:34:03 INFO  - Mia played ♠10
+15:34:03 INFO  - Mia played ♠10
+15:34:03 INFO  - Mia played ♠10
+15:34:03 INFO  - Mia played ♠10
+15:34:03 INFO  - Current trick: ♠A   ♠A   ♠K   ♠10   
+15:34:03 INFO  - Patrick won this round (36 pts)
+15:34:03 INFO  - Current trick: ♠A   ♠A   ♠K   ♠10     -  Patrick won this round (36 pts)
+15:34:03 INFO  -   Round  5  
+15:34:03 INFO  - Current trick: ♠A   ♠A   ♠K   ♠10     -  Patrick won this round (36 pts)
+15:34:03 INFO  -   Round  5  
+15:34:03 INFO  - Current trick: ♠A   ♠A   ♠K   ♠10     -  Patrick won this round (36 pts)
+15:34:03 INFO  - Current trick: ♠A   ♠A   ♠K   ♠10     -  Patrick won this round (36 pts)
+15:34:03 INFO  -   Round  5  
+15:34:03 INFO  -   Round  5  
+15:34:03 INFO  -   Round  5  
+15:34:07 INFO  - Patrick played ♥K
+15:34:07 INFO  - Patrick played ♥K
+15:34:07 INFO  - Patrick played ♥K
+15:34:07 INFO  - Patrick played ♥K
+15:34:07 INFO  - Patrick played ♥K
+15:34:07 INFO  - Current trick: ♥K   
+15:34:08 INFO  - Fabian played ♣K
+15:34:08 INFO  - Fabian played ♣K
+15:34:08 INFO  - Fabian played ♣K
+15:34:08 INFO  - Fabian played ♣K
+15:34:09 INFO  - Fabian played ♣K
+15:34:09 INFO  - Current trick: ♥K   ♣K   
+15:34:12 INFO  - Dennis played ♥A
+15:34:12 INFO  - Dennis played ♥A
+15:34:12 INFO  - Dennis played ♥A
+15:34:12 INFO  - Dennis played ♥A
+15:34:12 INFO  - Dennis played ♥A
+15:34:13 INFO  - Current trick: ♥K   ♣K   ♥A   
+15:34:17 INFO  - Mia played ♥K
+15:34:17 INFO  - Mia played ♥K
+15:34:17 INFO  - Mia played ♥K
+15:34:17 INFO  - Mia played ♥K
+15:34:17 INFO  - Mia played ♥K
+15:34:17 INFO  - Current trick: ♥K   ♣K   ♥A   ♥K   
+15:34:17 INFO  - Dennis won this round (23 pts)
+15:34:17 INFO  - Current trick: ♥K   ♣K   ♥A   ♥K     -  Dennis won this round (23 pts)
+15:34:17 INFO  -   Round  6  
+15:34:17 INFO  - Current trick: ♥K   ♣K   ♥A   ♥K     -  Dennis won this round (23 pts)
+15:34:17 INFO  - Current trick: ♥K   ♣K   ♥A   ♥K     -  Dennis won this round (23 pts)
+15:34:17 INFO  -   Round  6  
+15:34:17 INFO  -   Round  6  
+15:34:17 INFO  - Current trick: ♥K   ♣K   ♥A   ♥K     -  Dennis won this round (23 pts)
+15:34:17 INFO  -   Round  6  
+15:34:17 INFO  -   Round  6  
+15:34:21 INFO  - Dennis played ♠K
+15:34:21 INFO  - Dennis played ♠K
+15:34:21 INFO  - Dennis played ♠K
+15:34:21 INFO  - Dennis played ♠K
+15:34:21 INFO  - Dennis played ♠K
+15:34:21 INFO  - Current trick: ♠K   
+15:34:23 INFO  - Mia played ♣10
+15:34:23 INFO  - Mia played ♣10
+15:34:23 INFO  - Mia played ♣10
+15:34:23 INFO  - Mia played ♣10
+15:34:23 INFO  - Mia played ♣10
+15:34:23 INFO  - Current trick: ♠K   ♣10   
+15:34:25 INFO  - Patrick played ♥Q
+15:34:25 INFO  - Patrick played ♥Q
+15:34:25 INFO  - Patrick played ♥Q
+15:34:25 INFO  - Patrick played ♥Q
+15:34:25 INFO  - Patrick played ♥Q
+15:34:25 INFO  - Current trick: ♠K   ♣10   ♥Q   
+15:34:26 INFO  - Fabian played ♦A
+15:34:26 INFO  - Fabian played ♦A
+15:34:26 INFO  - Fabian played ♦A
+15:34:26 INFO  - Fabian played ♦A
+15:34:26 INFO  - Fabian played ♦A
+15:34:26 INFO  - Current trick: ♠K   ♣10   ♥Q   ♦A   
+15:34:26 INFO  - Patrick won this round (28 pts)
+15:34:26 INFO  - Current trick: ♠K   ♣10   ♥Q   ♦A     -  Patrick won this round (28 pts)
+15:34:26 INFO  -   Round  7  
+15:34:26 INFO  - Current trick: ♠K   ♣10   ♥Q   ♦A     -  Patrick won this round (28 pts)
+15:34:26 INFO  - Current trick: ♠K   ♣10   ♥Q   ♦A     -  Patrick won this round (28 pts)
+15:34:26 INFO  -   Round  7  
+15:34:26 INFO  - Current trick: ♠K   ♣10   ♥Q   ♦A     -  Patrick won this round (28 pts)
+15:34:26 INFO  -   Round  7  
+15:34:26 INFO  -   Round  7  
+15:34:27 INFO  -   Round  7  
+15:34:31 INFO  - Patrick played ♦K
+15:34:31 INFO  - Patrick played ♦K
+15:34:31 INFO  - Patrick played ♦K
+15:34:31 INFO  - Patrick played ♦K
+15:34:31 INFO  - Patrick played ♦K
+15:34:31 INFO  - Current trick: ♦K   
+15:34:33 INFO  - Fabian played ♣J
+15:34:33 INFO  - Fabian played ♣J
+15:34:33 INFO  - Fabian played ♣J
+15:34:33 INFO  - Fabian played ♣J
+15:34:33 INFO  - Fabian played ♣J
+15:34:33 INFO  - Current trick: ♦K   ♣J   
+15:34:35 INFO  - Dennis played ♥10
+15:34:35 INFO  - Dennis played ♥10
+15:34:35 INFO  - Dennis played ♥10
+15:34:35 INFO  - Dennis played ♥10
+15:34:35 INFO  - Dennis played ♥10
+15:34:35 INFO  - Current trick: ♦K   ♣J   ♥10   
+15:34:36 INFO  - Mia played ♦J
+15:34:36 INFO  - Mia played ♦J
+15:34:36 INFO  - Mia played ♦J
+15:34:36 INFO  - Mia played ♦J
+15:34:36 INFO  - Mia played ♦J
+15:34:37 INFO  - Current trick: ♦K   ♣J   ♥10   ♦J   
+15:34:37 INFO  - Dennis won this round (18 pts)
+15:34:37 INFO  - Current trick: ♦K   ♣J   ♥10   ♦J     -  Dennis won this round (18 pts)
+15:34:37 INFO  - Current trick: ♦K   ♣J   ♥10   ♦J     -  Dennis won this round (18 pts)
+15:34:37 INFO  - Current trick: ♦K   ♣J   ♥10   ♦J     -  Dennis won this round (18 pts)
+15:34:37 INFO  -   Round  8  
+15:34:37 INFO  -   Round  8  
+15:34:37 INFO  -   Round  8  
+15:34:37 INFO  - Current trick: ♦K   ♣J   ♥10   ♦J     -  Dennis won this round (18 pts)
+15:34:37 INFO  -   Round  8  
+15:34:37 INFO  -   Round  8  
+15:34:41 INFO  - Dennis played ♣A
+15:34:41 INFO  - Dennis played ♣A
+15:34:41 INFO  - Dennis played ♣A
+15:34:41 INFO  - Dennis played ♣A
+15:34:41 INFO  - Dennis played ♣A
+15:34:41 INFO  - Current trick: ♣A   
+15:34:44 INFO  - Mia played ♣10
+15:34:44 INFO  - Mia played ♣10
+15:34:44 INFO  - Mia played ♣10
+15:34:44 INFO  - Mia played ♣10
+15:34:44 INFO  - Mia played ♣10
+15:34:44 INFO  - Current trick: ♣A   ♣10   
+15:34:46 INFO  - Patrick played ♣J
+15:34:46 INFO  - Patrick played ♣J
+15:34:46 INFO  - Patrick played ♣J
+15:34:46 INFO  - Patrick played ♣J
+15:34:47 INFO  - Patrick played ♣J
+15:34:47 INFO  - Current trick: ♣A   ♣10   ♣J   
+15:34:50 INFO  - Fabian played ♣K
+15:34:50 INFO  - Fabian played ♣K
+15:34:50 INFO  - Fabian played ♣K
+15:34:50 INFO  - Fabian played ♣K
+15:34:50 INFO  - Fabian played ♣K
+15:34:50 INFO  - Current trick: ♣A   ♣10   ♣J   ♣K   
+15:34:50 INFO  - Patrick won this round (27 pts)
+15:34:50 INFO  - Current trick: ♣A   ♣10   ♣J   ♣K     -  Patrick won this round (27 pts)
+15:34:50 INFO  - Current trick: ♣A   ♣10   ♣J   ♣K     -  Patrick won this round (27 pts)
+15:34:50 INFO  - Current trick: ♣A   ♣10   ♣J   ♣K     -  Patrick won this round (27 pts)
+15:34:50 INFO  -   Round  9  
+15:34:50 INFO  -   Round  9  
+15:34:50 INFO  -   Round  9  
+15:34:50 INFO  - Current trick: ♣A   ♣10   ♣J   ♣K     -  Patrick won this round (27 pts)
+15:34:50 INFO  -   Round  9  
+15:34:50 INFO  -   Round  9  
+15:34:53 INFO  - Patrick played ♠Q
+15:34:53 INFO  - Patrick played ♠Q
+15:34:53 INFO  - Patrick played ♠Q
+15:34:53 INFO  - Patrick played ♠Q
+15:34:53 INFO  - Patrick played ♠Q
+15:34:53 INFO  - Current trick: ♠Q   
+15:34:54 INFO  - Fabian played ♦Q
+15:34:54 INFO  - Fabian played ♦Q
+15:34:54 INFO  - Fabian played ♦Q
+15:34:54 INFO  - Fabian played ♦Q
+15:34:54 INFO  - Fabian played ♦Q
+15:34:54 INFO  - Current trick: ♠Q   ♦Q   
+15:34:57 INFO  - Dennis played ♦Q
+15:34:57 INFO  - Dennis played ♦Q
+15:34:57 INFO  - Dennis played ♦Q
+15:34:57 INFO  - Dennis played ♦Q
+15:34:57 INFO  - Dennis played ♦Q
+15:34:57 INFO  - Current trick: ♠Q   ♦Q   ♦Q   
+15:34:58 INFO  - Mia played ♥A
+15:34:58 INFO  - Mia played ♥A
+15:34:58 INFO  - Mia played ♥A
+15:34:58 INFO  - Mia played ♥A
+15:34:59 INFO  - Mia played ♥A
+15:34:59 INFO  - Current trick: ♠Q   ♦Q   ♦Q   ♥A   
+15:34:59 INFO  - Patrick won this round (20 pts)
+15:34:59 INFO  - Current trick: ♠Q   ♦Q   ♦Q   ♥A     -  Patrick won this round (20 pts)
+15:34:59 INFO  -   Round 10  
+15:34:59 INFO  - Current trick: ♠Q   ♦Q   ♦Q   ♥A     -  Patrick won this round (20 pts)
+15:34:59 INFO  - Current trick: ♠Q   ♦Q   ♦Q   ♥A     -  Patrick won this round (20 pts)
+15:34:59 INFO  - Current trick: ♠Q   ♦Q   ♦Q   ♥A     -  Patrick won this round (20 pts)
+15:34:59 INFO  -   Round 10  
+15:34:59 INFO  -   Round 10  
+15:34:59 INFO  -   Round 10  
+15:34:59 INFO  -   Round 10  
+15:35:00 INFO  - Patrick played ♥Q
+15:35:00 INFO  - Patrick played ♥Q
+15:35:00 INFO  - Patrick played ♥Q
+15:35:00 INFO  - Patrick played ♥Q
+15:35:00 INFO  - Patrick played ♥Q
+15:35:01 INFO  - Current trick: ♥Q   
+15:35:02 INFO  - Fabian played ♦A
+15:35:02 INFO  - Fabian played ♦A
+15:35:02 INFO  - Fabian played ♦A
+15:35:02 INFO  - Fabian played ♦A
+15:35:02 INFO  - Fabian played ♦A
+15:35:02 INFO  - Current trick: ♥Q   ♦A   
+15:35:04 INFO  - Dennis played ♠10
+15:35:04 INFO  - Dennis played ♠10
+15:35:04 INFO  - Dennis played ♠10
+15:35:04 INFO  - Dennis played ♠10
+15:35:04 INFO  - Dennis played ♠10
+15:35:04 INFO  - Current trick: ♥Q   ♦A   ♠10   
+15:35:05 INFO  - Mia played ♣A
+15:35:05 INFO  - Mia played ♣A
+15:35:05 INFO  - Mia played ♣A
+15:35:05 INFO  - Mia played ♣A
+15:35:05 INFO  - Mia played ♣A
+15:35:05 INFO  - Current trick: ♥Q   ♦A   ♠10   ♣A   
+15:35:05 INFO  - Patrick won this round (35 pts)
+15:35:05 INFO  -   Game Over  
+15:35:05 INFO  -   Game Over  
+15:35:05 INFO  -   Game Over  
+15:35:05 INFO  -   Game Over  
+15:35:05 INFO  - Victory points re-party: 3
+15:35:05 INFO  - Players in re-party: 
+15:35:05 INFO  - Patrick   
+15:35:06 INFO  - 1. Dennis (-3)
+2. Mia (-3)
+3. Fabian (-3)
+4. Patrick (3)
+
+15:35:06 INFO  - 1. Dennis (-3)
+2. Mia (-3)
+3. Fabian (-3)
+4. Patrick (3)
+
+15:35:06 INFO  - 1. Dennis (-3)
+2. Mia (-3)
+3. Fabian (-3)
+4. Patrick (3)
+
+15:35:06 INFO  - 1. Dennis (-3)
+2. Mia (-3)
+3. Fabian (-3)
+4. Patrick (3)
+
+15:35:06 INFO  - HHH000412: Hibernate Core {5.2.16.Final}
+15:35:06 INFO  - HHH000206: hibernate.properties not found
+15:35:06 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+15:35:06 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+15:35:06 INFO  - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://127.0.0.1:5432/Doppelkopf_Table?createDatabaseIfNotExist=true]
+15:35:06 INFO  - HHH10001001: Connection properties: {user=postgres, password=****, pool_size=20}
+15:35:06 INFO  - HHH10001003: Autocommit mode: false
+15:35:06 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+15:35:06 INFO  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+15:35:06 INFO  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+15:35:06 INFO  - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@4b013c76
+15:35:07 INFO  - HV000001: Hibernate Validator 6.0.10.Final
+15:35:07 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@e041f0c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+15:35:08 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+15:35:08 INFO  - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://127.0.0.1:5432/Doppelkopf_Table?createDatabaseIfNotExist=true]
+15:35:08 INFO  - HHH10001001: Connection properties: {user=postgres, password=****, pool_size=20}
+15:35:08 INFO  - HHH10001003: Autocommit mode: false
+15:35:08 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+15:35:08 INFO  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+15:35:08 INFO  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+15:35:08 INFO  - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@4b013c76
+15:35:08 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4c27d39d] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+15:35:08 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+15:35:08 INFO  - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://127.0.0.1:5432/Doppelkopf_Table?createDatabaseIfNotExist=true]
+15:35:08 INFO  - HHH10001001: Connection properties: {user=postgres, password=****, pool_size=20}
+15:35:08 INFO  - HHH10001003: Autocommit mode: false
+15:35:08 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+15:35:08 INFO  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+15:35:08 INFO  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+15:35:08 INFO  - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@4b013c76
+15:35:08 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@23202c31] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+15:35:08 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+15:35:08 INFO  - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://127.0.0.1:5432/Doppelkopf_Table?createDatabaseIfNotExist=true]
+15:35:08 INFO  - HHH10001001: Connection properties: {user=postgres, password=****, pool_size=20}
+15:35:08 INFO  - HHH10001003: Autocommit mode: false
+15:35:08 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+15:35:08 INFO  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+15:35:08 INFO  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+15:35:08 INFO  - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@4b013c76
+15:35:08 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7942a854] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+15:35:08 ERROR -  
+Game Over.
+15:35:12 INFO  - test tries to login
+15:35:43 INFO  - All 4 Clients logged in. Starting Game...
+15:35:43 INFO  -  Lobby 
+15:35:43 INFO  -  Lobby 
+15:35:43 INFO  -  Lobby 
+15:35:43 INFO  -  Lobby 
+15:35:48 INFO  -  Card  Handout 
+15:35:48 INFO  -  Card  Handout 
+15:35:48 INFO  -  Card  Handout 
+15:35:48 INFO  -  Card  Handout 
+15:35:48 INFO  -  Card  Handout 
+15:36:28 INFO  - Running
+15:36:31 INFO  - Running
+15:36:32 INFO  - Running
+15:36:32 INFO  - Running
+15:36:33 INFO  - Running
+15:36:42 INFO  - Login was successful
+15:36:42 INFO  - Dennis tries to login
+15:36:48 INFO  - Login was successful
+15:36:49 INFO  - Mia tries to login
+15:37:03 INFO  - Login was successful
+15:37:03 INFO  - Patrick tries to login
+15:37:11 INFO  - Login was successful
+15:37:11 INFO  - Fabian tries to login
+15:37:13 INFO  - All 4 Clients logged in. Starting Game...
+15:37:13 INFO  -  Card  Handout 
+15:37:13 INFO  -  Card  Handout 
+15:37:13 INFO  -  Card  Handout 
+15:37:13 INFO  -  Card  Handout 
+15:37:18 INFO  -  Round  1  
+15:37:18 INFO  -  Round  1  
+15:37:18 INFO  -  Round  1  
+15:37:18 INFO  -  Round  1  
+15:37:18 INFO  -  Round  1  
+15:37:19 INFO  - Dennis played ♠A
+15:37:19 INFO  - Dennis played ♠A
+15:37:19 INFO  - Dennis played ♠A
+15:37:19 INFO  - Dennis played ♠A
+15:37:19 INFO  - Dennis played ♠A
+15:37:19 INFO  - Current trick: ♠A   
+15:37:22 INFO  - Mia played ♠10
+15:37:22 INFO  - Mia played ♠10
+15:37:22 INFO  - Mia played ♠10
+15:37:22 INFO  - Mia played ♠10
+15:37:22 INFO  - Mia played ♠10
+15:37:22 INFO  - Current trick: ♠A   ♠10   
+15:37:27 INFO  - Patrick played ♠K
+15:37:27 INFO  - Patrick played ♠K
+15:37:27 INFO  - Patrick played ♠K
+15:37:27 INFO  - Patrick played ♠K
+15:37:27 INFO  - Patrick played ♠K
+15:37:27 INFO  - Current trick: ♠A   ♠10   ♠K   
+15:37:31 INFO  - Fabian played ♠10
+15:37:31 INFO  - Fabian played ♠10
+15:37:31 INFO  - Fabian played ♠10
+15:37:31 INFO  - Fabian played ♠10
+15:37:31 INFO  - Fabian played ♠10
+15:37:31 INFO  - Current trick: ♠A   ♠10   ♠K   ♠10   
+15:37:31 INFO  - Dennis won this round (35 pts)
+15:37:31 INFO  - Current trick: ♠A   ♠10   ♠K   ♠10     -  Dennis won this round (35 pts)
+15:37:31 INFO  - Current trick: ♠A   ♠10   ♠K   ♠10     -  Dennis won this round (35 pts)
+15:37:31 INFO  - Current trick: ♠A   ♠10   ♠K   ♠10     -  Dennis won this round (35 pts)
+15:37:31 INFO  - Current trick: ♠A   ♠10   ♠K   ♠10     -  Dennis won this round (35 pts)
+15:37:31 INFO  -   Round  2  
+15:37:31 INFO  -   Round  2  
+15:37:31 INFO  -   Round  2  
+15:37:31 INFO  -   Round  2  
+15:37:31 INFO  -   Round  2  
+15:37:34 INFO  - Dennis played ♥K
+15:37:34 INFO  - Dennis played ♥K
+15:37:34 INFO  - Dennis played ♥K
+15:37:34 INFO  - Dennis played ♥K
+15:37:34 INFO  - Dennis played ♥K
+15:37:34 INFO  - Current trick: ♥K   
+15:37:35 INFO  - Mia played ♣J
+15:37:35 INFO  - Mia played ♣J
+15:37:35 INFO  - Mia played ♣J
+15:37:35 INFO  - Mia played ♣J
+15:37:36 INFO  - Mia played ♣J
+15:37:36 INFO  - Current trick: ♥K   ♣J   
+15:37:40 INFO  - Patrick played ♥A
+15:37:40 INFO  - Patrick played ♥A
+15:37:40 INFO  - Patrick played ♥A
+15:37:40 INFO  - Patrick played ♥A
+15:37:40 INFO  - Patrick played ♥A
+15:37:40 INFO  - Current trick: ♥K   ♣J   ♥A   
+15:37:41 INFO  - Fabian played ♥K
+15:37:41 INFO  - Fabian played ♥K
+15:37:41 INFO  - Fabian played ♥K
+15:37:41 INFO  - Fabian played ♥K
+15:37:42 INFO  - Fabian played ♥K
+15:37:42 INFO  - Current trick: ♥K   ♣J   ♥A   ♥K   
+15:37:42 INFO  - Mia won this round (21 pts)
+15:37:42 INFO  - Current trick: ♥K   ♣J   ♥A   ♥K     -  Mia won this round (21 pts)
+15:37:42 INFO  -   Round  3  
+15:37:42 INFO  - Current trick: ♥K   ♣J   ♥A   ♥K     -  Mia won this round (21 pts)
+15:37:42 INFO  - Current trick: ♥K   ♣J   ♥A   ♥K     -  Mia won this round (21 pts)
+15:37:42 INFO  -   Round  3  
+15:37:42 INFO  -   Round  3  
+15:37:42 INFO  - Current trick: ♥K   ♣J   ♥A   ♥K     -  Mia won this round (21 pts)
+15:37:42 INFO  -   Round  3  
+15:37:42 INFO  -   Round  3  
+15:37:44 INFO  - Mia played ♣A
+15:37:44 INFO  - Mia played ♣A
+15:37:44 INFO  - Mia played ♣A
+15:37:44 INFO  - Mia played ♣A
+15:37:44 INFO  - Mia played ♣A
+15:37:44 INFO  - Current trick: ♣A   
+15:37:45 INFO  - Patrick played ♣10
+15:37:45 INFO  - Patrick played ♣10
+15:37:45 INFO  - Patrick played ♣10
+15:37:45 INFO  - Patrick played ♣10
+15:37:45 INFO  - Patrick played ♣10
+15:37:46 INFO  - Current trick: ♣A   ♣10   
+15:37:47 INFO  - Fabian played ♣Q
+15:37:47 INFO  - Fabian played ♣Q
+15:37:47 INFO  - Fabian played ♣Q
+15:37:47 INFO  - Fabian played ♣Q
+15:37:47 INFO  - Fabian played ♣Q
+15:37:47 INFO  - Current trick: ♣A   ♣10   ♣Q   
+15:37:54 INFO  - Dennis played ♣10
+15:37:54 INFO  - Dennis played ♣10
+15:37:54 INFO  - Dennis played ♣10
+15:37:54 INFO  - Dennis played ♣10
+15:37:54 INFO  - Dennis played ♣10
+15:37:54 INFO  - Current trick: ♣A   ♣10   ♣Q   ♣10   
+15:37:54 INFO  - Fabian won this round (34 pts)
+15:37:54 INFO  - Current trick: ♣A   ♣10   ♣Q   ♣10     -  Fabian won this round (34 pts)
+15:37:54 INFO  - Current trick: ♣A   ♣10   ♣Q   ♣10     -  Fabian won this round (34 pts)
+15:37:54 INFO  -   Round  4  
+15:37:54 INFO  - Current trick: ♣A   ♣10   ♣Q   ♣10     -  Fabian won this round (34 pts)
+15:37:54 INFO  - Current trick: ♣A   ♣10   ♣Q   ♣10     -  Fabian won this round (34 pts)
+15:37:54 INFO  -   Round  4  
+15:37:54 INFO  -   Round  4  
+15:37:54 INFO  -   Round  4  
+15:37:54 INFO  -   Round  4  
+15:38:07 INFO  - Fabian played ♦K
+15:38:07 INFO  - Fabian played ♦K
+15:38:07 INFO  - Fabian played ♦K
+15:38:07 INFO  - Fabian played ♦K
+15:38:07 INFO  - Fabian played ♦K
+15:38:07 INFO  - Current trick: ♦K   
+15:38:09 INFO  - Dennis played ♦10
+15:38:09 INFO  - Dennis played ♦10
+15:38:09 INFO  - Dennis played ♦10
+15:38:09 INFO  - Dennis played ♦10
+15:38:09 INFO  - Dennis played ♦10
+15:38:09 INFO  - Current trick: ♦K   ♦10   
+15:38:10 INFO  - Mia played ♣J
+15:38:10 INFO  - Mia played ♣J
+15:38:10 INFO  - Mia played ♣J
+15:38:10 INFO  - Mia played ♣J
+15:38:10 INFO  - Mia played ♣J
+15:38:10 INFO  - Current trick: ♦K   ♦10   ♣J   
+15:38:14 INFO  - Patrick played ♥Q
+15:38:14 INFO  - Patrick played ♥Q
+15:38:14 INFO  - Patrick played ♥Q
+15:38:14 INFO  - Patrick played ♥Q
+15:38:14 INFO  - Patrick played ♥Q
+15:38:14 INFO  - Current trick: ♦K   ♦10   ♣J   ♥Q   
+15:38:14 INFO  - Patrick won this round (19 pts)
+15:38:14 INFO  - Current trick: ♦K   ♦10   ♣J   ♥Q     -  Patrick won this round (19 pts)
+15:38:14 INFO  -   Round  5  
+15:38:14 INFO  - Current trick: ♦K   ♦10   ♣J   ♥Q     -  Patrick won this round (19 pts)
+15:38:14 INFO  -   Round  5  
+15:38:14 INFO  - Current trick: ♦K   ♦10   ♣J   ♥Q     -  Patrick won this round (19 pts)
+15:38:14 INFO  -   Round  5  
+15:38:14 INFO  - Current trick: ♦K   ♦10   ♣J   ♥Q     -  Patrick won this round (19 pts)
+15:38:14 INFO  -   Round  5  
+15:38:15 INFO  -   Round  5  
+15:38:17 INFO  - Patrick played ♣K
+15:38:17 INFO  - Patrick played ♣K
+15:38:17 INFO  - Patrick played ♣K
+15:38:17 INFO  - Patrick played ♣K
+15:38:17 INFO  - Patrick played ♣K
+15:38:17 INFO  - Current trick: ♣K   
+15:38:18 INFO  - Fabian played ♥A
+15:38:18 INFO  - Fabian played ♥A
+15:38:18 INFO  - Fabian played ♥A
+15:38:18 INFO  - Fabian played ♥A
+15:38:19 INFO  - Fabian played ♥A
+15:38:19 INFO  - Current trick: ♣K   ♥A   
+15:38:20 INFO  - Dennis played ♠Q
+15:38:20 INFO  - Dennis played ♠Q
+15:38:20 INFO  - Dennis played ♠Q
+15:38:20 INFO  - Dennis played ♠Q
+15:38:20 INFO  - Dennis played ♠Q
+15:38:21 INFO  - Current trick: ♣K   ♥A   ♠Q   
+15:38:24 INFO  - Mia played ♣A
+15:38:24 INFO  - Mia played ♣A
+15:38:24 INFO  - Mia played ♣A
+15:38:24 INFO  - Mia played ♣A
+15:38:24 INFO  - Mia played ♣A
+15:38:24 INFO  - Current trick: ♣K   ♥A   ♠Q   ♣A   
+15:38:24 INFO  - Dennis won this round (29 pts)
+15:38:24 INFO  - Current trick: ♣K   ♥A   ♠Q   ♣A     -  Dennis won this round (29 pts)
+15:38:24 INFO  - Current trick: ♣K   ♥A   ♠Q   ♣A     -  Dennis won this round (29 pts)
+15:38:24 INFO  - Current trick: ♣K   ♥A   ♠Q   ♣A     -  Dennis won this round (29 pts)
+15:38:24 INFO  -   Round  6  
+15:38:24 INFO  - Current trick: ♣K   ♥A   ♠Q   ♣A     -  Dennis won this round (29 pts)
+15:38:24 INFO  -   Round  6  
+15:38:24 INFO  -   Round  6  
+15:38:24 INFO  -   Round  6  
+15:38:24 INFO  -   Round  6  
+15:38:29 INFO  - Dennis played ♥10
+15:38:29 INFO  - Dennis played ♥10
+15:38:29 INFO  - Dennis played ♥10
+15:38:29 INFO  - Dennis played ♥10
+15:38:29 INFO  - Dennis played ♥10
+15:38:29 INFO  - Current trick: ♥10   
+15:38:31 INFO  - Mia played ♠J
+15:38:31 INFO  - Mia played ♠J
+15:38:31 INFO  - Mia played ♠J
+15:38:31 INFO  - Mia played ♠J
+15:38:31 INFO  - Mia played ♠J
+15:38:31 INFO  - Current trick: ♥10   ♠J   
+15:38:34 INFO  - Patrick played ♦K
+15:38:34 INFO  - Patrick played ♦K
+15:38:34 INFO  - Patrick played ♦K
+15:38:34 INFO  - Patrick played ♦K
+15:38:34 INFO  - Patrick played ♦K
+15:38:34 INFO  - Current trick: ♥10   ♠J   ♦K   
+15:38:37 INFO  - Fabian played ♦Q
+15:38:37 INFO  - Fabian played ♦Q
+15:38:37 INFO  - Fabian played ♦Q
+15:38:37 INFO  - Fabian played ♦Q
+15:38:37 INFO  - Fabian played ♦Q
+15:38:37 INFO  - Current trick: ♥10   ♠J   ♦K   ♦Q   
+15:38:37 INFO  - Dennis won this round (19 pts)
+15:38:37 INFO  - Current trick: ♥10   ♠J   ♦K   ♦Q     -  Dennis won this round (19 pts)
+15:38:37 INFO  - Current trick: ♥10   ♠J   ♦K   ♦Q     -  Dennis won this round (19 pts)
+15:38:37 INFO  -   Round  7  
+15:38:37 INFO  - Current trick: ♥10   ♠J   ♦K   ♦Q     -  Dennis won this round (19 pts)
+15:38:37 INFO  -   Round  7  
+15:38:37 INFO  -   Round  7  
+15:38:37 INFO  - Current trick: ♥10   ♠J   ♦K   ♦Q     -  Dennis won this round (19 pts)
+15:38:37 INFO  -   Round  7  
+15:38:37 INFO  -   Round  7  
+15:38:40 INFO  - Dennis played ♦10
+15:38:40 INFO  - Dennis played ♦10
+15:38:40 INFO  - Dennis played ♦10
+15:38:40 INFO  - Dennis played ♦10
+15:38:40 INFO  - Dennis played ♦10
+15:38:40 INFO  - Current trick: ♦10   
+15:38:42 INFO  - Mia played ♥J
+15:38:42 INFO  - Mia played ♥J
+15:38:42 INFO  - Mia played ♥J
+15:38:42 INFO  - Mia played ♥J
+15:38:42 INFO  - Mia played ♥J
+15:38:42 INFO  - Current trick: ♦10   ♥J   
+15:38:45 INFO  - Patrick played ♠Q
+15:38:45 INFO  - Patrick played ♠Q
+15:38:45 INFO  - Patrick played ♠Q
+15:38:45 INFO  - Patrick played ♠Q
+15:38:45 INFO  - Patrick played ♠Q
+15:38:45 INFO  - Current trick: ♦10   ♥J   ♠Q   
+15:38:48 INFO  - Fabian played ♠J
+15:38:48 INFO  - Fabian played ♠J
+15:38:48 INFO  - Fabian played ♠J
+15:38:48 INFO  - Fabian played ♠J
+15:38:48 INFO  - Fabian played ♠J
+15:38:48 INFO  - Current trick: ♦10   ♥J   ♠Q   ♠J   
+15:38:48 INFO  - Patrick won this round (17 pts)
+15:38:48 INFO  - Current trick: ♦10   ♥J   ♠Q   ♠J     -  Patrick won this round (17 pts)
+15:38:48 INFO  -   Round  8  
+15:38:48 INFO  - Current trick: ♦10   ♥J   ♠Q   ♠J     -  Patrick won this round (17 pts)
+15:38:48 INFO  - Current trick: ♦10   ♥J   ♠Q   ♠J     -  Patrick won this round (17 pts)
+15:38:48 INFO  -   Round  8  
+15:38:48 INFO  -   Round  8  
+15:38:48 INFO  - Current trick: ♦10   ♥J   ♠Q   ♠J     -  Patrick won this round (17 pts)
+15:38:48 INFO  -   Round  8  
+15:38:48 INFO  -   Round  8  
+15:38:51 INFO  - Patrick played ♠K
+15:38:51 INFO  - Patrick played ♠K
+15:38:51 INFO  - Patrick played ♠K
+15:38:51 INFO  - Patrick played ♠K
+15:38:51 INFO  - Patrick played ♠K
+15:38:51 INFO  - Current trick: ♠K   
+15:38:52 INFO  - Fabian played ♠A
+15:38:52 INFO  - Fabian played ♠A
+15:38:52 INFO  - Fabian played ♠A
+15:38:52 INFO  - Fabian played ♠A
+15:38:52 INFO  - Fabian played ♠A
+15:38:53 INFO  - Current trick: ♠K   ♠A   
+15:38:54 INFO  - Dennis played ♣Q
+15:38:54 INFO  - Dennis played ♣Q
+15:38:54 INFO  - Dennis played ♣Q
+15:38:54 INFO  - Dennis played ♣Q
+15:38:54 INFO  - Dennis played ♣Q
+15:38:54 INFO  - Current trick: ♠K   ♠A   ♣Q   
+15:38:56 INFO  - Mia played ♣K
+15:38:56 INFO  - Mia played ♣K
+15:38:56 INFO  - Mia played ♣K
+15:38:56 INFO  - Mia played ♣K
+15:38:56 INFO  - Mia played ♣K
+15:38:56 INFO  - Current trick: ♠K   ♠A   ♣Q   ♣K   
+15:38:56 INFO  - Dennis won this round (22 pts)
+15:38:56 INFO  - Current trick: ♠K   ♠A   ♣Q   ♣K     -  Dennis won this round (22 pts)
+15:38:56 INFO  - Current trick: ♠K   ♠A   ♣Q   ♣K     -  Dennis won this round (22 pts)
+15:38:56 INFO  -   Round  9  
+15:38:56 INFO  - Current trick: ♠K   ♠A   ♣Q   ♣K     -  Dennis won this round (22 pts)
+15:38:56 INFO  -   Round  9  
+15:38:56 INFO  -   Round  9  
+15:38:56 INFO  - Current trick: ♠K   ♠A   ♣Q   ♣K     -  Dennis won this round (22 pts)
+15:38:56 INFO  -   Round  9  
+15:38:56 INFO  -   Round  9  
+15:39:00 INFO  - Dennis played ♥Q
+15:39:00 INFO  - Dennis played ♥Q
+15:39:00 INFO  - Dennis played ♥Q
+15:39:00 INFO  - Dennis played ♥Q
+15:39:00 INFO  - Dennis played ♥Q
+15:39:00 INFO  - Current trick: ♥Q   
+15:39:02 INFO  - Mia played ♦A
+15:39:02 INFO  - Mia played ♦A
+15:39:02 INFO  - Mia played ♦A
+15:39:02 INFO  - Mia played ♦A
+15:39:02 INFO  - Mia played ♦A
+15:39:02 INFO  - Current trick: ♥Q   ♦A   
+15:39:04 INFO  - Patrick played ♦J
+15:39:04 INFO  - Patrick played ♦J
+15:39:04 INFO  - Patrick played ♦J
+15:39:04 INFO  - Patrick played ♦J
+15:39:04 INFO  - Patrick played ♦J
+15:39:04 INFO  - Current trick: ♥Q   ♦A   ♦J   
+15:39:05 INFO  - Fabian played ♦A
+15:39:05 INFO  - Fabian played ♦A
+15:39:05 INFO  - Fabian played ♦A
+15:39:05 INFO  - Fabian played ♦A
+15:39:05 INFO  - Fabian played ♦A
+15:39:05 INFO  - Current trick: ♥Q   ♦A   ♦J   ♦A   
+15:39:05 INFO  - Dennis won this round (27 pts)
+15:39:05 INFO  - Current trick: ♥Q   ♦A   ♦J   ♦A     -  Dennis won this round (27 pts)
+15:39:05 INFO  - Current trick: ♥Q   ♦A   ♦J   ♦A     -  Dennis won this round (27 pts)
+15:39:05 INFO  - Current trick: ♥Q   ♦A   ♦J   ♦A     -  Dennis won this round (27 pts)
+15:39:05 INFO  - Current trick: ♥Q   ♦A   ♦J   ♦A     -  Dennis won this round (27 pts)
+15:39:05 INFO  -   Round 10  
+15:39:05 INFO  -   Round 10  
+15:39:05 INFO  -   Round 10  
+15:39:05 INFO  -   Round 10  
+15:39:06 INFO  -   Round 10  
+15:39:08 INFO  - Dennis played ♥J
+15:39:08 INFO  - Dennis played ♥J
+15:39:08 INFO  - Dennis played ♥J
+15:39:08 INFO  - Dennis played ♥J
+15:39:08 INFO  - Dennis played ♥J
+15:39:08 INFO  - Current trick: ♥J   
+15:39:18 INFO  - Mia played ♦Q
+15:39:18 INFO  - Mia played ♦Q
+15:39:18 INFO  - Mia played ♦Q
+15:39:18 INFO  - Mia played ♦Q
+15:39:18 INFO  - Mia played ♦Q
+15:39:18 INFO  - Current trick: ♥J   ♦Q   
+15:39:23 INFO  - Patrick played ♥10
+15:39:23 INFO  - Patrick played ♥10
+15:39:23 INFO  - Patrick played ♥10
+15:39:23 INFO  - Patrick played ♥10
+15:39:23 INFO  - Patrick played ♥10
+15:39:23 INFO  - Current trick: ♥J   ♦Q   ♥10   
+15:39:26 INFO  - Fabian played ♦J
+15:39:26 INFO  - Fabian played ♦J
+15:39:26 INFO  - Fabian played ♦J
+15:39:26 INFO  - Fabian played ♦J
+15:39:26 INFO  - Fabian played ♦J
+15:39:26 INFO  - Current trick: ♥J   ♦Q   ♥10   ♦J   
+15:39:26 INFO  - Patrick won this round (17 pts)
+15:39:26 INFO  -   Game Over  
+15:39:26 INFO  -   Game Over  
+15:39:26 INFO  -   Game Over  
+15:39:26 INFO  -   Game Over  
+15:39:26 INFO  - Victory points re-party: -1
+15:39:26 INFO  - Players in re-party: 
+15:39:26 INFO  - Dennis   
+15:39:26 INFO  - Fabian   
+15:39:26 INFO  - 1. Dennis (-1)
+2. Fabian (-1)
+3. Mia (1)
+4. Patrick (1)
+
+15:39:26 INFO  - 1. Dennis (-1)
+2. Fabian (-1)
+3. Mia (1)
+4. Patrick (1)
+
+15:39:26 INFO  - 1. Dennis (-1)
+2. Fabian (-1)
+3. Mia (1)
+4. Patrick (1)
+
+15:39:26 INFO  - 1. Dennis (-1)
+2. Fabian (-1)
+3. Mia (1)
+4. Patrick (1)
+
+15:39:27 INFO  - HHH000412: Hibernate Core {5.2.16.Final}
+15:39:27 INFO  - HHH000206: hibernate.properties not found
+15:39:27 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+15:39:27 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+15:39:27 INFO  - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://127.0.0.1:5432/Doppelkopf_Table?createDatabaseIfNotExist=true]
+15:39:27 INFO  - HHH10001001: Connection properties: {user=postgres, password=****, pool_size=20}
+15:39:27 INFO  - HHH10001003: Autocommit mode: false
+15:39:27 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+15:39:27 INFO  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+15:39:27 INFO  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+15:39:27 INFO  - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@712625fd
+15:39:27 INFO  - HV000001: Hibernate Validator 6.0.10.Final
+15:39:28 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@11ee02f8] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+15:39:28 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+15:39:28 INFO  - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://127.0.0.1:5432/Doppelkopf_Table?createDatabaseIfNotExist=true]
+15:39:28 INFO  - HHH10001001: Connection properties: {user=postgres, password=****, pool_size=20}
+15:39:28 INFO  - HHH10001003: Autocommit mode: false
+15:39:28 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+15:39:28 INFO  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+15:39:28 INFO  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+15:39:28 INFO  - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@712625fd
+15:39:28 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@67dba613] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+15:39:28 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+15:39:28 INFO  - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://127.0.0.1:5432/Doppelkopf_Table?createDatabaseIfNotExist=true]
+15:39:28 INFO  - HHH10001001: Connection properties: {user=postgres, password=****, pool_size=20}
+15:39:28 INFO  - HHH10001003: Autocommit mode: false
+15:39:28 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+15:39:28 INFO  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+15:39:28 INFO  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+15:39:28 INFO  - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@712625fd
+15:39:28 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@29629fbb] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+15:39:28 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+15:39:28 INFO  - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://127.0.0.1:5432/Doppelkopf_Table?createDatabaseIfNotExist=true]
+15:39:28 INFO  - HHH10001001: Connection properties: {user=postgres, password=****, pool_size=20}
+15:39:28 INFO  - HHH10001003: Autocommit mode: false
+15:39:28 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+15:39:28 INFO  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+15:39:29 INFO  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+15:39:29 INFO  - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@712625fd
+15:39:29 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5fcfca62] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+15:39:29 ERROR -  
+Game Over.
+15:39:43 INFO  - test tries to login
+15:39:50 INFO  - Fabian went offline
+15:39:53 ERROR - Problems while publishing Message 'test tries to login':Keine Verbindung zu Client
+15:39:53 ERROR - Problems while publishing Message 'de.fh_dortmund.swt.doppelkopf.Client@4450908c requests leaderboard':Keine Verbindung zu Client
+15:39:56 ERROR - Problems while publishing Message 'Fabian went offline':Keine Verbindung zu Client
+15:40:00 ERROR - Problems while publishing Message 'test tries to login':Keine Verbindung zu Client
+15:40:00 ERROR - Problems while publishing Message 'de.fh_dortmund.swt.doppelkopf.Client@4450908c requests leaderboard':Keine Verbindung zu Client
+15:40:01 ERROR - Problems while publishing Message 'Fabian went offline':Keine Verbindung zu Client
+15:40:04 INFO  - All 4 Clients logged in. Starting Game...
+15:40:04 INFO  -  Lobby 
+15:40:04 INFO  -  Lobby 
+15:40:04 INFO  -  Lobby 
