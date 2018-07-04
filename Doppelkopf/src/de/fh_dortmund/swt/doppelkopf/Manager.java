@@ -68,7 +68,7 @@ public class Manager {
 	public static String askLeaderboard() {
 		String url = "jdbc:postgresql://localhost:5432/Doppelkopf_Table";
         String user = "postgres";
-        String password = "fadr2541994*";
+        String password = "0000";
         String leaderboardString = "";
 
         try (Connection con = DriverManager.getConnection(url, user, password);
