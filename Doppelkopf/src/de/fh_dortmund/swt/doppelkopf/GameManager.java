@@ -42,7 +42,6 @@ public class GameManager {
 	private static int loggedInClients = 0;
 	transient private MqttClient mqttClient;
 
-
 	/** 
 	 * Lifecyle:
 	 * 1. Connecting to MQTT Broker
@@ -57,6 +56,7 @@ public class GameManager {
 		GameManager instance = new GameManager();
 		instance.connect();
 		instance.game = new Game();
+		Manager.start();
 		while(true) {
 			if(loggedInClients == 4) {
 				logger.info("All 4 Clients logged in. Starting Game...");
@@ -80,14 +80,14 @@ public class GameManager {
 					else
 						instance.clients[i].getPlayer().setVictoryPoints(-instance.calcVictoryPoints());
 				}
-				
+
 				//generates Player[] from Client[] to create a ToClient_LeaderBoardMsg
 				instance.publishMessage(new ToClient_LeaderBoardMsg(null, Arrays.stream(instance.clients).map(c -> c.getPlayer()).toArray(Player[]::new)));
-				
+
 				for(int i=0;i<instance.clients.length;i++)
 				{	
 					instance.clients[i].getPlayer().setDate(LocalDateTime.now());
-					Manager.start(instance.clients[i].getPlayer());
+					Manager.persist(instance.clients[i].getPlayer());
 				}
 				logger.error(" \nGame Over.");
 				try {
@@ -171,7 +171,7 @@ public class GameManager {
 
 	/**
 	 * Adds card to game and notifies clients by publishing a ToClient_PlayedCardMsg
- 	 */
+	 */
 	public void addPlayedCard(Card card) {
 		game.clientPlaysCard(card);
 		game.nextClient();
@@ -234,13 +234,15 @@ public class GameManager {
 	 */
 	public void login(Client client, String username, String password) {
 		//TODO if provided credentials match those on DB
-		if(loggedInClients>=4) return;
-		Player player = new Player(username, password);
-		client.setPlayer(player);
-		for (int i = 0; i < clients.length; i++) {
-			if(clients[i]==null) {
-				clients[i] = client;
-				break;
+		Player player = Manager.askPlayer(username, password);
+		if(player != null) {
+			if(loggedInClients>=4) return;
+			client.setPlayer(player);
+			for (int i = 0; i < clients.length; i++) {
+				if(clients[i]==null) {
+					clients[i] = client;
+					break;
+				}
 			}
 		}
 		loggedInClients++;
@@ -300,7 +302,7 @@ public class GameManager {
 
 			message.setPayload(bytes);
 			mqttClient.publish(msg.getType(), message);
-			
+
 			Thread.sleep(100);
 		} catch (IOException e) {
 			logger.error("Could not serialize Message '" + msg.getMessage() + "': " + e.getMessage());

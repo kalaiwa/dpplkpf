@@ -5,6 +5,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
+
 import org.hibernate.HibernateException;
 import org.hibernate.PersistentObjectException;
 import org.hibernate.Session;
@@ -12,6 +16,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
 import org.hibernate.service.ServiceRegistry;
 
 public class Manager {
@@ -23,19 +28,34 @@ public class Manager {
 		System.out.println(Manager.askLeaderboard());
 	}
 	
+
 	/**
-	 *  Configures and builds a Sessionfactory, uses it to open a session to persist the given object
+	 *  Configures and builds a Sessionfactory
 	 */
-	public static void start(Object obj)
+	public static void start() {
+		System.out.println( "------------------------------------------------------" );
+		System.out.println( "Initializing Hibernate" );
+		Configuration cfg=new Configuration().configure("hibernate.cfg.xml");
+		cfg.addAnnotatedClass(Player.class);
+		registry =  new StandardServiceRegistryBuilder().applySettings(cfg.getProperties()).build();
+		factory=cfg.buildSessionFactory(registry);
+		System.out.println( "Finished Initializing Hibernate" );
+		System.out.println( "------------------------------------------------------" );
+		/*Configuration configuration = new Configuration();
+	        configuration.configure("hibernate.cfg.xml");
+	        configuration.addAnnotatedClass(Player.class);
+	        ServiceRegistry srvcReg = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
+	        factory = configuration.buildSessionFactory(srvcReg);*/
+	}
+	
+	/**
+	 * persists the given object
+	 */
+	public static void persist(Object obj)
 	{
 		try
 		{
-			System.out.println( "------------------------------------------------------" );
-			System.out.println( "Initializing Hibernate" );
-			Configuration cfg=new Configuration().configure("hibernate.cfg.xml");
-			cfg.addAnnotatedClass(Player.class);
-			registry =  new StandardServiceRegistryBuilder().applySettings(cfg.getProperties()).build();
-			factory=cfg.buildSessionFactory(registry);
+			if(factory==null) start();
 			Session session=factory.openSession();
 			Transaction t= session.beginTransaction();
 				if(session.contains(obj))
@@ -46,11 +66,6 @@ public class Manager {
 			session.close();
 			System.out.println( "Finished Initializing Hibernate" );
 			System.out.println( "------------------------------------------------------" );
-			/*Configuration configuration = new Configuration();
-	        configuration.configure("hibernate.cfg.xml");
-	        configuration.addAnnotatedClass(Player.class);
-	        ServiceRegistry srvcReg = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
-	        factory = configuration.buildSessionFactory(srvcReg);*/
 		}
 		catch(PersistentObjectException p)
 		{
@@ -86,6 +101,19 @@ public class Manager {
             ex.printStackTrace();
         }
 		return leaderboardString;
+	}
+	
+	public static Player askPlayer(String name, String pw) {
+//		Player player;
+		if(factory==null) start();
+		Session session = factory.openSession();
+		CriteriaBuilder builder = session.getCriteriaBuilder();
+		CriteriaQuery<Player> criteria = builder.createQuery(Player.class);
+		Root<Player> root = criteria.from(Player.class);
+		criteria.where(builder.and(builder.equal(root.get("name"), name), builder.equal(root.get("password"), pw)));
+		Query<Player> query = session.createQuery(criteria);
+		Player player = query.getSingleResult();
+		return player;
 	}
 
 }

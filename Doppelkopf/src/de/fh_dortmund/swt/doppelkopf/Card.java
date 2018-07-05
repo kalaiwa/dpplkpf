@@ -12,6 +12,9 @@ public class Card implements Serializable{
 
 	private static final long serialVersionUID = -1319404831682683859L;
 
+	/**
+	 * List with all trump cards sorted descending by strength
+	 */
 	public static final List<Pair<CardColour, CardValue>> trumps = Arrays.asList(
 
 			new Pair<CardColour, CardValue>(CardColour.HEART, CardValue.TEN),
