@@ -2,6 +2,9 @@ package de.fh_dortmund.swt.doppelkopf.enumerations;
 
 import java.io.Serializable;
 
+/**
+ * Actual colour of a Card
+ */
 public enum CardColour implements Serializable{
 
 	CLUB("♣"),

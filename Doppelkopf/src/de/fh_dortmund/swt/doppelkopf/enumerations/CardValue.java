@@ -2,6 +2,9 @@ package de.fh_dortmund.swt.doppelkopf.enumerations;
 
 import java.io.Serializable;
 
+/**
+ * Actual value of a card
+ */
 public enum CardValue implements Serializable {
 
 	TEN("10", 10),
