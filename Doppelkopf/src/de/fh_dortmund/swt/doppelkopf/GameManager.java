@@ -247,19 +247,30 @@ public class GameManager {
 	 */
 	public void login(Client client, String username, String password) {
 		//TODO if provided credentials match those on DB
-		Player player = Manager.askPlayer(username, password);
-		if(player != null) {
-			if(loggedInClients>=4) return;
-			client.setPlayer(player);
-			for (int i = 0; i < clients.length; i++) {
-				if(clients[i]==null) {
-					clients[i] = client;
-					break;
+		try {
+			Player player = Manager.askPlayer(username, password);
+			if(player != null) {
+				for(Client currentClient : clients) {
+					if(currentClient != null && currentClient.getPlayer() != null && 
+							currentClient.getPlayer().getName().equals(username)) {
+						logger.error("Der Spieler mit dem Namen " + username + " ist bereits eingeloggt!");
+						return;
+					}
+				}
+				if(loggedInClients>=4) return;
+				client.setPlayer(player);
+				for (int i = 0; i < clients.length; i++) {
+					if(clients[i]==null) {
+						clients[i] = client;
+						break;
+					}
 				}
 			}
+			loggedInClients++;
+			publishMessage(new ToClient_LoginReactionMsg(client.getId(), player, true));
+		} catch (NoResultException e) {
+			logger.error("Kein Spieler mit dem Namen " + username + " gefunden!");
 		}
-		loggedInClients++;
-		publishMessage(new ToClient_LoginReactionMsg(client.getId(), player, true));
 	}
 
 
