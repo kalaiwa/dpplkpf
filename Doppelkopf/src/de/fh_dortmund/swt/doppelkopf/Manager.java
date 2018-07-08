@@ -52,10 +52,11 @@ public class Manager {
 			if(factory==null) start();
 			Session session=factory.openSession();
 			Transaction t= session.beginTransaction();
-				if(session.contains(obj))
+				/*if(session.contains(obj))
 					session.merge(obj);
 				else
-					session.persist(obj);
+					session.merge(obj);*/
+			session.merge(obj);
 			t.commit();
 			session.close();
 			System.out.println( "Finished Initializing Hibernate" );

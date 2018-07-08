@@ -66,6 +66,11 @@ public class GameManager {
 				instance.game.reset();
 				
 				logger.info("All 4 Clients in Lobby. Starting Game...");
+				for(int i=0;i<instance.clients.length;i++)
+				{	
+					instance.clients[i].getPlayer().setDate(LocalDateTime.now());
+					Manager.persist(instance.clients[i].getPlayer());
+				}
 				instance.publishMessage(new ToClient_StateMsg(null, instance.game.nextState()));
 				instance.handOutCards();
 				while(!instance.game.nextState().equals(State.EVALUATION)) {
@@ -93,7 +98,7 @@ public class GameManager {
 				for(int i=0;i<instance.clients.length;i++)
 				{	
 					instance.clients[i].getPlayer().setDate(LocalDateTime.now());
-					//Manager.persist(instance.clients[i].getPlayer());
+					Manager.persist(instance.clients[i].getPlayer());
 				}
 				logger.error(" \nGame Over.");
 				try {
