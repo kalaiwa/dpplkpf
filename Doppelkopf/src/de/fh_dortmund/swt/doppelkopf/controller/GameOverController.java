@@ -35,4 +35,9 @@ public class GameOverController {
 	private void handleBackToMenuButtonAction(ActionEvent event) {
 		model.setBackToMenuPressed();
 	}
+	
+	@FXML
+	private void handleNextGameButtonAction(ActionEvent event) {
+		model.setNextGamePressed();
+	}
 }

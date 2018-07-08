@@ -1,5 +1,6 @@
 package de.fh_dortmund.swt.doppelkopf.messages;
 
+import de.fh_dortmund.swt.doppelkopf.Client;
 import de.fh_dortmund.swt.doppelkopf.interfaces.ToClientMessage;
 
 /**
@@ -15,7 +16,8 @@ public class ToClient_OverallScoreMsg implements ToClientMessage{
 	private String leaderboardString;
 
 	public ToClient_OverallScoreMsg(String addressee, String leaderboardString) {
-		
+		this.addressee = addressee;
+		this.leaderboardString = leaderboardString;
 	}
 
 	@Override

@@ -14,6 +14,10 @@ public class GameOverDataModel {
 		propertyChangeSupport.firePropertyChange("BackToMenuProperty", false, true);
 	}
 	
+	public void setNextGamePressed() {
+		propertyChangeSupport.firePropertyChange("NextGameProperty", false, true);
+	}
+	
 	public void registerPropertyChangeListener(PropertyChangeListener listener) {
 		propertyChangeSupport.addPropertyChangeListener(listener);
 	}

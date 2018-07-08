@@ -125,9 +125,10 @@ public class ClientMqttCallback implements MqttCallback{
 			logger.info(msg.getMessage());
 			break;
 		case ToClient_OverallScoreMsg.type:
-			if(msg.getAddressee().equals(client.getId())) {
-				client.signalLeaderBoard(msg.getMessage());
-				logger.info(msg.getMessage());	
+			ToClient_OverallScoreMsg overallScoreMsg = (ToClient_OverallScoreMsg) msg;
+			if(overallScoreMsg.getAddressee().equals(client.getId())) {
+				client.signalLeaderBoard(overallScoreMsg.getMessage());
+				logger.info(overallScoreMsg.getMessage());	
 			}
 			break;
 		default:

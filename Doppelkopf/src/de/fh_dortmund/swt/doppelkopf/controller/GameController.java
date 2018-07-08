@@ -84,6 +84,11 @@ public class GameController {
 				card10Button.setGraphic(new ImageView(getCardImage(9, cards)));
 				
 				disableButtons(true);
+				
+				playedCard1Label.setGraphic(null);	
+				playedCard2Label.setGraphic(null);
+				playedCard3Label.setGraphic(null);
+				playedCard4Label.setGraphic(null);
 			}
 			if(li.getPropertyName().equals("NewMessageProperty")) {
 				Platform.runLater(new Runnable() {

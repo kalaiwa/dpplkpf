@@ -27,5 +27,10 @@
             <Font size="15.0" />
          </font>
       </Button>
+      <Button id="backToMenuButton" fx:id="nextGameButton" mnemonicParsing="false" onAction="#handleNextGameButtonAction" text="Nächstes Spiel" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
    </children>
 </GridPane>

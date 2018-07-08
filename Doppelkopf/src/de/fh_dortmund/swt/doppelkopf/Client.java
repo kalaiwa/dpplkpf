@@ -25,9 +25,12 @@ import de.fh_dortmund.swt.doppelkopf.messages.ToClient_LastTrickMsg;
 import de.fh_dortmund.swt.doppelkopf.messages.ToClient_LeaderBoardMsg;
 import de.fh_dortmund.swt.doppelkopf.messages.ToClient_LoginReactionMsg;
 import de.fh_dortmund.swt.doppelkopf.messages.ToClient_NextPlayerMsg;
+import de.fh_dortmund.swt.doppelkopf.messages.ToClient_OverallScoreMsg;
 import de.fh_dortmund.swt.doppelkopf.messages.ToClient_PlayedCardMsg;
 import de.fh_dortmund.swt.doppelkopf.messages.ToClient_StateMsg;
+import de.fh_dortmund.swt.doppelkopf.messages.ToServer_EnterLobbyMsg;
 import de.fh_dortmund.swt.doppelkopf.messages.ToServer_LeaderBoardMsg;
+import de.fh_dortmund.swt.doppelkopf.messages.ToServer_LeaveLobbyMsg;
 import de.fh_dortmund.swt.doppelkopf.messages.ToServer_LoginMsg;
 import de.fh_dortmund.swt.doppelkopf.messages.ToServer_LogoutMsg;
 import de.fh_dortmund.swt.doppelkopf.messages.ToServer_PlayedCardMsg;
@@ -164,6 +167,14 @@ public class Client implements Serializable{
 		keyboard.close();
 	}
 
+	public void enterLobby() {
+		publishMessage(new ToServer_EnterLobbyMsg(this));
+	}
+	
+	public void leaveLobby() {
+		publishMessage(new ToServer_LeaveLobbyMsg(this));
+	}
+	
 	/**
 	 * Checks, if client could and does follow a possible suit. If no trick is given, Client will see this as an
 	 * indicator, that he is the first in line, so he's free to pick a suit 
@@ -201,6 +212,7 @@ public class Client implements Serializable{
 			mqttClient.subscribe(ToClient_NextPlayerMsg.type);
 			mqttClient.subscribe(ToClient_PlayedCardMsg.type);
 			mqttClient.subscribe(ToClient_StateMsg.type);
+			mqttClient.subscribe(ToClient_OverallScoreMsg.type);
 		} catch (MqttException e) {
 			logger.error("Could not connect to MQTT Broker (" + e.getMessage() + ")");
 		}
@@ -304,7 +316,7 @@ public class Client implements Serializable{
 	public void signalLeaderBoard(String leaderboardString) {
 		propertyChangeSupport.firePropertyChange("LeaderboardProperty", null, leaderboardString);
 	}
-
+	
 	public void askLeaderboard() {
 		publishMessage(new ToServer_LeaderBoardMsg(this));
 	}

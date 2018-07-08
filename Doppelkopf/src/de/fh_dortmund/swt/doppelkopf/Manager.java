@@ -22,12 +22,6 @@ import org.hibernate.service.ServiceRegistry;
 public class Manager {
 	private static SessionFactory factory;
 	private static ServiceRegistry registry;
-	
-	public static void main(String[] args) {
-		//Manager.start(null);
-		System.out.println(Manager.askLeaderboard());
-	}
-	
 
 	/**
 	 *  Configures and builds a Sessionfactory
@@ -93,7 +87,7 @@ public class Manager {
             while (rs.next()) {
                 String name = rs.getString("name");
                 int points = rs.getInt("victorypoints");
-                leaderboardString += "Name: " + name + "|| Punkte: " + points + "\n"; 
+                leaderboardString += name + " || " + points + "\n"; 
             }
             
             return leaderboardString;

@@ -87,4 +87,12 @@ public class GameDataModel {
 	public void nextRoundBegins() {
 		controllerSupport.firePropertyChange("NextRoundProperty", false, true);
 	}
+	
+	public void reset() {
+		buttons.clear();
+		cards.clear();
+		lastPlayedCard = 0;
+		lastPressedButton = null;
+		disabledButtons.clear();
+	}
 }

@@ -88,4 +88,10 @@ public class Game{
 	public Trick getCurrentRound() {
 		return rounds[currentState.getRoundNo()];
 	}
+	
+	public void reset() {
+		for(int i = 0; i < 10; i++) {
+			rounds[i] = new Trick();
+		}
+	}
 }

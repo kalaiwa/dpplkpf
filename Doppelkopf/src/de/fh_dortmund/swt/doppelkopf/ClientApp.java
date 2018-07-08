@@ -1,5 +1,7 @@
 package de.fh_dortmund.swt.doppelkopf;
 
+import java.io.IOException;
+
 import de.fh_dortmund.swt.doppelkopf.controller.GameController;
 import de.fh_dortmund.swt.doppelkopf.controller.GameOverController;
 import de.fh_dortmund.swt.doppelkopf.controller.LeaderboardController;
@@ -37,7 +39,7 @@ public class ClientApp extends Application{
 	public ClientApp() {
 		client = new Client(li -> {
 			if(li.getPropertyName().equals("LoginSuccessfullProperty")) {
-				screenController.activate("lobby");
+				screenController.activate("menu");
 			}
 			if(li.getPropertyName().equals("GameStartProperty")) {
 				gameDataModel.setCards(client.getCards());
@@ -61,6 +63,7 @@ public class ClientApp extends Application{
 			}
 			if(li.getPropertyName().equals("GameScoreProperty")) {
 				screenController.activate("gameOver");
+				client.leaveLobby();
 				gameOverDataModel.setGameScore((String)li.getNewValue());
 			}
 			if(li.getPropertyName().equals("LeaderboardProperty")) {
@@ -110,7 +113,7 @@ public class ClientApp extends Application{
 			screenController.addScreen("gameOver", gameOverLoader.load());
 			screenController.addScreen("leaderboard", leaderboardLoader.load());
 
-			screenController.activate("menu");
+			screenController.activate("login");
 			
 			stage.setTitle("Doppelkopf");
 		    stage.setScene(scene);
@@ -125,10 +128,10 @@ public class ClientApp extends Application{
 		menuDataModel = new MenuDataModel();
 		menuDataModel.registerPropertyChangeListener(li -> {
 			if(li.getPropertyName().equals("StartPressedProperty")) {		
-				screenController.activate("login");
+				client.enterLobby();
+				screenController.activate("lobby");
 			} 
 			if(li.getPropertyName().equals("LeaderboardPressedProperty")) {
-				client.login("test", "test");
 				client.askLeaderboard();
 				screenController.activate("leaderboard");
 			}
@@ -137,6 +140,7 @@ public class ClientApp extends Application{
 		lobbyDataModel = new LobbyDataModel();
 		lobbyDataModel.registerPropertyChangeListener(li -> {
 			if(li.getPropertyName().equals("CancelPressedProperty")) {
+				client.leaveLobby();
 				screenController.activate("menu");
 			} 
 		});
@@ -160,12 +164,18 @@ public class ClientApp extends Application{
 			if(li.getPropertyName().equals("BackToMenuProperty")) {
 				screenController.activate("menu");
 			}
+			if(li.getPropertyName().equals("NextGameProperty")) {
+				screenController.activate("lobby");
+				
+				gameDataModel.reset();
+				
+				client.enterLobby();
+			}
 		});
 		
 		leaderboardDataModel = new LeaderboardDataModel();
 		leaderboardDataModel.registerPropertyChangeListener(li -> {
 			if(li.getPropertyName().equals("BackToMenuProperty")) {
-				client.logout();
 				screenController.activate("menu");
 			}
 		});

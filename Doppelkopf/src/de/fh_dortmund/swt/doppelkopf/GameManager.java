@@ -26,6 +26,9 @@ import de.fh_dortmund.swt.doppelkopf.messages.ToClient_NextPlayerMsg;
 import de.fh_dortmund.swt.doppelkopf.messages.ToClient_OverallScoreMsg;
 import de.fh_dortmund.swt.doppelkopf.messages.ToClient_PlayedCardMsg;
 import de.fh_dortmund.swt.doppelkopf.messages.ToClient_StateMsg;
+import de.fh_dortmund.swt.doppelkopf.messages.ToServer_EnterLobbyMsg;
+import de.fh_dortmund.swt.doppelkopf.messages.ToServer_LeaderBoardMsg;
+import de.fh_dortmund.swt.doppelkopf.messages.ToServer_LeaveLobbyMsg;
 import de.fh_dortmund.swt.doppelkopf.messages.ToServer_LoginMsg;
 import de.fh_dortmund.swt.doppelkopf.messages.ToServer_LogoutMsg;
 import de.fh_dortmund.swt.doppelkopf.messages.ToServer_PlayedCardMsg;
@@ -41,6 +44,7 @@ public class GameManager {
 	private static boolean waitingForPlayedCard = false;
 	private static int loggedInClients = 0;
 	transient private MqttClient mqttClient;
+	private static int clientsInLobby = 0;
 
 	/** 
 	 * Lifecyle:
@@ -58,8 +62,10 @@ public class GameManager {
 		instance.game = new Game();
 		Manager.start();
 		while(true) {
-			if(loggedInClients == 4) {
-				logger.info("All 4 Clients logged in. Starting Game...");
+			if(loggedInClients == 4 && clientsInLobby == 4) {
+				instance.game.reset();
+				
+				logger.info("All 4 Clients in Lobby. Starting Game...");
 				instance.publishMessage(new ToClient_StateMsg(null, instance.game.nextState()));
 				instance.handOutCards();
 				while(!instance.game.nextState().equals(State.EVALUATION)) {
@@ -87,14 +93,16 @@ public class GameManager {
 				for(int i=0;i<instance.clients.length;i++)
 				{	
 					instance.clients[i].getPlayer().setDate(LocalDateTime.now());
-					Manager.persist(instance.clients[i].getPlayer());
+					//Manager.persist(instance.clients[i].getPlayer());
 				}
 				logger.error(" \nGame Over.");
 				try {
-					Thread.sleep(30000);
+					Thread.sleep(1000);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
+				
+				instance.publishMessage(new ToClient_StateMsg(null, instance.game.nextState()));
 			}
 			try {
 				Thread.sleep(5000);
@@ -270,6 +278,24 @@ public class GameManager {
 		}
 
 	}
+	
+	public void enterLobby(Client client) {
+		for(Client currentClient : clients) {
+			if(currentClient.equals(client)) {
+				clientsInLobby++;
+				break;
+			}
+		}
+	}
+	
+	public void leaveLobby(Client client) {
+		for(Client currentClient : clients) {
+			if(currentClient.equals(client)) {
+				clientsInLobby--;
+				break;
+			}
+		}
+	}
 
 	/**
 	 * Connects to MQTT Broker and subscribes to topics
@@ -283,7 +309,9 @@ public class GameManager {
 			mqttClient.subscribe(ToServer_LoginMsg.type);
 			mqttClient.subscribe(ToServer_LogoutMsg.type);
 			mqttClient.subscribe(ToServer_PlayedCardMsg.type);
-
+			mqttClient.subscribe(ToServer_LeaderBoardMsg.type);
+			mqttClient.subscribe(ToServer_EnterLobbyMsg.type);
+			mqttClient.subscribe(ToServer_LeaveLobbyMsg.type);
 		} catch (MqttException e) {
 			logger.error("Could not connect to MQTT Broker (" + e.getMessage() + ")");
 		}

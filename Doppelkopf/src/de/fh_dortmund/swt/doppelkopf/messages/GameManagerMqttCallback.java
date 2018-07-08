@@ -52,6 +52,7 @@ public class GameManagerMqttCallback implements MqttCallback {
 		}
 		msg = (ToServerMessage) o;
 		// processes message depending on its type
+		
 		switch (topic) {
 		case ToServer_LoginMsg.type:
 			// redirects login request to GameManager
@@ -76,7 +77,17 @@ public class GameManagerMqttCallback implements MqttCallback {
 			// redirects card info to GameManager
 			ToServer_LeaderBoardMsg leaderboardMsg = (ToServer_LeaderBoardMsg) msg;
 			gameManager.sendLeaderboard(leaderboardMsg.getSender());
-			logger.info(msg.getMessage());
+			logger.info(leaderboardMsg.getMessage());
+			break;
+		case ToServer_EnterLobbyMsg.type:
+			ToServer_EnterLobbyMsg enterLobbyMsg = (ToServer_EnterLobbyMsg) msg;
+			gameManager.enterLobby(enterLobbyMsg.getSender());
+			logger.info(enterLobbyMsg.getMessage());
+			break;
+		case ToServer_LeaveLobbyMsg.type:
+			ToServer_LeaveLobbyMsg leaveLobbyMsg = (ToServer_LeaveLobbyMsg) msg;
+			gameManager.leaveLobby(leaveLobbyMsg.getSender());
+			logger.info(leaveLobbyMsg.getMessage());
 			break;
 		}
 	}
