@@ -4,10 +4,11 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutput;
 import java.io.ObjectOutputStream;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
+
+import javax.persistence.NoResultException;
 
 import org.apache.log4j.Logger;
 import org.eclipse.paho.client.mqttv3.MqttClient;
@@ -64,11 +65,11 @@ public class GameManager {
 		while(true) {
 			if(loggedInClients == 4 && clientsInLobby == 4) {
 				instance.game.reset();
-				
+
 				logger.info("All 4 Clients in Lobby. Starting Game...");
 				for(int i=0;i<instance.clients.length;i++)
 				{	
-					instance.clients[i].getPlayer().setDate(LocalDateTime.now());
+//					instance.clients[i].getPlayer().setDate(LocalDateTime.now());
 					Manager.persist(instance.clients[i].getPlayer());
 				}
 				instance.publishMessage(new ToClient_StateMsg(null, instance.game.nextState()));
@@ -97,7 +98,7 @@ public class GameManager {
 
 				for(int i=0;i<instance.clients.length;i++)
 				{	
-					instance.clients[i].getPlayer().setDate(LocalDateTime.now());
+//					instance.clients[i].getPlayer().setDate(LocalDateTime.now());
 					Manager.persist(instance.clients[i].getPlayer());
 				}
 				logger.error(" \nGame Over.");
@@ -106,7 +107,7 @@ public class GameManager {
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
-				
+
 				instance.publishMessage(new ToClient_StateMsg(null, instance.game.nextState()));
 			}
 			try {
@@ -246,9 +247,12 @@ public class GameManager {
 	 * Tries to log in a client, send information if login was successful via ToClient_LoginReaction
 	 */
 	public void login(Client client, String username, String password) {
-		//TODO if provided credentials match those on DB
+		Player player = null;
 		try {
-			Player player = Manager.askPlayer(username, password);
+			player = Manager.askPlayer(username, password);
+		} catch (NoResultException e) {
+			logger.info("Kein Spieler mit dem Namen " + username + " gefunden, versuche Spieler zu registrieren");
+		}
 			if(player != null) {
 				for(Client currentClient : clients) {
 					if(currentClient != null && currentClient.getPlayer() != null && 
@@ -257,20 +261,25 @@ public class GameManager {
 						return;
 					}
 				}
-				if(loggedInClients>=4) return;
-				client.setPlayer(player);
-				for (int i = 0; i < clients.length; i++) {
-					if(clients[i]==null) {
-						clients[i] = client;
-						break;
-					}
+			} else if (!Manager.isPlayerExisting(username)){
+				player = new Player(username, password);
+				Manager.persist(player);
+			}
+			else {
+				logger.error("Der Nutzername ist bereits vergeben");
+				return;
+			}
+
+			if(loggedInClients>=4) return;
+			client.setPlayer(player);
+			for (int i = 0; i < clients.length; i++) {
+				if(clients[i]==null) {
+					clients[i] = client;
+					break;
 				}
 			}
 			loggedInClients++;
 			publishMessage(new ToClient_LoginReactionMsg(client.getId(), player, true));
-		} catch (NoResultException e) {
-			logger.error("Kein Spieler mit dem Namen " + username + " gefunden!");
-		}
 	}
 
 
@@ -294,7 +303,7 @@ public class GameManager {
 		}
 
 	}
-	
+
 	public void enterLobby(Client client) {
 		for(Client currentClient : clients) {
 			if(currentClient.equals(client)) {
@@ -303,7 +312,7 @@ public class GameManager {
 			}
 		}
 	}
-	
+
 	public void leaveLobby(Client client) {
 		for(Client currentClient : clients) {
 			if(currentClient.equals(client)) {

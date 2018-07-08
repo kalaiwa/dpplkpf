@@ -1,10 +1,7 @@
 package de.fh_dortmund.swt.doppelkopf;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.util.List;
 
+import javax.persistence.NoResultException;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
@@ -41,7 +38,7 @@ public class Manager {
 	        ServiceRegistry srvcReg = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
 	        factory = configuration.buildSessionFactory(srvcReg);*/
 	}
-	
+
 	/**
 	 * persists the given object
 	 */
@@ -52,7 +49,7 @@ public class Manager {
 			if(factory==null) start();
 			Session session=factory.openSession();
 			Transaction t= session.beginTransaction();
-				/*if(session.contains(obj))
+			/*if(session.contains(obj))
 					session.merge(obj);
 				else
 					session.merge(obj);*/
@@ -74,32 +71,29 @@ public class Manager {
 			he.printStackTrace();
 		}
 	}
-	
+
 	public static String askLeaderboard() {
-		String url = "jdbc:postgresql://localhost:5432/Doppelkopf_Table";
-        String user = "postgres";
-        String password = "0000";
-        String leaderboardString = "";
+		String leaderboardString = "";
 
-        try (Connection con = DriverManager.getConnection(url, user, password);
-                Statement st = con.createStatement();
-                ResultSet rs = st.executeQuery("SELECT * FROM public.player")) {
-
-            while (rs.next()) {
-                String name = rs.getString("name");
-                int points = rs.getInt("victorypoints");
-                leaderboardString += name + " || " + points + "\n"; 
-            }
-            
-            return leaderboardString;
-        } catch (SQLException ex) {
-            ex.printStackTrace();
-        }
+		if(factory==null) start();
+		Session session = factory.openSession();
+		CriteriaBuilder builder = session.getCriteriaBuilder();
+		CriteriaQuery<Player> criteria = builder.createQuery(Player.class);
+		Root<Player> root = criteria.from(Player.class);
+		criteria.select(root);
+		Query<Player> query = session.createQuery(criteria);
+		List<Player> players = query.getResultList();
+		session.close();
+		players.sort((p1, p2) -> p1.getVictoryPoints() - p2.getVictoryPoints());
+		for (Player player : players) {
+			String name = player.getName();
+			int points = player.getVictoryPoints();
+			leaderboardString += name + " || " + points + "\n"; 
+		}
 		return leaderboardString;
 	}
-	
+
 	public static Player askPlayer(String name, String pw) {
-//		Player player;
 		if(factory==null) start();
 		Session session = factory.openSession();
 		CriteriaBuilder builder = session.getCriteriaBuilder();
@@ -108,7 +102,24 @@ public class Manager {
 		criteria.where(builder.and(builder.equal(root.get("name"), name), builder.equal(root.get("password"), pw)));
 		Query<Player> query = session.createQuery(criteria);
 		Player player = query.getSingleResult();
+		session.close();
 		return player;
+	}
+	
+	public static Boolean isPlayerExisting(String name) {
+		if(factory==null) start();
+		Session session = factory.openSession();
+		CriteriaBuilder builder = session.getCriteriaBuilder();
+		CriteriaQuery<Player> criteria = builder.createQuery(Player.class);
+		Root<Player> root = criteria.from(Player.class);
+		criteria.where(builder.equal(root.get("name"), name));
+		Query<Player> query = session.createQuery(criteria);
+		Player player = null;
+		try {
+			player = query.getSingleResult();
+		} catch (NoResultException e) {}
+		session.close();
+		return player!=null;
 	}
 
 }

@@ -1,20 +1,21 @@
 package de.fh_dortmund.swt.doppelkopf;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
-import javax.persistence.*;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
 @Entity
 public class Player implements Serializable{
 
 	private static final long serialVersionUID = -5634458240601433318L;
+//	@GeneratedValue(strategy=GenerationType.AUTO)
+//	private int id;
 	@Id
-	@GeneratedValue
-	private int id;
 	private String name;
 	private String password;
 	private int victoryPoints;
-	private LocalDateTime date;
+//	private LocalDateTime date;
 	public Player()
 	{
 		
@@ -47,20 +48,20 @@ public class Player implements Serializable{
 	public void setVictoryPoints(int victoryPoints) {
 		this.victoryPoints = victoryPoints;
 	}
-	public LocalDateTime getDate()
-	{
-		return this.date;
-	}
-	public void setDate(LocalDateTime now) {
-		// TODO Auto-generated method stub
-		this.date=now;
-	}
-	public void setId(int id)
-	{
-		this.id=id;
-	}
-	public int getId()
-	{
-		return this.id;
-	}
+//	public LocalDateTime getDate()
+//	{
+//		return this.date;
+//	}
+//	public void setDate(LocalDateTime now) {
+//		// TODO Auto-generated method stub
+//		this.date=now;
+//	}
+//	public void setId(int id)
+//	{
+//		this.id=id;
+//	}
+//	public int getId()
+//	{
+//		return this.id;
+//	}
 }
